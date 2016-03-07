@@ -37,7 +37,7 @@
     "globalMetadata": {},
     "fileMetadata": {},
     "template": [
-      "op.html"
+     "default"
     ],
     "dest": "Docs"
   }
