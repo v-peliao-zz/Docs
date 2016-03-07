@@ -16,12 +16,17 @@
     "resource": [
       {
         "files": [
-          "**/*.png",
-          "**/*.jpg"
+                 "**/*.png",
+	          "**/*.jpg",
+	          "**/*.gif",
+	          "**/*.bmp",
+	          "_themes/**"
+
         ],
         "exclude": [
           "**/obj/**",
-          "Docs/**"
+	          "_themes/DocPacker/**"
+
         ],
         "src": null,
         "dest": null
