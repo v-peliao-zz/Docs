@@ -1,0 +1,76 @@
+items:
+- uid: msipc.ipc_connection_info
+  id: IPC_CONNECTION_INFO
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_connection_info.wszExtranetUrl
+  - msipc.ipc_connection_info.wszIntranetUrl
+  href: IPC_CONNECTION_INFO.yml
+  langs:
+  - cplusplus
+  name: IPC_CONNECTION_INFO
+  fullName: msipc.ipc_connection_info
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Provides information on the rights management services (RMS) server to which to connect.
+
+
+
+
+
+
+
+  remarks: >+
+    The structure always contains the intranet URL and may optionally contain an extranet URL. In typical client scenarios, the connection info is not required. It is useful only in advanced server scenarios in which the application manages the server URLs.
+
+
+
+  syntax:
+    content: >-
+      typedef struct _IPC_CONNECTION_INFO {
+      	LPCWSTR wszExtranetUrl;
+      	LPCWSTR wszIntranetUrl;
+      } IPC_CONNECTION_INFO *PIPC_CONNECTION_INFO;typedef const IPC_CONNECTION_INFO *PCIPC_CONNECTION_INFO;
+  inheritance: []
+- uid: msipc.ipc_connection_info.wszExtranetUrl
+  id: wszExtranetUrl
+  parent: msipc.ipc_connection_info
+  href: IPC_CONNECTION_INFO.yml
+  langs:
+  - cplusplus
+  name: wszExtranetUrl
+  fullName: msipc.ipc_connection_info.wszExtranetUrl
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The extranet URL.
+- uid: msipc.ipc_connection_info.wszIntranetUrl
+  id: wszIntranetUrl
+  parent: msipc.ipc_connection_info
+  href: IPC_CONNECTION_INFO.yml
+  langs:
+  - cplusplus
+  name: wszIntranetUrl
+  fullName: msipc.ipc_connection_info.wszIntranetUrl
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The intranet URL.
+
+
+
+    Intranet URL, **wszIntranetUrl**, is required if extranet URL, **wszExtranetUrl**, is **NULL**.
+
+
+
+references:
+- uid: msipc.ipc_connection_info.wszExtranetUrl
+  href: IPC_CONNECTION_INFO.yml
+  name: wszExtranetUrl
+- uid: msipc.ipc_connection_info.wszIntranetUrl
+  href: IPC_CONNECTION_INFO.yml
+  name: wszIntranetUrl

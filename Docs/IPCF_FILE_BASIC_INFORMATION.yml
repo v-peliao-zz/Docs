@@ -1,0 +1,134 @@
+items:
+- uid: msipc.ipcf_file_basc_information
+  id: IPCF_FILE_BASIC_INFORMATION
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipcf_file_basc_information.cbSize
+  - msipc.ipcf_file_basc_information.ftDateModified
+  - msipc.ipcf_file_basc_information.pAppSpecificProperties
+  - msipc.ipcf_file_basc_information.qwDecryptedFileSize
+  - msipc.ipcf_file_basc_information.wszDecryptedFileName
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  langs:
+  - cplusplus
+  name: IPCF_FILE_BASIC_INFORMATION
+  fullName: msipc.ipcf_file_basc_information
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Describes the basic information about a protected file .
+
+
+
+    For more information on protected file , see @msipc.supported_file_formats
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPCF_FILE_BASC_INFORMATION {
+      	DWORD cbSize;
+      	LPCWSTR wszDecryptedFileName;
+      	DWORD64 qwDecryptedFileSize;
+      	FILETIME ftDateModified;
+      	IPC_NAME_VALUE_LIST * pAppSpecificProperties;
+      } IPCF_FILE_BASC_INFORMATION *PIPCF_FILE_BASC_INFORMATION;
+  inheritance: []
+- uid: msipc.ipcf_file_basc_information.cbSize
+  id: cbSize
+  parent: msipc.ipcf_file_basc_information
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  langs:
+  - cplusplus
+  name: cbSize
+  fullName: msipc.ipcf_file_basc_information.cbSize
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    This is the size of this structure and needs to be initialized to
+
+
+
+    sizeof(@msipc.ipcf_file_basc_information)
+
+
+
+- uid: msipc.ipcf_file_basc_information.wszDecryptedFileName
+  id: wszDecryptedFileName
+  parent: msipc.ipcf_file_basc_information
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  langs:
+  - cplusplus
+  name: wszDecryptedFileName
+  fullName: msipc.ipcf_file_basc_information.wszDecryptedFileName
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Name of the decrypted file. Can be optionally stored in the metadata section.
+- uid: msipc.ipcf_file_basc_information.qwDecryptedFileSize
+  id: qwDecryptedFileSize
+  parent: msipc.ipcf_file_basc_information
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  langs:
+  - cplusplus
+  name: qwDecryptedFileSize
+  fullName: msipc.ipcf_file_basc_information.qwDecryptedFileSize
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Size of the decrypted file, in bytes.
+- uid: msipc.ipcf_file_basc_information.ftDateModified
+  id: ftDateModified
+  parent: msipc.ipcf_file_basc_information
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  langs:
+  - cplusplus
+  name: ftDateModified
+  fullName: msipc.ipcf_file_basc_information.ftDateModified
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: 'The date modified on the file. '
+- uid: msipc.ipcf_file_basc_information.pAppSpecificProperties
+  id: pAppSpecificProperties
+  parent: msipc.ipcf_file_basc_information
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  langs:
+  - cplusplus
+  name: pAppSpecificProperties
+  fullName: msipc.ipcf_file_basc_information.pAppSpecificProperties
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Custom application specific properties as name-value pairs.
+references:
+- uid: msipc.supported_file_formats
+  name: Supported File Formats
+- uid: msipc.ipcf_file_basc_information
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  name: IPCF_FILE_BASIC_INFORMATION
+- uid: msipc.ipc_name_value_list
+  href: IPC_NAME_VALUE_LIST.yml
+  name: IPC_NAME_VALUE_LIST
+- uid: msipc.msipc_structures
+  href: Structures.yml
+  name: Structures
+- uid: msipc.ipcf_file_basc_information.cbSize
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  name: cbSize
+- uid: msipc.ipcf_file_basc_information.wszDecryptedFileName
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  name: wszDecryptedFileName
+- uid: msipc.ipcf_file_basc_information.qwDecryptedFileSize
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  name: qwDecryptedFileSize
+- uid: msipc.ipcf_file_basc_information.ftDateModified
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  name: ftDateModified
+- uid: msipc.ipcf_file_basc_information.pAppSpecificProperties
+  href: IPCF_FILE_BASIC_INFORMATION.yml
+  name: pAppSpecificProperties

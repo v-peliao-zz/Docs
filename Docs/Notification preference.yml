@@ -1,0 +1,90 @@
+items:
+- uid: msipc.notification_preference
+  id: Notification preference
+  parent: msipc.msipc_constants
+  children:
+  - msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DEFAULT
+  - msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DIGEST
+  href: Notification preference.yml
+  langs:
+  - cplusplus
+  name: Notification preference
+  fullName: msipc.notification_preference
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Specifies the users's notification preference for a tracked document.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DEFAULT
+  id: IPCD_CT_NOTIFICATION_PREF_DEFAULT
+  parent: msipc.notification_preference
+  href: Notification preference.yml
+  langs:
+  - cplusplus
+  name: IPCD_CT_NOTIFICATION_PREF_DEFAULT
+  fullName: msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DEFAULT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Specifies that a notifications are sent every time the content is accessed.
+  syntax:
+    content: IPCD_CT_NOTIFICATION_PREF_DEFAULT = 0
+- uid: msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DIGEST
+  id: IPCD_CT_NOTIFICATION_PREF_DIGEST
+  parent: msipc.notification_preference
+  href: Notification preference.yml
+  langs:
+  - cplusplus
+  name: IPCD_CT_NOTIFICATION_PREF_DIGEST
+  fullName: msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DIGEST
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Specifies that notifications are sent as a digest notification, for example once every day.
+  syntax:
+    content: IPCD_CT_NOTIFICATION_PREF_DIGEST = 1
+references:
+- uid: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  name: License metadata property types
+- uid: msipc.notification_preference
+  href: Notification preference.yml
+  name: Notification preference
+- uid: msipc.notification_type
+  href: Notification type.yml
+  name: Notification type
+- uid: msipc.ipccreatelicensemetadatahandle
+  href: IpcCreateLicenseMetadataHandle.yml
+  name: IpcCreateLicenseMetadataHandle
+- uid: msipc.ipcsetlicensemetadataproperty
+  href: IpcSetLicenseMetadataProperty.yml
+  name: IpcSetLicenseMetadataProperty
+- uid: msipc.ipcserializelicensemetadata
+  href: IpcSerializeLicenseWithMetadata.yml
+  name: IpcSerializeLicenseWithMetadata
+- uid: msipc.ipcfencryptfilewithmetadata
+  href: IpcfEncryptFileWithMetadata.yml
+  name: IpcfEncryptFileWithMetadata
+- uid: msipc.ipcfencryptfilestreamwithmetadata
+  href: IpcfEncryptFileStreamWithMetadata.yml
+  name: IpcfEncryptFileStreamWithMetadata
+- uid: msipc.ipcregisterlicense
+  href: IpcRegisterLicense.yml
+  name: IpcRegisterLicense
+- uid: msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DEFAULT
+  href: Notification preference.yml
+  name: IPCD_CT_NOTIFICATION_PREF_DEFAULT
+- uid: msipc.notification_preference.IPCD_CT_NOTIFICATION_PREF_DIGEST
+  href: Notification preference.yml
+  name: IPCD_CT_NOTIFICATION_PREF_DIGEST

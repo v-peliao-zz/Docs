@@ -1,0 +1,116 @@
+items:
+- uid: msipc.ipc_user_rights
+  id: IPC_USER_RIGHTS
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_user_rights.cRights
+  - msipc.ipc_user_rights.rgwszRights
+  - msipc.ipc_user_rights.User
+  href: IPC_USER_RIGHTS.yml
+  langs:
+  - cplusplus
+  name: IPC_USER_RIGHTS
+  fullName: msipc.ipc_user_rights
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    A structure that is used to specify rights per user.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_USER_RIGHTS {
+      	IPC_USER User;
+      	DWORD cRights;
+      	LPCWSTR rgwszRights;
+      } IPC_USER_RIGHTS *PIPC_USER_RIGHTS;typedef const IPC_USER_RIGHTS *PCIPC_USER_RIGHTS;
+  inheritance: []
+- uid: msipc.ipc_user_rights.User
+  id: User
+  parent: msipc.ipc_user_rights
+  href: IPC_USER_RIGHTS.yml
+  langs:
+  - cplusplus
+  name: User
+  fullName: msipc.ipc_user_rights.User
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The user or group to be granted the specified rights.
+- uid: msipc.ipc_user_rights.cRights
+  id: cRights
+  parent: msipc.ipc_user_rights
+  href: IPC_USER_RIGHTS.yml
+  langs:
+  - cplusplus
+  name: cRights
+  fullName: msipc.ipc_user_rights.cRights
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The number of elements in **rgwszRights**.
+- uid: msipc.ipc_user_rights.rgwszRights
+  id: rgwszRights
+  parent: msipc.ipc_user_rights
+  href: IPC_USER_RIGHTS.yml
+  langs:
+  - cplusplus
+  name: rgwszRights
+  fullName: msipc.ipc_user_rights.rgwszRights
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    A string array of rights. Rights depend on the developer to map them to meaningful behavior for each application. For a list of reserved rights and detailed information on rights,     see @msipc.rights.
+
+
+
+    Valid characters for a rights string are as follows:
+
+
+
+    * {A-Z} (Uppercase characters)
+
+
+
+    * {a-z} (Lowercase characters)
+
+
+
+    * {0-9} (Numeric characters)
+
+
+
+    * {- _ .} (Special characters)
+
+
+
+
+
+
+
+    The name cannot contain special characters used for XML markup and cannot exceed 256 characters in length.
+
+
+
+references:
+- uid: msipc.rights
+  href: Rights.yml
+  name: Rights
+- uid: msipc.ipc_user_rights.User
+  href: IPC_USER_RIGHTS.yml
+  name: User
+- uid: msipc.ipc_user_rights.cRights
+  href: IPC_USER_RIGHTS.yml
+  name: cRights
+- uid: msipc.ipc_user_rights.rgwszRights
+  href: IPC_USER_RIGHTS.yml
+  name: rgwszRights

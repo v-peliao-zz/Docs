@@ -1,0 +1,64 @@
+items:
+- uid: msipc.ipc_buffer
+  id: IPC_BUFFER
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_buffer.cbBuffer
+  - msipc.ipc_buffer.pvBuffer
+  href: IPC_BUFFER.yml
+  langs:
+  - cplusplus
+  name: IPC_BUFFER
+  fullName: msipc.ipc_buffer
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Represents a buffer.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_BUFFER {
+      	LPVOID pvBuffer;
+      	DWORD cbBuffer;
+      } IPC_BUFFER *PIPC_BUFFER;typedef const IPC_BUFFER *PCIPC_BUFFER;
+  inheritance: []
+- uid: msipc.ipc_buffer.pvBuffer
+  id: pvBuffer
+  parent: msipc.ipc_buffer
+  href: IPC_BUFFER.yml
+  langs:
+  - cplusplus
+  name: pvBuffer
+  fullName: msipc.ipc_buffer.pvBuffer
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The pointer to the buffer.
+- uid: msipc.ipc_buffer.cbBuffer
+  id: cbBuffer
+  parent: msipc.ipc_buffer
+  href: IPC_BUFFER.yml
+  langs:
+  - cplusplus
+  name: cbBuffer
+  fullName: msipc.ipc_buffer.cbBuffer
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The size of the buffer, in bytes.
+references:
+- uid: msipc.ipc_buffer.pvBuffer
+  href: IPC_BUFFER.yml
+  name: pvBuffer
+- uid: msipc.ipc_buffer.cbBuffer
+  href: IPC_BUFFER.yml
+  name: cbBuffer

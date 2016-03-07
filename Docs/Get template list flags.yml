@@ -1,0 +1,107 @@
+items:
+- uid: msipc.get_template_list_flags
+  id: Get template list flags
+  parent: msipc.msipc_constants
+  children:
+  - msipc.get_template_list_flags.IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY
+  - msipc.get_template_list_flags.IPC_GTL_FLAG_DEFAULT
+  - msipc.get_template_list_flags.IPC_GTL_FLAG_FORCE_DOWNLOAD
+  href: Get template list flags.yml
+  langs:
+  - cplusplus
+  name: Get template list flags
+  fullName: msipc.get_template_list_flags
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    These flags specify optional behavior for the @msipc.ipcgettemplatelist and @msipc.ipcgettemplateissuerlist functions.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.get_template_list_flags.IPC_GTL_FLAG_DEFAULT
+  id: IPC_GTL_FLAG_DEFAULT
+  parent: msipc.get_template_list_flags
+  href: Get template list flags.yml
+  langs:
+  - cplusplus
+  name: IPC_GTL_FLAG_DEFAULT
+  fullName: msipc.get_template_list_flags.IPC_GTL_FLAG_DEFAULT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: 0 is allowed.
+  syntax:
+    content: IPC_GTL_FLAG_DEFAULT = 0
+- uid: msipc.get_template_list_flags.IPC_GTL_FLAG_FORCE_DOWNLOAD
+  id: IPC_GTL_FLAG_FORCE_DOWNLOAD
+  parent: msipc.get_template_list_flags
+  href: Get template list flags.yml
+  langs:
+  - cplusplus
+  name: IPC_GTL_FLAG_FORCE_DOWNLOAD
+  fullName: msipc.get_template_list_flags.IPC_GTL_FLAG_FORCE_DOWNLOAD
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Use this flag to force the download of templates from the server. Templates are cached on the client and are not downloaded again unless the cache is expired or **IPC_GTL_FLAG_FORCE_DOWNLOAD** is set.
+
+
+
+
+
+
+
+    This flag should not be used under normal conditions. Using locally cached templates has better performance characteristics and will less likely cause the display of any unwanted UI.
+
+
+
+  syntax:
+    content: IPC_GTL_FLAG_FORCE_DOWNLOAD = 1
+- uid: msipc.get_template_list_flags.IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY
+  id: IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY
+  parent: msipc.get_template_list_flags
+  href: Get template list flags.yml
+  langs:
+  - cplusplus
+  name: IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY
+  fullName: msipc.get_template_list_flags.IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Use this flag to retrieve only the default server for the enterprise or user.
+
+
+
+    For usage information, see @msipc.ipcgettemplateissuerlist.
+
+
+
+  syntax:
+    content: IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY = 1
+references:
+- uid: msipc.ipcgettemplatelist
+  href: IpcGetTemplateList.yml
+  name: IpcGetTemplateList
+- uid: msipc.ipcgettemplateissuerlist
+  href: IpcGetTemplateIssuerList.yml
+  name: IpcGetTemplateIssuerList
+- uid: msipc.get_template_list_flags.IPC_GTL_FLAG_DEFAULT
+  href: Get template list flags.yml
+  name: IPC_GTL_FLAG_DEFAULT
+- uid: msipc.get_template_list_flags.IPC_GTL_FLAG_FORCE_DOWNLOAD
+  href: Get template list flags.yml
+  name: IPC_GTL_FLAG_FORCE_DOWNLOAD
+- uid: msipc.get_template_list_flags.IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY
+  href: Get template list flags.yml
+  name: IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY

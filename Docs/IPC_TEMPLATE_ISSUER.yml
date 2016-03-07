@@ -1,0 +1,80 @@
+items:
+- uid: msipc.ipc_template_issuer
+  id: IPC_TEMPLATE_ISSUER
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_template_issuer.connectionInfo
+  - msipc.ipc_template_issuer.fAllowFromScratch
+  - msipc.ipc_template_issuer.wszDisplayName
+  href: IPC_TEMPLATE_ISSUER.yml
+  langs:
+  - cplusplus
+  name: IPC_TEMPLATE_ISSUER
+  fullName: msipc.ipc_template_issuer
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Contains information about the template issuer,  such as display name and whether the issuer allows a from-scratch policy.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_TEMPLATE_ISSUER {
+      	IPC_CONNECTION_INFO connectionInfo;
+      	LPCWSTR wszDisplayName;
+      	BOOL fAllowFromScratch;
+      } IPC_TEMPLATE_ISSUER *PIPC_TEMPLATE_ISSUER;typedef const IPC_TEMPLATE_ISSUER *PCIPC_TEMPLATE_ISSUER;
+  inheritance: []
+- uid: msipc.ipc_template_issuer.connectionInfo
+  id: connectionInfo
+  parent: msipc.ipc_template_issuer
+  href: IPC_TEMPLATE_ISSUER.yml
+  langs:
+  - cplusplus
+  name: connectionInfo
+  fullName: msipc.ipc_template_issuer.connectionInfo
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The connection information of the issuer. For more information, see @msipc.ipc_connection_info.
+- uid: msipc.ipc_template_issuer.wszDisplayName
+  id: wszDisplayName
+  parent: msipc.ipc_template_issuer
+  href: IPC_TEMPLATE_ISSUER.yml
+  langs:
+  - cplusplus
+  name: wszDisplayName
+  fullName: msipc.ipc_template_issuer.wszDisplayName
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The display name of the issuer.
+- uid: msipc.ipc_template_issuer.fAllowFromScratch
+  id: fAllowFromScratch
+  parent: msipc.ipc_template_issuer
+  href: IPC_TEMPLATE_ISSUER.yml
+  langs:
+  - cplusplus
+  name: fAllowFromScratch
+  fullName: msipc.ipc_template_issuer.fAllowFromScratch
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: '** TRUE** if the issuer allows creating a  policy from scratch; otherwise, **FALSE**.'
+references:
+- uid: msipc.ipc_connection_info
+  href: IPC_CONNECTION_INFO.yml
+  name: IPC_CONNECTION_INFO
+- uid: msipc.ipc_template_issuer.connectionInfo
+  href: IPC_TEMPLATE_ISSUER.yml
+  name: connectionInfo
+- uid: msipc.ipc_template_issuer.wszDisplayName
+  href: IPC_TEMPLATE_ISSUER.yml
+  name: wszDisplayName
+- uid: msipc.ipc_template_issuer.fAllowFromScratch
+  href: IPC_TEMPLATE_ISSUER.yml
+  name: fAllowFromScratch

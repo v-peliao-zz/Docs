@@ -1,0 +1,5424 @@
+items:
+- uid: msipc.microsoft_information_protection_and_control_client_functions
+  id: Functions
+  children:
+  - msipc.ipcaccesscheck
+  - msipc.ipcclosehandle
+  - msipc.ipccreatelicensefromscratch
+  - msipc.ipccreatelicensefromtemplateid
+  - msipc.ipccreatelicensemetadatahandle
+  - msipc.ipcdecrypt
+  - msipc.ipcencrypt
+  - msipc.ipcfdecryptfile
+  - msipc.ipcfdecryptfilestream
+  - msipc.ipcfencryptfile
+  - msipc.ipcfencryptfilestream
+  - msipc.ipcfencryptfilestreamwithmetadata
+  - msipc.ipcfencryptfilewithmetadata
+  - msipc.ipcfgetdecryptedfilepath
+  - msipc.ipcfgetdecryptedfilepathfromstream
+  - msipc.ipcfgetencryptedfilepath
+  - msipc.ipcfgetencryptedfilepathfromstream
+  - msipc.ipcfgetfileproperty
+  - msipc.ipcfgetserializedlicensefromfile
+  - msipc.ipcfgetserializedlicensefromfilestream
+  - msipc.ipcfisfileencrypted
+  - msipc.ipcfisfilestreamencrypted
+  - msipc.ipcflogicalfilerangetorawfilerange
+  - msipc.ipcfopenfileonhandle
+  - msipc.ipcfopenfileonilockbytes
+  - msipc.ipcfreadfile
+  - msipc.ipcfreememory
+  - msipc.ipcfsetendoffile
+  - msipc.ipcfsetfileproperty
+  - msipc.ipcfwritefile
+  - msipc.ipcgeterrormessagetext
+  - msipc.ipcgetglobalproperty
+  - msipc.ipcgetkey
+  - msipc.ipcgetkeyproperty
+  - msipc.ipcgetlicenseproperty
+  - msipc.ipcgetserializedlicenseproperty
+  - msipc.ipcgettemplateissuerlist
+  - msipc.ipcgettemplatelist
+  - msipc.ipcinitialize
+  - msipc.ipcprotectwindow
+  - msipc.ipcregisterlicense
+  - msipc.ipcserializelicense
+  - msipc.ipcserializelicensemetadata
+  - msipc.ipcsetglobalproperty
+  - msipc.ipcsetlicensemetadataproperty
+  - msipc.ipcsetlicenseproperty
+  - msipc.ipcunprotectwindow
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: Functions
+  fullName: msipc.microsoft_information_protection_and_control_client_functions
+  type: Class
+  assemblies: &o0
+  - RMS21
+  namespace: Functions
+- uid: msipc.ipcaccesscheck
+  id: IpcAccessCheck
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcAccessCheck
+  fullName: msipc.ipcaccesscheck
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Checks whether a key object grants the requested right.
+
+
+
+
+
+
+
+  remarks: >+
+    This function should be used to determine whether to enforce a usage restriction, application defined or otherwise. For more information, see the @msipc.usage_restriction_reference.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcAccessCheck(
+      	_In_ IPC_KEY_HANDLE hKey,
+      	_In_ LPCWSTR wszRequestedRight,
+      	_Out_ LPBOOL pfAccessGranted
+      )
+    parameters:
+    - id: hKey [in]
+      type: IPC_KEY_HANDLE
+      description: A handle to a key object returned by either @msipc.ipcserializelicense or @msipc.ipcgetkey.
+    - id: wszRequestedRight [in]
+      type: LPCWSTR
+      description: A Unicode string that represents a single right. The string is not case-sensitive. Rights can be defined by the application or can be one of the rights defined by Rights Management Services SDK 2.1 . For more information, see  @msipc.rights.
+    - id: pfAccessGranted [out]
+      type: LPBOOL
+      description: A pointer to a variable that receives the result of the operation. The result is  **TRUE** if the requested right has been granted; otherwise, **FALSE.**
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcclosehandle
+  id: IpcCloseHandle
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcCloseHandle
+  fullName: msipc.ipcclosehandle
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Closes a handle to an Rights Management Services SDK 2.1  object and frees any resources associated with it.
+
+
+
+  remarks: >+
+    This function clears up sensitive data from memory and allows the Rights Management Services SDK 2.1  system to keep an accurate reference count on objects used.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcCloseHandle(
+      	_In_ IPC_HANDLE handle
+      )
+    parameters:
+    - id: handle [in]
+      type: IPC_HANDLE
+      description: The handle to close.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipccreatelicensefromscratch
+  id: IpcCreateLicenseFromScratch
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcCreateLicenseFromScratch
+  fullName: msipc.ipccreatelicensefromscratch
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns a handle to a license created from scratch.
+
+
+
+    The license can be edited by calling @msipc.ipcsetlicenseproperty.
+
+
+
+  remarks: >+
+    When you have finished using the license handle created with this function, close it by using the @msipc.ipcclosehandle function.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcCreateLicenseFromScratch(
+      	_In_ PCIPC_TEMPLATE_ISSUER pTemplateIssuer,
+      		 DWORD dwFlags,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ PIPC_LICENSE_HANDLE phLicense
+      )
+    parameters:
+    - id: pTemplateIssuer [in]
+      type: PCIPC_TEMPLATE_ISSUER
+      description: >+
+        A pointer to a @msipc.ipc_template_issuer structure returned by a call to @msipc.ipcgettemplateissuerlist.
+
+
+
+        The license created will be protected to the AD RMS server pointed to by the connectionInfo member of this @msipc.ipc_template_issuer structure.
+
+
+
+    - id: dwFlags
+      type: DWORD
+      description: Must be 0.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This parameter is reserved and must be **NULL**.
+    - id: phLicense [out]
+      type: PIPC_LICENSE_HANDLE
+      description: A pointer to a variable that receives a handle to the created license.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipccreatelicensefromtemplateid
+  id: IpcCreateLicenseFromTemplateID
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcCreateLicenseFromTemplateID
+  fullName: msipc.ipccreatelicensefromtemplateid
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns a handle to a license created from a template.
+
+
+
+    The license can be edited by calling the @msipc.ipcsetlicenseproperty function.
+
+
+
+  remarks: >+
+    When you have finished using the license handle created with this function, close it by using the @msipc.ipcclosehandle function.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcCreateLicenseFromTemplateID(
+      	_In_ LPCWSTR wszTemplateID,
+      		 DWORD dwFlags,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ PIPC_LICENSE_HANDLE phLicense
+      )
+    parameters:
+    - id: wszTemplateID [in]
+      type: LPCWSTR
+      description: A template ID obtained from a call to the @msipc.ipcgettemplatelist function.
+    - id: dwFlags
+      type: DWORD
+      description: This parameter must be 0.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This parameter is reserved and must be **NULL**.
+    - id: phLicense [out]
+      type: PIPC_LICENSE_HANDLE
+      description: A pointer to a variable that receives a handle to the created license.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipccreatelicensemetadatahandle
+  id: IpcCreateLicenseMetadataHandle
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcCreateLicenseMetadataHandle
+  fullName: msipc.ipccreatelicensemetadatahandle
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Creates a handle for create or modify operations on the  metadata of the serialized license.
+
+
+
+
+
+
+
+  remarks: >+
+    The user must be the owner of the PL to be able to modify the metadata.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcCreateLicenseMetadataHandle(
+      	_In_ PCIPC_BUFFER pvSerializedLicense,
+      		 IPC_KEY_HANDLE hKey,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ PIPC_METADATA_HANDLE phMetadata
+      )
+    parameters:
+    - id: pvSerializedLicense [in]
+      type: PCIPC_BUFFER
+      description: Pointer to the serialized license with or without the metadata information set.
+    - id: hKey
+      type: IPC_KEY_HANDLE
+      description: Handle to a key object acquired via @msipc.ipcgetkey or via @msipc.ipcgetserializedlicenseproperty.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This is a reserved field and must be NULL.
+    - id: phMetadata [out]
+      type: PIPC_METADATA_HANDLE
+      description: The resulting handle.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **E_INVALIDARG**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcdecrypt
+  id: IpcDecrypt
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcDecrypt
+  fullName: msipc.ipcdecrypt
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Decrypts  encrypted data.
+
+
+
+    For information about using this function with MSDRM encryption, see @msipc.ipcdecrypt.
+
+
+
+  remarks: "Data decryption approachWhen decrypting data, memory must be allocated by the caller to store the decrypted data. To reduce runtime memory usage, you may choose to decrypt a large amount of contiguous data by breaking it up into smaller blocks first, rather than decrypting all the data in a single call.\r\n\r\n\r\n\r\nBreaking your content into multiple segments and performing multiple calls may also be required if the content of your document is not stored contiguously.\r\n\r\nTo decrypt a block of data in a single call, pass in 0 (zero) for *dwBlockNumber*, **TRUE** for *fFinal*, and set *pbInput* to thebeginning of your data.\r\n\r\nTo decrypt a large block of contiguous data over the course of several calls, use the **IPC_KI_BLOCK_SIZE** property from @msipc.ipcgetkeyproperty to determine the block size usedby the platform. Break up your data into segments that are multiples of this size. For each successive call to @msipc.ipcdecrypt, set *dwBlockNumber*to the value of (bytes of data encrypted so far / block size as determined by @msipc.ipcgetkeyproperty). Be sure to set *pbInput* to the location ofnext block of data to decrypt, and *pbOutput* to the proper location to receive the next block of data to receive the result of that decryption. Set *fFinal* to **TRUE** only if you are passingin the last block of data to be decrypted.\r\n\r\nPaddingIn the default case, when *fFinal* is set to **TRUE**, the size of the decrypted data may not be a multiple of the platform's block size.  @msipc.ipcdecrypt will determine the size of the original plaintext data and return this value in *pcbResult*.  \r\n\r\nIf your application decrypts data that was protected by using either the MSDRM libraryor 	the  Rights Management Services SDK 2.1  library in the case when the **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** property was set during license creation,then automatic padding is not supported. The final decrypted block will be a multiple of the platform's block size, as determined by @msipc.ipcgetkeyproperty.  \r\n\r\nIf your application decrypts data that could be encrypted in either mode, you must query which type of encryption was used to decrypt the final block correctly.  Use the **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** property to do this.\r\n\r\nCompatibility with MSDRMIn most cases, it is possible to use Rights Management Services SDK 2.1  to decrypt content encrypted by using MSDRM.\r\n\r\nIt is also possible to create MSDRM applications that will produce information that  Rights Management Services SDK 2.1  cannot decrypt.\r\n\r\nThe following prerequisites will help to ensure decryption is possible:\r\n\r\n* The license generated by MSDRM's @rm.drmgetsignedissuancelicense specified LAES as the *wszSymKeyType* parameter.\r\n\r\n* Content was encrypted by MSDRM in multiples of the blocksize, queried using @rm.drmgetinfo.\r\n\r\n* Content is decrypted by Rights Management Services SDK 2.1  in multiples of the blocksize, queried using @msipc.ipcgetkeyproperty.\r\n\r\nTesting is the only way to know for sure if your MSDRM-encrypted data can be decrypted by using Rights Management Services SDK 2.1 .\r\n\r\n"
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcDecrypt(
+      	_In_ IPC_KEY_HANDLE hKey,
+      		 DWORD dwBlockNumber,
+      		 BOOL fFinal,
+      	_In_ PBYTE pbInput,
+      		 DWORD cbInput,
+      	_Out_ PBYTE pbOutput,
+      		 DWORD cbOutput,
+      	_Out_ DWORD *pcbResult
+      )
+    parameters:
+    - id: hKey [in]
+      type: IPC_KEY_HANDLE
+      description: The handle to a key object from @msipc.ipcgetkey or @msipc.ipcserializelicense.
+    - id: dwBlockNumber
+      type: DWORD
+      description: The block number (calculated as block number == offset/block size). For more information on usage, see Remarks.
+    - id: fFinal
+      type: BOOL
+      description: Specifies whether this is the last section in a series being decrypted. **TRUE** for the last or only block; **FALSE** if there are more blocks to be decrypted.
+    - id: pbInput [in]
+      type: PBYTE
+      description: A pointer to the cipher text to decrypt.
+    - id: cbInput
+      type: DWORD
+      description: The byte count of the cipher text to decrypt. The length of the cipher text must be a multiple of the block size unless *fFinal* is **TRUE**.
+    - id: pbOutput [out]
+      type: PBYTE
+      description: >+
+        A pointer to the output buffer. On output, this buffer receives the plaintext.
+
+
+
+        Set to **NULL** to query for the size required for the output buffer.
+
+
+
+    - id: cbOutput
+      type: DWORD
+      description: The size of the output buffer, in bytes.
+    - id: pcbResult [out]
+      type: DWORD
+      description: A pointer to a **ULONG** that receives the number of bytes copied to *pbOutput*. If *pbOutput* is **NULL**, *pcbResult* receives the size, in bytes, required for the plaintext.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcencrypt
+  id: IpcEncrypt
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcEncrypt
+  fullName: msipc.ipcencrypt
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Encrypts plaintext data.
+
+
+
+    For important information about using this function, see @msipc.ipcencrypt.
+
+
+
+  remarks: >+
+    Data encryption approachWhen encrypting data, memory must be allocated by the caller to store the encrypted data. To reduce runtime memory usage, you may choose to encrypt a large amount of contiguous data by breaking it up into smaller blocks first, rather than encrypting all the data in a single call.
+
+
+
+
+
+
+
+    Breaking your content into multiple segments and performing multiple calls may also be required if the content of your document is not stored contiguously.
+
+
+
+    To encrypt a block of data in a single call, pass in 0 (zero) for *dwBlockNumber*, **TRUE** for *fFinal*, and set *pbInput* to thebeginning of your data.
+
+
+
+    To encrypt a large block of contiguous data over the course of several calls, use the **IPC_KI_BLOCK_SIZE** property from @msipc.ipcgetkeyproperty to determine the block size usedby the platform. Break up your data into segments that are multiples of this size. For each successive call to @msipc.ipcencrypt, set *dwBlockNumber*to the value of (bytes of data encrypted so far / block size as determined by @msipc.ipcgetkeyproperty). Be sure to set *pbInput* to the location ofthe next block of data to encrypt, and *pbOutput* to the proper location to receive the next block of data resulting from that encryption. Set *fFinal* to **TRUE** only if you are passingin the last block of data to be encrypted.
+
+
+
+
+
+
+
+    Automatic padding is not supported. All segments of data must be a multiple of the platform's block size, as determined by@msipc.ipcgetkeyproperty.
+
+
+
+    PaddingIn the default case, when *fFinal* is set to **TRUE**, the input data does not need to be a multiple of the platform's block size.  @msipc.ipcencrypt may generate encrypted data that is larger in size than the original data.  To ensure correct behavior, you must first query the required size of the encrypted data by calling @msipc.ipcencrypt with *pbOutput* set to **NULL**.  It is not recommended to pad the input data to a multiple of the platform's block size in your application because the platform's block size may be significantly larger than the padding data actually required.
+
+
+
+    If your application encrypts data that can be consumed by using the MSDRM library, you may choose to set the **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** property when creating a license.  In this case, automatic padding is not supported. All segments of data must be a multiple of the platform's block size, as determined by @msipc.ipcgetkeyproperty.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcEncrypt(
+      	_In_ IPC_KEY_HANDLE hKey,
+      		 DWORD dwBlockNumber,
+      		 BOOL fFinal,
+      	_In_ PBYTE pbInput,
+      		 DWORD cbInput,
+      	_Out_ PBYTE pbOutput,
+      		 DWORD cbOutput,
+      	_Out_ DWORD *pcbResult
+      )
+    parameters:
+    - id: hKey [in]
+      type: IPC_KEY_HANDLE
+      description: A handle to a key object from @msipc.ipcgetkey or @msipc.ipcserializelicense.
+    - id: dwBlockNumber
+      type: DWORD
+      description: The block number (calculated as block number == offset/block size). For information about usage, see Remarks.
+    - id: fFinal
+      type: BOOL
+      description: Specifies whether this is the last section in a series being encrypted. **TRUE** for the last or only block; **FALSE** if there are more blocks to be encrypted.
+    - id: pbInput [in]
+      type: PBYTE
+      description: A pointer to the plaintext to encrypt.
+    - id: cbInput
+      type: DWORD
+      description: The byte count of the plaintext to encrypt. The length of the plaintext must be a multiple of             the block size unless *fFinal* is **FALSE**.
+    - id: pbOutput [out]
+      type: PBYTE
+      description: >+
+        A pointer to the output buffer. On output, this buffer receives the ciphertext.
+
+
+
+        Set to **NULL** to query for the size required for the output buffer.
+
+
+
+    - id: cbOutput
+      type: DWORD
+      description: The size of the output buffer, in bytes.
+    - id: pcbResult [out]
+      type: DWORD
+      description: A pointer to a **ULONG** that receives the number of bytes copied to *pbOutput*. If *pbOutput* is **NULL**, *pcbResult* receives the size, in bytes, required for the ciphertext.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfreememory
+  id: IpcFreeMemory
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcFreeMemory
+  fullName: msipc.ipcfreememory
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Frees a buffer allocated by another  Rights Management Services SDK 2.1  function.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      void WINAPI IpcFreeMemory(
+      	_In_ LPVOID pb
+      )
+    parameters:
+    - id: pb [in]
+      type: LPVOID
+      description: A pointer to the buffer to free.
+    return:
+      type: void
+      description: 
+  inheritance: []
+- uid: msipc.ipcgeterrormessagetext
+  id: IpcGetErrorMessageText
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetErrorMessageText
+  fullName: msipc.ipcgeterrormessagetext
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns the error message text associated with a supplied error code.
+
+
+
+    This function can translate both  errors and errors returned by another Rights Management Services SDK 2.1  function.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetErrorMessageText(
+      		 HRESULT hrError,
+      		 DWORD dwLanguageId,
+      	_Out_ LPCWSTR *ppwszErrorMessageText
+      )
+    parameters:
+    - id: hrError
+      type: HRESULT
+      description: The error code to translate.
+    - id: dwLanguageId
+      type: DWORD
+      description: The language identifier for the requested message.  If zero, the function searches for LANGIDs in the order  specified by @base.formatmessage.
+    - id: ppwszErrorMessageText [out]
+      type: LPCWSTR
+      description: A pointer  to a variable that receives a **NULL**-terminated string that contains the translated error text.  This buffer is allocated by the Active Directory Rights Management Services Client 2.1    and must be freed by calling @msipc.ipcfreememory.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcgetglobalproperty
+  id: IpcGetGlobalProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetGlobalProperty
+  fullName: msipc.ipcgetglobalproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns information about environment properties  of the  Rights Management Services SDK 2.1  system.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetGlobalProperty(
+      		 DWORD dwPropID,
+      	_Out_ LPVOID *ppvProperty
+      )
+    parameters:
+    - id: dwPropID
+      type: DWORD
+      description: >+
+        The ID of the property that is being queried.
+
+
+
+        For a list of valid property IDs, see @msipc.environment_properties.
+
+
+
+    - id: ppvProperty [out]
+      type: LPVOID
+      description: A pointer to a variable that  receives a pointer to the buffer that contains  the queried information. The buffer is allocated by the system and must be freed by calling @msipc.ipcfreememory. The structure of the information depends on the *dwPropID* parameter. For more information, see @msipc.environment_properties.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcgetkey
+  id: IpcGetKey
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetKey
+  fullName: msipc.ipcgetkey
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns a handle to a key object created from a serialized license.
+
+
+
+
+
+
+
+  remarks: "A key object is required for decryption, encryption, and checking granted rights.  A key object is created only if the current user has access to the content that the serialized license in *pvLicense*  is associated with.  The key object is populated with the rights granted to the current user.  Whether a specific right has been granted to the current user can be checked by calling @msipc.ipcaccesscheck.\r\n\r\n@msipc.ipcgetkey may initialize COM with the **COINIT_APARTMENTTHREADED** flag to display user interface elements.  As a result, callers who have initialized COM with the **COINIT_MULTITHREADED** flag must use the @msipc.ipcgetkey function in  silent mode by using the **IPC_PROMPT_FLAG_SILENT** flag with the @msipc.ipc_prompt_ctx structure.  \r\n\r\n"
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetKey(
+      	_In_ PCIPC_BUFFER pvLicense,
+      		 DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ PIPC_KEY_HANDLE phKey
+      )
+    parameters:
+    - id: pvLicense [in]
+      type: PCIPC_BUFFER
+      description: The serialized license for which the key is to be created. For more information, see @msipc.ipc_buffer.
+    - id: dwFlags
+      type: DWORD
+      description: Must be 0.
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to an @msipc.ipc_prompt_ctx structure. This can be used in cases where authentication prompts are not desirable or when an application wants to control the modal behavior of any prompt dialogs.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: Reserved for future use. Must be **NULL**.
+    - id: phKey [out]
+      type: PIPC_KEY_HANDLE
+      description: >+
+        A pointer to a variable that receives a handle to the key object created by this function.
+
+
+
+
+
+
+
+        This key handle should be closed with @msipc.ipcclosehandle when no longer needed.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_ONLINE**
+
+        </td>
+
+        <td>
+
+        Rights Management Services SDK 2.1  needs network access to complete the operation, but the application requested offline mode.
+
+
+
+        Call the function again, without specifying the **IPC_PROMPT_FLAG_OFFLINE** flag. Typically, this flag is used in situations in which failure is acceptable and preferred to performing a network access. The system is already optimized to use the network only when absolutely necessary, so we do not recommend that developers use the **IPC_PROMPT_FLAG_OFFLINE** flag as an optimization.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_UI**
+
+        </td>
+
+        <td>
+
+        Rights Management Services SDK 2.1  needs to display a window to complete the operation, but the application requested silent mode.
+
+
+
+        Call the function again, without specifying the **IPC_PROMPT_FLAG_SILENT** flag.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_RIGHT_NOT_GRANTED**
+
+        </td>
+
+        <td>
+
+        Meaning: The user does not have rights to consume the content.
+
+
+
+        Action: Communicate the process for requesting adequate rights. Referral information can be queried using @msipc.ipcgetserializedlicenseproperty  with *dwPropID* set to **IPC_LI_REFERRAL_INFO_URL**.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcgetkeyproperty
+  id: IpcGetKeyProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetKeyProperty
+  fullName: msipc.ipcgetkeyproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns requested property information.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetKeyProperty(
+      	_In_ IPC_KEY_HANDLE hKey,
+      		 DWORD dwPropID,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ LPVOID *ppvProperty
+      )
+    parameters:
+    - id: hKey [in]
+      type: IPC_KEY_HANDLE
+      description: A handle to the key object.
+    - id: dwPropID
+      type: DWORD
+      description: >-
+        The ID of the property to query.<table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPC_KI_BLOCK_SIZE**
+
+        </td>
+
+        <td>
+
+        **2**
+
+        </td>
+
+        <td>
+
+        *ppvProperty* is of type **LPDWORD***.
+
+
+
+        The block size used when encrypting/decrypting.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPC_KI_LICENSE**
+
+        </td>
+
+        <td>
+
+        **6**
+
+        </td>
+
+        <td>
+
+        *ppvProperty* is of type **PIPC_BUFFER***. For more information, see @msipc.microsoft_information_protection_and_control_client_data_types.
+
+
+
+        The license from which the key object was created.
+
+
+
+        See @msipc.ipcgetkey for details.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPC_KI_USER_DISPLAYNAME**
+
+        </td>
+
+        <td>
+
+        **7**
+
+        </td>
+
+        <td>
+
+        *ppvProperty* is of type **LPWSTR***.
+
+
+
+        The user for which the key is acquired.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This parameter is reserved for future use. It must be **NULL**.
+    - id: ppvProperty [out]
+      type: LPVOID
+      description: >+
+        A pointer to a variable that receives a pointer to the buffer that contains the property information. The structure of the property information depends on the *dwPropID* parameter.
+
+
+
+
+
+
+
+        The buffer is allocated by the Rights Management Services SDK 2.1  and must be freed by calling @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcgetlicenseproperty
+  id: IpcGetLicenseProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetLicenseProperty
+  fullName: msipc.ipcgetlicenseproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Retrieves the information available from a  license.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetLicenseProperty(
+      	_In_ IPC_LICENSE_HANDLE hLicense,
+      		 DWORD dwPropID,
+      		 LCID lcid,
+      	_Out_ LPVOID *ppvProperty
+      )
+    parameters:
+    - id: hLicense [in]
+      type: IPC_LICENSE_HANDLE
+      description: >+
+        A handle to the license or template to be queried.
+
+
+
+        You can get a license handle from these functions:
+
+
+
+        * @msipc.ipccreatelicensefromscratch
+
+
+
+        * @msipc.ipccreatelicensefromtemplateid
+
+
+
+    - id: dwPropID
+      type: DWORD
+      description: >+
+        The ID of the license property for which to query. The *pvLicenseInfo* parameter must match this property ID. For a list of valid property IDs, see @msipc.license_property_types.
+
+
+
+        When querying for user rights, take note of the setting of **cbSize** on the @msipc.ipc_user_rights_list structure. For more information, see @msipc.ipc_user_rights_list.
+
+
+
+    - id: lcid
+      type: LCID
+      description: >+
+        For localized properties, contains the locale identifier (LCID) of the descriptor to query. This parameter is ignored unless *dwPropID* is **IPC_LI_DESCRIPTOR**.
+
+
+
+
+
+
+
+        See the Frequently asked questions section of the @msipc.release_notes__rtm_ topic for information about the API behavior regarding language.
+
+
+
+    - id: ppvProperty [out]
+      type: LPVOID
+      description: 'A pointer to a variable that receives a pointer to the buffer that contains the license information. The buffer is allocated by the  Active Directory Rights Management Services Client 2.1  and must be freed by calling @msipc.ipcfreememory.  The structure of the data returned depends on the property ID specified in *dwPropID*. For more information, see @msipc.license_property_types. '
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_LOCALE_NOT_FOUND**
+
+        </td>
+
+        <td>
+
+        Meaning: The application specified a nonzero *lcid*, but no templates were available that had a descriptor in this locale.
+
+
+
+        Action: For more information about *lcid* see, the description of **IPC_LI_DESCRIPTOR** in @msipc.license_property_types. Also see the Frequently asked questions section of the @msipc.release_notes__rtm_ topic.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcgetserializedlicenseproperty
+  id: IpcGetSerializedLicenseProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetSerializedLicenseProperty
+  fullName: msipc.ipcgetserializedlicenseproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Retrieves the information available from a serialized license.
+
+
+
+    This is functionally equivalent to information that could be gathered from@msipc.ipcgetlicenseproperty, but it may be performed by the consumer of content who only has the serialized license.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetSerializedLicenseProperty(
+      	_In_ PCIPC_BUFFER pvLicense,
+      		 DWORD  dwPropID,
+      	_In_opt_ IPC_KEY_HANDLE  hKey,
+      		 LCID lcid,
+      	_Out_ LPVOID *ppvProperty
+      )
+    parameters:
+    - id: pvLicense [in]
+      type: PCIPC_BUFFER
+      description: A buffer which stores a serialized license. For more information, see @msipc.microsoft_information_protection_and_control_client_data_types.
+    - id: dwPropID
+      type: 'DWORD '
+      description: >+
+        ID of the property to query. For more information on valid IDs, see  @msipc.license_property_types.
+
+
+
+        When querying for user rights, take note of the setting of **cbSize** on the @msipc.ipc_user_rights_list structure. For more information, see @msipc.ipc_user_rights_list.
+
+
+
+    - id: hKey [in, optional]
+      type: 'IPC_KEY_HANDLE '
+      description: Handle to a key object acquired by using the @msipc.ipcgetkey function.
+    - id: lcid
+      type: LCID
+      description: >+
+        For localized properties, *lcid* contains the locale ID of the descriptor to query. This parameter is ignored unless *dwPropID* is **IPC_LI_DESCRIPTOR**.
+
+
+
+
+
+
+
+        See the Frequently asked questions section of the @msipc.release_notes__rtm_ topic for information about the API behavior regarding language ID.
+
+
+
+    - id: ppvProperty [out]
+      type: LPVOID
+      description: Pointer to a Pointer of a buffer to hold the license information. The buffer is allocated by the API and must be de-allocated using  @msipc.ipcfreememory. The structure returned depends on the value of *dwPropID*. For more information on valid types,  see @msipc.license_property_types.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_LOCALE_NOT_FOUND**
+
+        </td>
+
+        <td>
+
+        Meaning: The application specified a nonzero *lcid*, but no templates were available that had a descriptor in this locale.
+
+
+
+        Action: For more information about *lcid* see, the description of **IPC_LI_DESCRIPTOR** in @msipc.license_property_types. Also see the Frequently asked questions section of the @msipc.release_notes__rtm_ topic.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_KEY_PARAMETER**
+
+        </td>
+
+        <td>
+
+        Meaning: The *hKey* parameter was needed with this call due to the property being accessed by using the *dwPropID* parameter. For more information about properties needing a key, see @msipc.license_property_types.
+
+
+
+        Action: Provide the *hKey* parameter acquired by using the @msipc.ipcgetkey function.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_RIGHT_NOT_GRANTED**
+
+        </td>
+
+        <td>
+
+        Meaning: The user does not have **IPC_GENERIC_VIEW_RIGHTS** to the license passed in, when trying to reuse a license.
+
+
+
+
+
+
+
+
+
+        **Tip** Consider messaging the user about this absence of rights.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcgettemplateissuerlist
+  id: IpcGetTemplateIssuerList
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetTemplateIssuerList
+  fullName: msipc.ipcgettemplateissuerlist
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns available issuers of rights policy templates.
+
+
+
+    The available issuers is a list of RMS servers that this user has already contacted.
+
+
+
+  remarks: "The issuer information can be used as basis of application-specified policy.An application can use the issuer information returned by this function to create its own usage policy by calling @msipc.ipccreatelicensefromscratch if the **fAllowFromScratch** of the @msipc.ipc_template_issuer structure is set to **TRUE**. \r\n\r\n@msipc.ipcgettemplateissuerlist may initialize COM with the **COINIT_APARTMENTTHREADED** flag to display user interface elements.  As a result, callers who have initialized COM with the **COINIT_MULTITHREADED** flag must use the @msipc.ipcgettemplateissuerlist function in  silent mode by using the **IPC_PROMPT_FLAG_SILENT** flag with the  @msipc.ipc_prompt_ctx structure.\r\n\r\n"
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetTemplateIssuerList(
+      	_In_opt_ PCIPC_CONNECTION_INFO pConnectionInfo,
+      		 DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ PCIPC_TEMPLATE_ISSUER_LIST *ppcTemplateIssuers
+      )
+    parameters:
+    - id: pConnectionInfo [in, optional]
+      type: PCIPC_CONNECTION_INFO
+      description: "Optional RMS Server information from which to get templates. See @msipc.ipc_connection_info for server URLs.\r\n\r\nIf specified, this function will return only the @msipc.ipc_template_issuer_list structure for the specified server.  If not specified,  this function will return @msipc.ipc_template_issuer_list structures for all available servers. \r\n\r\n"
+    - id: dwFlags
+      type: DWORD
+      description: >-
+        <table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPC_GTIL_FLAG_DEFAULT_SERVER_ONLY**
+
+        </td>
+
+        <td>
+
+        **1**
+
+        </td>
+
+        <td>
+
+        Use this flag to retrieve only the default server for the enterprise or user. If this flag is specified, then *pConnectionInfo* should be **NULL**.
+
+        </td>
+
+        </tr>
+
+        </table>
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to an @msipc.ipc_prompt_ctx structure. This can be used in cases where authentication prompts are not desirable or when an application wants to control the modal behavior of any prompt dialogs.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: Reserved for future use. Must be **NULL**.
+    - id: ppcTemplateIssuers [out]
+      type: PCIPC_TEMPLATE_ISSUER_LIST
+      description: >+
+        A pointer to a variable that receives a pointer to the buffer that contains the Template Issuer  List. For more information, see @msipc.ipc_template_issuer_list.
+
+
+
+
+
+
+
+        The buffer is allocated by the Rights Management Services SDK 2.1  and must be freed by calling @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_ONLINE**
+
+        </td>
+
+        <td>
+
+        Meaning: Rights Management Services SDK 2.1  needs network access to complete the operation, but the application requested offline mode.
+
+
+
+        Action: Call the function again, without specifying the **IPC_PROMPT_FLAG_OFFLINE** flag. Typically, this flag is used in situations in which failure is acceptable and preferred to performing a network access. The system is already optimized to use the network only when absolutely necessary, so we do not recommend that developers use the **IPC_PROMPT_FLAG_OFFLINE** flag as an optimization.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_UI**
+
+        </td>
+
+        <td>
+
+        Meaning: Rights Management Services SDK 2.1  needs to display a window to complete the operation, but the application requested silent mode.
+
+
+
+        Action: Call the function again, without specifying the IPC_PROMPT_FLAG_SILENT flag.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcgettemplatelist
+  id: IpcGetTemplateList
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcGetTemplateList
+  fullName: msipc.ipcgettemplatelist
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Returns official rights policy templates.
+
+
+
+
+
+
+
+
+
+
+
+    Templates are available beginning with .
+
+
+
+  remarks: >+
+    Templates are available starting with .
+
+
+
+
+
+
+
+    Typical application behavior:
+
+
+
+    * When displaying template selection UI, it typically displays both       **IPC_TEMPLATE_INFO::wszIssuerDisplayName** and       **IPC_TEMPLATE_INFO::wszName** for each available template.
+
+
+
+    * Extract IPC_TEMPLATE_INFO::wszID from the       @msipc.ipc_template_info selected by the user.
+
+
+
+    * Pass the extracted wszID to       @msipc.ipcserializelicense to generate a Rights       Management Services (RMS) license.
+
+
+
+    All templates returned are sorted based on the issuer name in the     @msipc.ipc_template_info structure. Downloaded templates     are cached locally and are not downloaded again on successive calls unless the cache is expired. To modify this     behavior, set *dwFlags* to **IPC_GTL_FLAG_FORCE_DOWNLOAD**. For more     information, see @msipc.get_template_list_flags.
+
+
+
+    Because template updates can occur in the background, in general, applications should call      IpcGetTemplateList immediately before presenting the templates to the user.
+
+
+
+
+
+
+
+    @msipc.ipcgettemplatelist may initialize COM with the     **COINIT_APARTMENTTHREADED** flag to display user interface elements.  As a result, callers     who have initialized COM with the **COINIT_MULTITHREADED** flag must use the     @msipc.ipcgettemplatelist function in  silent mode by     using the **IPC_PROMPT_FLAG_SILENT** flag on with the     @msipc.ipc_prompt_ctx structure.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcGetTemplateList(
+      	_In_opt_ PCIPC_CONNECTION_INFO pConnectionInfo,
+      		 DWORD dwFlags,
+      		 LCID lcid,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Reserved_ LPVOID pvReserved,
+      	_Out_ PCIPC_TIL *ppcTil
+      )
+    parameters:
+    - id: pConnectionInfo [in, optional]
+      type: PCIPC_CONNECTION_INFO
+      description: Optional AD RMS server information from which to get templates. For more information, see       @msipc.ipc_connection_info.
+    - id: dwFlags
+      type: DWORD
+      description: Specifies optional behavior for this function. For a list of optional flags,       @msipc.get_template_list_flags.
+    - id: lcid
+      type: LCID
+      description: >+
+        The locale ID (LCID) to use for template names and descriptions.
+
+
+
+        When passing a nonzero value as the *lcid*, only information from templates that have        a name and description for that *lcid* will be retrieved.
+
+
+
+        When zero is passed as the *lcid*, the Rights Management Services SDK 2.1  infrastructure        follows a particular process, described in the Frequently asked questions section of the        @msipc.release_notes__rtm_ topic, to select a locale to use. For        more information, see @msipc.release_notes__rtm_.
+
+
+
+        For more information about language IDs, see        @intl.locale_identifiers.
+
+
+
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to an @msipc.ipc_prompt_ctx       structure. This can be used in cases where authentication prompts are not desired or when an application wants       to control the modal behavior of any prompt dialog boxes.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This parameter is reserved for future use and must be set to **NULL**.
+    - id: ppcTil [out]
+      type: PCIPC_TIL
+      description: >+
+        A pointer to a variable that receives a pointer to the buffer that contains the Template Information List.        For more information, see @msipc.ipc_til.
+
+
+
+
+
+
+
+        The buffer is allocated by the Rights Management Services SDK 2.1  and must be freed by calling        @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it        returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description        of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in        the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_ONLINE**
+
+        </td>
+
+        <td>
+
+        Meaning: Rights Management Services SDK 2.1  needs network access to complete the operation, but the application          requested offline mode.
+
+
+
+        Action: Call the function again, without specifying the **IPC_PROMPT_FLAG_OFFLINE**          flag. Typically, this flag is used in situations in which failure is acceptable and preferred to performing a          network access. The system is already optimized to use the network only when absolutely necessary, so we do          not recommend that developers use the **IPC_PROMPT_FLAG_OFFLINE** flag as an          optimization.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_UI**
+
+        </td>
+
+        <td>
+
+        Meaning: The Rights Management Services SDK 2.1  needs to display a window to complete the operation, but the          application requested silent mode.
+
+
+
+        Action: Call the function again, without specifying the **IPC_PROMPT_FLAG_SILENT**          flag.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_LOCALE_NOT_FOUND**
+
+        </td>
+
+        <td>
+
+        Meaning: The application specified a nonzero *lcid*, but no templates were          available that had a descriptor in this locale.
+
+
+
+        Action: For more information about *lcid* see, the description of          **IPC_LI_DESCRIPTOR** in          @msipc.license_property_types. Also see the          Frequently asked questions section of the          @msipc.release_notes__rtm_ topic.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcinitialize
+  id: IpcInitialize
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcInitialize
+  fullName: msipc.ipcinitialize
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Locates the installed version of Msipc.dll and calls the      @base.loadlibrary against     it.
+
+
+
+    @msipc.ipcinitialize is made available through a static library, *msipc_s.lib*.
+
+
+
+
+
+
+
+
+
+    **Important** This function must be called before any other Rights Management Services SDK 2.1  function, otherwise     the system will not work properly.
+
+
+
+  remarks: >+
+    For installation information about Msipc.dll, see the reference topic      @msipc.sdk_elements.
+
+
+
+
+
+
+
+    The *msipc.dll* must be delay loaded as part of your project configuration in Visual Studio. For more information, see step 4 in  @msipc.how_to_configure_a_visual_studio_project_to_use_the_ad_rms_sdk_2_0.
+
+
+
+
+
+
+
+    There is currently no corresponding  function to free this      library.
+
+
+
+
+
+
+
+    After Msipc.dll is loaded in a process, it cannot be unloaded.
+
+
+
+
+
+
+
+    It is not safe to call @msipc.ipcinitialize from within      @base.dllmain.
+
+
+
+
+
+
+
+    @msipc.ipcinitialize is made available through a static library, *msipc_s.lib*.
+
+
+
+  syntax:
+    content: HRESULT WINAPI IpcInitialize()
+    parameters: []
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcprotectwindow
+  id: IpcProtectWindow
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcProtectWindow
+  fullName: msipc.ipcprotectwindow
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Protects a window by using mechanisms available on the current operating system.
+
+
+
+
+
+
+
+  remarks: >+
+    Typically, you will call @msipc.ipcprotectwindow when your application is loading an RMS-protected document.  If the user does not have rights to copy/paste the protected content hosted within a window, you need to call @msipc.ipcprotectwindow on this window.  If this call fails, you cannot display the protected content securely, and you should treat this as a failure to load the document, presenting an appropriate error message to the user.
+
+
+
+    To ensure that your application works with current and future versions of the AD RMS SDK, you should use the following code  to protect a window.
+
+
+
+
+
+
+
+    hr = IpcProtectWindow(hwnd);
+
+    if (FAILED(hr) && (IPCERROR_PROPERTY_ALREADY_SET != hr))
+
+    {
+      // Fail to load document
+    }
+
+    else
+
+    {
+      // Success!  Continue...
+    hr = S_OK;
+
+    }
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcProtectWindow(
+      	_In_ HWND     hwnd
+      )
+    parameters:
+    - id: hwnd [in]
+      type: 'HWND    '
+      description: The window to protect.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an *HRESULT* value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcserializelicense
+  id: IpcSerializeLicense
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcSerializeLicense
+  fullName: msipc.ipcserializelicense
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Serializes a license.
+
+
+
+
+
+
+
+    Serialization is the final mandatory step that is needed before the license can be used for encryption. Call this  function to finalize a license. This applies to @msipc.ipcencrypt but not @msipc.ipcfencryptfile.
+
+
+
+  remarks: >+
+    @msipc.ipcserializelicense may initialize COM with the **COINIT_APARTMENTTHREADED** flag to display user interface elements.  As a result, callers who have initialized COM with the **COINIT_MULTITHREADED** flag must use the @msipc.ipcserializelicense function in  silent mode by using the **IPC_PROMPT_FLAG_SILENT** flag with the @msipc.ipc_prompt_ctx structure.
+
+
+
+    License buffer data is encoded in UTF8 when using the default flags and UTF16 when using the **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** flag.
+
+
+
+    If you are storing confidential information in the AppSpecific data field, you should specify the **IPC_SL_FLAG_KEY_NO_PERSIST_LICENSE** when serializing your license (@msipc.ipcserializelicense) so your information will remain confidential.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcSerializeLicense(
+      	_In_ LPCVOID pvLicenseInfo,
+      		 DWORD dwType,
+      		 DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Out_opt_ PIPC_KEY_HANDLE phKey,
+      	_Out_ PIPC_BUFFER *ppvLicense
+      )
+    parameters:
+    - id: pvLicenseInfo [in]
+      type: LPCVOID
+      description: A pointer to the template ID or a license handle, depending on the value of the *dwType* parameter. The template ID or license handle identifies the license to be serialized.
+    - id: dwType
+      type: DWORD
+      description: >-
+        The type of data for the  *pvLicenseInfo* parameter.<table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPC_SL_TEMPLATE_ID**
+
+        </td>
+
+        <td>
+
+        **1**
+
+        </td>
+
+        <td>
+
+        Generate a serialized license based on a supplied Rights Management Services (RMS) Template ID.  *pvLicenseInfo* must contain an **LPCWSTR** that represents the template ID.  The template ID must be computed by calling @msipc.ipcgettemplatelist, and extracting the **wszID** field from one of the returned @msipc.ipc_template_info structures.
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPC_SL_LICENSE_HANDLE**
+
+        </td>
+
+        <td>
+
+        **2**
+
+        </td>
+
+        <td>
+
+        A license handle returned by the  @msipc.ipccreatelicensefromscratch or @msipc.ipccreatelicensefromtemplateid function that is used to serialize the  license. *pvLicenseInfo* is of type **IPC_LICENSE_HANDLE** and points to the returned handle.
+
+        </td>
+
+        </tr>
+
+        </table>
+    - id: dwFlags
+      type: DWORD
+      description: "Specifies optional behavior for this function.<table border=\"1\">\n<tr>\n<th>Name</th>\n<th>Value</th>\n<th>Meaning</th>\n</tr>\n<tr>\n<td>\n**IPC_SL_FLAG_DEFAULT**\n</td>\n<td>\n**0**\n</td>\n<td>\nUses all of the default settings for @msipc.ipcserializelicense.  Most applications should use this flag when serializing a license.\n</td>\n</tr>\n<tr>\n<td>\n**IPC_SL_FLAG_KEY_NO_PERSIST**\n</td>\n<td>\n**2**\n</td>\n<td>\nUse this flag to prevent a key from being cached locally and inserted within the serialized license. If thisflag is used, the content creator must contact the RMS server in order to access the content.\r\n\r\n\r\n\r\nIf this flag is used, the creator of the serialized license will require a network connection to the RMS server if they attempt to create a key from it using @msipc.ipcgetkey.  \r\n\r\n\n</td>\n</tr>\n<tr>\n<td>\n**IPC_SL_FLAG_KEY_NO_PERSIST_DISK**\n</td>\n<td>\n**4**\n</td>\n<td>\nUse this flag to prevent the content key from being cached locally. The content key will still be cached in the serialized license.\n</td>\n</tr>\n<tr>\n<td>\n**IPC_SL_FLAG_DEPRECATED_UNSIGNED_LICENSE_TEMPLATE**\n</td>\n<td>\n**8**\n</td>\n<td>\nThis flag should only be used by applications that protect content using functions of the MSDRM library. For more information, see @rm.ad_rms_functions. Passing this flag will generate an issuance license template that is compatible with MSDRM.\r\n\r\n\r\n\r\n\r\n**Important** Licenses that are created with this flag cannot be used with Rights Management Services SDK 2.1 .  This flag cannot be combined with any other flag.  \r\n\r\n\r\n\r\n\n</td>\n</tr>\n<tr>\n<td>\n**IPC_SL_FLAG_KEY_NO_PERSIST_LICENSE**\n</td>\n<td>\n**16**\n</td>\n<td>\nUse this flag to prevent an encrypted copy of this key from being cached within the serialized license.   The key may still be cached locally on disk.\r\n\r\n\r\n\r\nIf you are storing confidential information in the AppSpecific data field, you should specify the IPC_SL_FLAG_KEY_NO_PERSIST_LICENSE when serializing your license so your information will remain confidential.\r\n\r\n\n</td>\n</tr>\n</table>"
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to an @msipc.ipc_prompt_ctx structure. This can be used in cases where authentication prompts are not desirable or when an application wants to control the modal behavior of any prompt dialogs.
+    - id: phKey [out, optional]
+      type: PIPC_KEY_HANDLE
+      description: A pointer to a variable that receives a handle  to the key object corresponding to the owner license that can be used for encrypting with the serialized license.
+    - id: ppvLicense [out]
+      type: PIPC_BUFFER
+      description: A pointer to a variable that receives a pointer to the buffer that contains the  serialized license. The buffer is allocated by the IPC Client and must be freed using @msipc.ipcfreememory.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED**
+
+        </td>
+
+        <td>
+
+        Meaning: Returns this value when the user rights list is too large and the call would have produced a serialized license that exceeds the limits put in place by the RMS system. This is a common occurrence for applications that expand groups and attempt to assign them to the license (for example, a mail client like Outlook).
+
+
+
+        Action: We recommend that your application user interface  prompt the user to express the user rights list by using distribution groups instead of individual user's email addresses.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_ONLINE**
+
+        </td>
+
+        <td>
+
+        Meaning: The Rights Management Services SDK 2.1  needs network access to complete the operation, but the application requested offline mode.
+
+
+
+        Action: Call the function again, without specifying the **IPC_PROMPT_FLAG_OFFLINE** flag. Typically, this flag is used in situations in which failure is acceptable and preferred to performing a network access. The  system is already optimized to use the network only when absolutely necessary, so we do not recommend that developers use the **IPC_PROMPT_FLAG_OFFLINE** flag as an optimization.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_UI**
+
+        </td>
+
+        <td>
+
+        Meaning: Rights Management Services SDK 2.1  needs to display a window to complete the operation, but the application requested silent mode.
+
+
+
+        Action: Call the function again, without specifying the **IPC_PROMPT_FLAG_SILENT** flag.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_RIGHT_NOT_GRANTED**
+
+        </td>
+
+        <td>
+
+        Meaning: The user does not have the rights required to serialize this license.
+
+
+
+        This error can be returned in the following scenarios:
+
+
+
+        * 1. A license handle is created using either @msipc.ipccreatelicensefromscratch or @msipc.ipccreatelicensefromtemplateid.
+
+
+
+        * 2. Setting the content key on a license handle created in #1 using @msipc.ipcsetlicenseproperty with the **IPC_LI_CONTENT_KEY**.
+
+
+
+        * 3. The user does not have **IPC_WRITE_RIGHTS** on the key handle used in #2.
+
+
+
+        Action: If you serialized a license on which you had set the **IPC_LI_CONTENT_KEY** property, inform the user that they do not have rights to change the access policy for this content.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_USER_RIGHTS_NOT_SET**
+
+        </td>
+
+        <td>
+
+        Meaning: The license handle specified by *pvLicenseInfo* does not have a  user rights list specified.
+
+
+
+        Action: Add user rights to the license handle by calling @msipc.ipcsetlicenseproperty with *dwPropID* set to **IPC_LI_USER_RIGHTS_LIST**. For an example of how to add user rights to a license, see the example in @msipc.add_explicit_owner_rights.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcsetglobalproperty
+  id: IpcSetGlobalProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcSetGlobalProperty
+  fullName: msipc.ipcsetglobalproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Sets environment properties for the   system.
+
+
+
+    Every environment configuration setting has a default value that can be overridden by using this function.
+
+
+
+  remarks: >+
+    The following properties can only be set once per process:
+
+
+
+
+
+
+
+
+
+    **Important** Once the RMS system has been initialized with the call to  @msipc.ipcinitialize, you may then set these properties, doing so before calling other  Rights Management Services SDK 2.1  APIs.
+
+
+
+
+
+
+
+    * **IPC_EI_API_MODE**
+
+
+
+    * **IPC_EI_MANIFEST_PATH**
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcSetGlobalProperty(
+      		 DWORD dwPropID,
+      	_In_ LPCVOID pvProperty
+      )
+    parameters:
+    - id: dwPropID
+      type: DWORD
+      description: The ID of the property that is being set. For a list of valid property IDs, see @msipc.environment_properties.
+    - id: pvProperty [in]
+      type: LPCVOID
+      description: A pointer to a  buffer that contains the value for the property. The structure of the property information depends on the property ID specified in the *dwPropID* parameter. For more information, see @msipc.environment_properties.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_PROPERTY_ALREADY_SET**
+
+        </td>
+
+        <td>
+
+        Meaning: When the *dwPropID* parameter is set to **IPC_EI_API_MODE**, this property has been set before.
+
+
+
+        Action: This function should be called before any other Rights Management Services SDK 2.1  function if the application needs to change the API mode. The Rights Management Services SDK 2.1  will set the API mode automatically, and the API mode cannot be changed after it is set.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcsetlicenseproperty
+  id: IpcSetLicenseProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcSetLicenseProperty
+  fullName: msipc.ipcsetlicenseproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Sets license properties for the   platform.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcSetLicenseProperty(
+      	_In_ IPC_LICENSE_HANDLE hLicense,
+      		 BOOL fDelete,
+      		 DWORD dwPropID,
+      	_In_opt_ LPCVOID pvProperty
+      )
+    parameters:
+    - id: hLicense [in]
+      type: IPC_LICENSE_HANDLE
+      description: A handle to the license to be modified.
+    - id: fDelete
+      type: BOOL
+      description: >+
+        Set to **TRUE** to delete the existing information in the license. When set to **TRUE**; *pvProperty* is ignored.
+
+
+
+        Set to **FALSE** to replace the license info  for the property specified by *dwPropId* with the value specified by *pvProperty*; *pvProperty* cannot be **NULL**.
+
+
+
+    - id: dwPropID
+      type: DWORD
+      description: The ID  of the license property to modify. The data specified by *pvProperty*  must match this type. For a list of valid property IDs, see @msipc.license_property_types.
+    - id: pvProperty [in, optional]
+      type: LPCVOID
+      description: 'A pointer to the license information data to be written. If *fDelete* is false, this parameter cannot be **NULL**. The structure of the data depends on the property  ID specified in *dwPropID*. For more information, see @msipc.license_property_types. '
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **E_INVALIDARGS**
+
+        </td>
+
+        <td>
+
+        Meaning: The *fDelete* parameter is **TRUE**, but the license property specified by the *dwPropID* parameter is not a property that can be deleted with this function. For more information about which properties cannot be deleted with @msipc.ipcsetlicenseproperty, see @msipc.license_property_types.
+
+
+
+        Action: Do not try to delete the specified property with this function.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcunprotectwindow
+  id: IpcUnprotectWindow
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcUnprotectWindow
+  fullName: msipc.ipcunprotectwindow
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Removes the protection from  a window protected using @msipc.ipcprotectwindow.
+
+
+
+
+
+
+
+  remarks: "To ensure that your application works with current and future versions of the Rights Management Services SDK 2.1 , you should use the following code to unprotect a window.\r\n\r\nhr = IpcUnprotectWindow(hwnd);\nif (FAILED(hr) && (IPCERROR_PROPERTY_ALREADY_SET != hr)) \n{ \n\n// Failed to unprotect the window. \n// Your application code must determine whether to treat this condition as fatal. \n\n} \n\nelse \n{ \n// Success! Continue... \nhr = S_OK;\n}\n\r\n\r\n"
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcUnprotectWindow(
+      	_In_ HWND     hwnd
+      )
+    parameters:
+    - id: hwnd [in]
+      type: 'HWND    '
+      description: The window to unprotect.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcregisterlicense
+  id: IpcRegisterLicense
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcRegisterLicense
+  fullName: msipc.ipcregisterlicense
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: "Used to register the license with server.\r\n\r\nThis function is used for content tracking purposes. \r\n\r\n\r\n\r\n\r\n**Important** An application needs to use this API to register the PL of every protected document with the server. If this step is missed, the document will not be tracked.\r\n\r\n\r\n\r\nFor more information on content tracking and the use of this function, see @msipc.tracking_content.\r\n\r\n"
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcRegisterLicense(
+      	_In_ PCIPC_BUFFER pvLicenseWithMetadata,
+      	_Reserved_ LPVOID pvReserved,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_In_opt_ LPCWSTR wszContentName,
+      		 BOOL fSendRegistrationMail
+      )
+    parameters:
+    - id: pvLicenseWithMetadata [in]
+      type: PCIPC_BUFFER
+      description: Pointer to the serialized license with the metadata information added.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This is a reserved. The parameter must be set to  NULL.
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: >+
+        Optional pointer to information that helps the IPC Client decide what the user prompt behavior should be.This parameter can be used in cases where authentication prompts are not desirable or when an application wants to control the modal behavior of prompt dialogs.
+
+
+
+    - id: wszContentName [in, optional]
+      type: LPCWSTR
+      description: If *pvLicenseWithMetadata* does not specify a content name, the server will use this parameter, otherwise it will be ignored.
+    - id: fSendRegistrationMail
+      type: BOOL
+      description: Set to TRUE to notify the publisher via email of the tracking portal URL to manage the document, or FALSE to not send the notification.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **E_INVALIDARG**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_NEEDS_ONLINE**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcserializelicensemetadata
+  id: IpcSerializeLicenseWithMetadata
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcSerializeLicenseWithMetadata
+  fullName: msipc.ipcserializelicensemetadata
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to finalize the metadata of the license and serialize it.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcSerializeLicenseWithMetadata(
+      	_In_ IPC_LICENSE_METADATA_HANDLE hLicenseMetadata,
+      	_Reserved_ LPVOID pvReserved,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Out_ PIPC_BUFFER *ppvLicense
+      )
+    parameters:
+    - id: hLicenseMetadata [in]
+      type: IPC_LICENSE_METADATA_HANDLE
+      description: Handle representing the license metadata. This can be obtained from the method @msipc.ipccreatelicensemetadatahandle. See @msipc.microsoft_information_protection_and_control_client_data_types for more information about the type of this parameter.
+    - id: pvReserved [reserved]
+      type: LPVOID
+      description: This is a reserved parameter and must be set to NULL.
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: >+
+        Optional pointer to information that helps the IPC Client decide what the user prompt behavior should be.This can be used in cases where authentication prompts are not desirable or when an application wants to control the modal behavior of any prompt dialogs.
+
+
+
+    - id: ppvLicense [out]
+      type: PIPC_BUFFER
+      description: >+
+        Pointer to the pointer to the buffer for serialized license with metadata. The buffer is allocated by the API and must be freed using @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **E_INVALIDARG**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **E_OUTOFMEMORY
+
+        **
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcsetlicensemetadataproperty
+  id: IpcSetLicenseMetadataProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcSetLicenseMetadataProperty
+  fullName: msipc.ipcsetlicensemetadataproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to set the metadata of  the license.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcSetLicenseMetadataProperty(
+      	_In_ IPC_LICENSE_METADATA_HANDLE hLicenseMetadata,
+      		 BOOL fDelete,
+      		 DWORD dwPropID,
+      	_In_opt_ LPCVOID pvProperty
+      )
+    parameters:
+    - id: hLicenseMetadata [in]
+      type: IPC_LICENSE_METADATA_HANDLE
+      description: Handle representing the license metadata. This can be obtained from the method @msipc.ipccreatelicensemetadatahandle. See @msipc.microsoft_information_protection_and_control_client_data_types for more information about the type of this parameter.
+    - id: fDelete
+      type: BOOL
+      description: >+
+        If this parameter is **TRUE**, the property specified by *dwPropID* will be deleted from the license.The parameter, *pvProperty* should be **NULL** if this is **TRUE**.
+
+
+
+    - id: dwPropID
+      type: DWORD
+      description: "Type of license metadata property to modify. The *pvProperty* parameter must match this type. \r\n\r\nFor a list of valid IDs, @msipc.license_metadata_property_types.\r\n\r\n"
+    - id: pvProperty [in, optional]
+      type: LPCVOID
+      description: >+
+        Pointer to various types of license information data.For more information, see @msipc.license_metadata_property_types.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **E_INVALIDARG**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfdecryptfile
+  id: IpcfDecryptFile
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfDecryptFile
+  fullName: msipc.ipcfdecryptfile
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Decrypts the specified file on disk.
+
+
+
+    This operation requires that the current user has @msipc.rights right for the content.
+
+
+
+  remarks: >+
+    The current user must have  the **EXTRACT** right for the content or the function will fail.
+
+
+
+    If your application is scanning a protected file, you should perform operations against a copy of the protected file, not on the actual file itself. Your application should create a copy of the protected file,  unprotect the copy, scan it, re-encrypt it, and then replace the original protected file with the newly re-encrypted one. This should happen in a single transaction. Operating on a copy of the protected file ensures that if re-encryption fails -- for example, because a user opens the file while it is being operated on -- then the original file will not be lost.
+
+
+
+    If the input file is in a read-only folder, @msipc.ipcfdecryptfile will fail. In this case, you can either copy the file to the folder in which want the decrypted copy placed and call @msipc.ipcfdecryptfile without setting the *wszOutputFilePath* parameter,  or you can copy the file to a temporary folder and call @msipc.ipcfdecryptfile with  *wszOutputFilePath* set to the directory where you want the decrypted file to be placed. In both cases, @msipc.ipcfdecryptfile will delete the copy of the  original, encrypted file.
+
+
+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfDecryptFile(
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_In_opt_ LPCWSTR wszOutputFileDirectory,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file to decrypt. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: dwFlags [in]
+      type: DWORD
+      description: Specifies optional behavior for this function. For more information, see @msipc.decrypt_file_flags.
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to information that helps the Active Directory Rights Management Services Client 2.1  determine what the user prompt behavior should be. For more information, see @msipc.ipc_prompt_ctx structure.
+    - id: wszOutputFileDirectory [in, optional]
+      type: LPCWSTR
+      description: >+
+        An optional pointer to the output file directory. If the parameter is not specified,  the output file will be placed in the same directory as the input file. If the parameter is specified, the output file will be placed in the specified folder. The original file will be deleted.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        A pointer to a variable that receives a pointer to the output file path. If the file is decrypted in place (the output file path does not change), the value will be **NULL**. If the output file path is returned, it will be an absolute file path. The buffer that contains the output file path is allocated by the    File API and must be freed by using @msipc.ipcfreememory.
+
+
+
+        If native protection is used,  the value of *pwszOutputFilePath* will be NULL when the function returns.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **ERROR_FILE_READ_ONLY**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_SYSTEM_FILE**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_PROTECTOR_BAD_INSTALL**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfdecryptfilestream
+  id: IpcfDecryptFileStream
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfDecryptFileStream
+  fullName: msipc.ipcfdecryptfilestream
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: "Decrypts a file as a byte stream.  \r\n\r\nThis operation requires that the current user has @msipc.rights right for the content.\r\n\r\n"
+  remarks: >+
+    The current user must have  the **EXTRACT** right for the content or the function will fail.
+
+
+
+    If your application is scanning a protected file, you should perform operations against a copy of the protected file, not on the actual file itself. Your application should create a copy of the protected file,  unprotect the copy, scan it, re-encrypt it, and then replace the original protected file with the newly re-encrypted one. This should happen in a single transaction. Operating on a copy of the protected file ensures that if re-encryption fails -- for example, because a user opens the file while it is being operated on -- then the original file will not be lost.
+
+
+
+    If the input file is in a read-only folder, @msipc.ipcfdecryptfile will fail. In this case, you can either copy the file to the folder in which want the decrypted copy placed and call @msipc.ipcfdecryptfile without setting the *wszOutputFilePath* parameter,  or you can copy the file to a temporary folder and call @msipc.ipcfdecryptfile with  *wszOutputFilePath* set to the directory where you want the decrypted file to be placed. In both cases, @msipc.ipcfdecryptfile will delete the copy of the  original, encrypted file.
+
+
+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfDecryptFileStream(
+      	_In_ ILockBytes *pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Out_ ILockBytes *pOutputFileStream,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: Pointer to the byte stream that represents the file to be decrypted.
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file to decrypt. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        This parameter is only used determine the file format, based on the file name extension of the file in the input file stream. Based on this, the suggested output filename is returned via *pwszOutputFilePath* parameter.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: dwFlags [in]
+      type: DWORD
+      description: Specifies optional behavior for this function. For more information, see @msipc.decrypt_file_flags.
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to information that helps the Active Directory Rights Management Services Client 2.1  determine what the user prompt behavior should be. For more information, see @msipc.ipc_prompt_ctx structure.
+    - id: pOutputFileStream [out]
+      type: ILockBytes
+      description: >+
+        A pointer to get the decrypted bytes as a result of an decryption operation on a byte stream.
+
+
+
+        You will need to initialize this interface before calling the API, and free it after the API is done using **ILockBytes::Release**. For more information on using ILockBytes see, [ILockBytes interface](https://msdn.microsoft.com/en-us/library/aa379238(v=vs.85).aspx).
+
+
+
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: "A pointer to a variable that receives a pointer to the suggested output file path. \r\n\r\nThe file needs to be saved with the same extension suggested in the parameter for decryption to be possible. If the suggested output file path is same as the one provided via *wszInputFilePath*, this value will be **NULL**. \r\n\r\nIf the output file path is returned, it will be an absolute file path. The buffer that contains the output file path is allocated by the    File API and must be freed by using @msipc.ipcfreememory.\r\n\r\nIf native protection is used,  the value of *pwszOutputFilePath* will be NULL when the function returns.\r\n\r\n"
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfencryptfile
+  id: IpcfEncryptFile
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfEncryptFile
+  fullName: msipc.ipcfencryptfile
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Encrypts a file on disk.
+
+
+
+
+
+
+
+  remarks: >+
+    The value of the **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** property set on a license handle passed in the *pvLicenseInfo* parameter is ignored by @msipc.ipcfencryptfile.
+
+
+
+    If your application is scanning a protected file, you should perform operations against a copy of the protected file, not on the actual file itself. Your application should create a copy of the protected file,  unprotect the copy, scan it, re-encrypt it, and then replace the original protected file with the newly re-encrypted one. This should happen in a single transaction. Operating on a copy of the protected file ensures that if re-encryption fails -- for example, because a user opens the file while it is being operated on -- then the original file will not be lost.
+
+
+
+    If the input file is in a read-only folder, @msipc.ipcfencryptfile will fail. In this case, you can either copy the file to the folder in which want the encrypted copy placed and call @msipc.ipcfencryptfile without setting the *wszOutputFilePath* parameter,  or you can copy the file to a temporary folder and call @msipc.ipcfencryptfile with  *wszOutputFilePath* set to the directory where you want the encrypted file to be placed. In both cases, @msipc.ipcfencryptfile will delete the copy of the  original, unencrypted file.
+
+
+
+    PDF files which are signed, linearized, are not supported for native protection and will cause an error.
+
+
+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfEncryptFile(
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ LPCVOID pvLicenseInfo,
+      	_In_ DWORD dwType,
+      	_In_ DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_In_opt_ LPCWSTR wszOutputFileDirectory,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file to encrypt. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: pvLicenseInfo [in]
+      type: LPCVOID
+      description: A pointer to the license information to  use for encryption. The value of this parameter depends on the *dwType* parameter.
+    - id: dwType [in]
+      type: DWORD
+      description: The type of license information to use for encryption. For more information, see @msipc.encrypt_file_input_type.
+    - id: dwFlags [in]
+      type: DWORD
+      description: 'Specifies optional behavior for this function. For more information, see @msipc.encrypt_file_flags. '
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to information that helps the Active Directory Rights Management Services Client 2.1  determine what the user prompt behavior should be. For more information, see @msipc.ipc_prompt_ctx structure.
+    - id: wszOutputFileDirectory [in, optional]
+      type: LPCWSTR
+      description: >+
+        An optional pointer to the output file directory. If the parameter is not specified,  the output file will be placed in the same directory as the input file. If the parameter is specified, the output file will be placed in the specified folder. The original file will be deleted.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        A pointer to a variable that receives a pointer to the output file path. If the file is encrypted in place (the output file path does not change), the value will be **NULL**. If the output file path is returned, it will be an absolute file path. The buffer that contains the output file path is allocated by the File API     and must be freed by using @msipc.ipcfreememory.
+
+
+
+        If native protection is used,  the value of *pwszOutputFilePath* will be NULL when the function returns.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_ENCRYPT_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_UPDATELICENSE_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **ERROR_FILE_READ_ONLY**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_SYSTEM_FILE**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_PROTECTOR_BAD_INSTALL**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfencryptfilestream
+  id: IpcfEncryptFileStream
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfEncryptFileStream
+  fullName: msipc.ipcfencryptfilestream
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: "Encrypts a file as a byte stream. \r\n\r\n\r\n\r\n"
+  remarks: >+
+    PDF files which are signed, linearized, are not supported for native protection and will cause an error.
+
+
+
+
+
+
+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfEncryptFileStream(
+      	_In_ ILockBytes *pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ LPCVOID pvLicenseInfo,
+      		 DWORD dwType,
+      	_In_ DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_Out_ ILockBytes *pOutputFileStream,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: Pointer to the byte stream that represents the file to be encrypted.
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file to encrypt. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        This parameter is only used to determine the file format, based on the file name extension of the file in the input file stream. Based on this, the suggested output filename is returned via *pwszOutputFilePath* parameter.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: pvLicenseInfo [in]
+      type: LPCVOID
+      description: A pointer to the license information to  use for encryption. The value of this parameter depends on the *dwType* parameter.
+    - id: dwType
+      type: DWORD
+      description: The type of license information to use for encryption. For more information, see @msipc.encrypt_file_flags.
+    - id: dwFlags [in]
+      type: DWORD
+      description: 'Specifies optional behavior for this function. For more information, see @msipc.encrypt_file_input_type. '
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: An optional pointer to information that helps the Active Directory Rights Management Services Client 2.1  determine what the user prompt behavior should be. For more information, see @msipc.ipc_prompt_ctx structure.
+    - id: pOutputFileStream [out]
+      type: ILockBytes
+      description: >+
+        A pointer to get the encrypted bytes as a result of an encryption operation on a byte stream.
+
+
+
+        You will need to initialize this interface before calling the API, and free it after the API is done using **ILockBytes::Release**. For more information on using ILockBytes see, [ILockBytes interface](https://msdn.microsoft.com/en-us/library/aa379238(v=vs.85).aspx).
+
+
+
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: "A pointer to a variable that receives a pointer to the suggested output file path.\r\n\r\nThe file needs to be saved with the same extension suggested in the parameter for encryption to be possible. If the suggested output file path is same as the one provided via *wszInputFilePath*, this value will be **NULL**. \r\n\r\nIf the output file path is returned, it will be an absolute file path. The buffer that contains the output file path is allocated by the File API     and must be freed by using @msipc.ipcfreememory.\r\n\r\nIf native protection is used,  the value of *pwszOutputFilePath* will be NULL when the function returns.\r\n\r\n"
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_ENCRYPT_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_UPDATELICENSE_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **ERROR_FILE_READ_ONLY**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfencryptfilestreamwithmetadata
+  id: IpcfEncryptFileStreamWithMetadata
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfEncryptFileStreamWithMetadata
+  fullName: msipc.ipcfencryptfilestreamwithmetadata
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to encrypt a file as a byte stream and optionally add metadata to the encryption license.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfEncryptFileStreamWithMetadata(
+      	_In_ ILockBytes *pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ LPCVOID pvLicenseInfo,
+      	_In_ DWORD dwType,
+      	_In_ DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_In_opt_ PCIPC_LICENSE_METADATA pLicenseMetadata,
+      	_Out_ ILockBytes *pOutputFileStream,
+      	_Out_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: Pointer to the byte stream representing the file to be encrypted.
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        Specifies a file name and file extension. The file name and may also contain the path to the file. If a relative path is specified, the current working directory is used to create the absolute path.
+
+
+
+    - id: pvLicenseInfo [in]
+      type: LPCVOID
+      description: >+
+        License information used for encryption.For more information, see @msipc.encrypt_file_input_type
+
+
+
+    - id: dwType [in]
+      type: DWORD
+      description: >+
+        Type of license information used for encryption. For a list of valid values, see @msipc.encrypt_file_input_type
+
+
+
+    - id: dwFlags [in]
+      type: DWORD
+      description: >+
+        Specify optional behavior for this API. For a list of valid values, see @msipc.encrypt_file_flags
+
+
+
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: Optional pointer to user prompt information, @msipc.ipc_prompt_ctx, for the client.
+    - id: pLicenseMetadata [in, optional]
+      type: PCIPC_LICENSE_METADATA
+      description: Optional pointer to metadata information, @msipc.ipc_license_metadata, to be added to the file protection license.
+    - id: pOutputFileStream [out]
+      type: ILockBytes
+      description: Required to get the encrypted bytes as a result of an encryption operation on a byte stream.
+    - id: pwszOutputFilePath [out]
+      type: LPCWSTR
+      description: >-
+        On success, this is a suggested output file name. This should be freed using @msipc.ipcfreememory.
+
+
+
+        If *wszOutputFilePath* does not change,  the output parameter will be NULL.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_ENCRYPT_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_UPDATELICENSE_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **ERROR_FILE_READ_ONLY
+
+        **
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfencryptfilewithmetadata
+  id: IpcfEncryptFileWithMetadata
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfEncryptFileWithMetadata
+  fullName: msipc.ipcfencryptfilewithmetadata
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to encrypt a file and optionally add metadata to the file encryption license.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfEncryptFileWithMetadata(
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ LPCVOID pvLicenseInfo,
+      	_In_ DWORD dwType,
+      	_In_ DWORD dwFlags,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      	_In_opt_ LPCWSTR wszOutputFileDirectory,
+      	_In_opt_ PCIPC_LICENSE_METADATA pLicenseMetadata,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        Specifies a file name and file extension. The file name and may also contain the path to the file. If a relative path is specified, the current working directory is used to create the absolute path.
+
+
+
+    - id: pvLicenseInfo [in]
+      type: LPCVOID
+      description: >+
+        License information used for encryption.For more information, see @msipc.encrypt_file_input_type
+
+
+
+    - id: dwType [in]
+      type: DWORD
+      description: >+
+        Type of license information used for encryption. For a list of valid values, see @msipc.encrypt_file_input_type
+
+
+
+    - id: dwFlags [in]
+      type: DWORD
+      description: >+
+        Specify optional behavior for this API. For a list of valid values, see @msipc.encrypt_file_flags
+
+
+
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: Optional pointer to user prompt information, @msipc.ipc_prompt_ctx, for the client.
+    - id: wszOutputFileDirectory [in, optional]
+      type: LPCWSTR
+      description: >+
+        Optional pointer to the output file directory. If *wszOutputFileDirectory* is not specified,  the output file will be placed in the same directory as the input file.
+
+
+
+        If *wszOutputFileDirectory* is specified, the output file will be placed in this folder and the original file will be deleted.
+
+
+
+    - id: pLicenseMetadata [in, optional]
+      type: PCIPC_LICENSE_METADATA
+      description: Optional pointer to metadata information, @msipc.ipc_license_metadata, to be added to the file protection license.
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        On success, the full path of the output file. This should be freed using @msipc.ipcfreememory.
+
+
+
+        If neither the file name nor directory changes,  *pwszOutputFilePath* will be NULL.
+
+
+
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_ENCRYPT_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_UPDATELICENSE_BLOCKED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **ERROR_FILE_READ_ONLY
+
+        **
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_SYSTEM_FILE
+
+        **
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_PROTECTOR_BAD_INSTALL**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfgetdecryptedfilepath
+  id: IpcfGetDecryptedFilePath
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetDecryptedFilePath
+  fullName: msipc.ipcfgetdecryptedfilepath
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Use  to get the expected, decrypted, absolute file path.
+
+
+
+    Note that, this function does not actually decrypt the file.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfGetDecryptedFilePath(
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ DWORD dwFlags,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        Specifies file name and file extension of the file and, may contain the path to the file. If a relative path is specified, the current working directory is used to create the absolute path.
+
+
+
+    - id: dwFlags [in]
+      type: DWORD
+      description: Specifies optional behavior for this API. For a list of valid values, see @msipc.decrypt_file_flags.
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        On success, this parameter points to the expected full path of the decrypted file. This should be freed using @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfgetdecryptedfilepathfromstream
+  id: IpcfGetDecryptedFilePathFromStream
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetDecryptedFilePathFromStream
+  fullName: msipc.ipcfgetdecryptedfilepathfromstream
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to get the expected, decrypted, absolute file path.
+
+
+
+    Note that, this function does not actually decrypt the file.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfGetDecryptedFilePathFromStream(
+      	_In_ ILockBytes pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      	_In_ DWORD dwFlags,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: Pointer to the byte stream representing the protected file data.
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        Specifies file name and file extension of the file and, may contain the path to the file. If a relative path is specified, the current working directory is used to create the absolute path.
+
+
+
+    - id: dwFlags [in]
+      type: DWORD
+      description: Specifies optional behavior for this API. For a list of valid values, see @msipc.decrypt_file_flags.
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        On success, this parameter points to the expected full path of the decrypted file. This should be freed using @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfgetencryptedfilepath
+  id: IpcfGetEncryptedFilePath
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetEncryptedFilePath
+  fullName: msipc.ipcfgetencryptedfilepath
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to get the expected, encrypted, absolute file path.
+
+
+
+    Note that, this function does not actually encrypt the file.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfGetEncryptedFilePath(
+      	_In_ LPCWSTR wszInputFilePath,
+      		 DWORD dwFlags,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        Specifies file name and file extension of the file and, may contain the path to the file. If a relative path is specified, the current working directory is used to create the absolute path.
+
+
+
+    - id: dwFlags
+      type: DWORD
+      description: Specify optional behavior for this function. For a list of valid values, see @msipc.encrypt_file_flags.
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        On success, this parameter points to the expected full path of the decrypted file. This should be freed using @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfgetencryptedfilepathfromstream
+  id: IpcfGetEncryptedFilePathFromStream
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetEncryptedFilePathFromStream
+  fullName: msipc.ipcfgetencryptedfilepathfromstream
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Used to get the expected, encrypted, absolute file path.
+
+
+
+    Note that, this function does not actually encrypt the file.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfGetEncryptedFilePathFromStream(
+      	_In_ ILockBytes pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      		 DWORD dwFlags,
+      	_Out_opt_ LPCWSTR *pwszOutputFilePath
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: Pointer to the byte stream representing the protected file data.
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        Specifies file name and file extension of the file and, may contain the path to the file. If a relative path is specified, the current working directory is used to create the absolute path.
+
+
+
+    - id: dwFlags
+      type: DWORD
+      description: Specify optional behavior for this function. For a list of valid values, see @msipc.encrypt_file_flags.
+    - id: pwszOutputFilePath [out, optional]
+      type: LPCWSTR
+      description: >+
+        On success, this parameter points to the expected full path of the decrypted file. This should be freed using @msipc.ipcfreememory.
+
+
+
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfgetfileproperty
+  id: IpcfGetFileProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetFileProperty
+  fullName: msipc.ipcfgetfileproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Queries the properties of an **IPCF_FILE_HANDLE** or the file represented by it.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfGetFileProperty(
+      	_In_ IPCF_FILE_HANDLE hFile,
+      	_In_ DWORD dwPropId,
+      	_Out_ LPVOID *ppvProperty
+      )
+    parameters:
+    - id: hFile [in]
+      type: IPCF_FILE_HANDLE
+      description: Handle properties to be queried.
+    - id: dwPropId [in]
+      type: DWORD
+      description: >-
+        Which file property to query.
+
+
+
+        The *ppvProperty* parameter must match this property ID.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_HEADER_POSITION**
+
+        </td>
+
+        <td>
+
+        **1**
+
+        </td>
+
+        <td>
+
+        Describes the file range indicating the offset and size of the protected file header.
+
+
+
+
+
+
+
+        For @msipc.ipcfgetfileproperty*ppvProperty* is of type **PIPCF_FILE_RANGE***.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_CONTENT_KEY**
+
+        </td>
+
+        <td>
+
+        **2**
+
+        </td>
+
+        <td>
+
+        This is currently not implemented and returns **E_NOTIMPL** if called.
+
+
+
+        Describes the handle to the key which is used to protect the content of the file specified by parameter *hFile*.
+
+
+
+        For @msipc.ipcfgetfileproperty*ppvProperty* is of type **IPC_KEY_HANDLE***.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_ACCESS_BLOCK_SIZE**
+
+        </td>
+
+        <td>
+
+        **3**
+
+        </td>
+
+        <td>
+
+        Specifies the size of blocks with which the data will be accessed.
+
+
+
+
+
+
+
+        For @msipc.ipcfgetfileproperty*ppvProperty* is of type **LPDWORD***.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_BASIC_INFORMATION**
+
+        </td>
+
+        <td>
+
+        **4**
+
+        </td>
+
+        <td>
+
+        This is currently not implemented and returns **E_NOTIMPL** if called.
+
+
+
+        Specifies the basic information about the file represented by the parameter *hFile*.
+
+
+
+        For @msipc.ipcfgetfileproperty*ppvProperty* is of type **PIPCF_FILE_BASIC_INFORMATION***.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+    - id: ppvProperty [out]
+      type: LPVOID
+      description: >+
+        A pointer to a variable that receives a pointer to the buffer that contains the property information.
+
+
+
+        The structure of the property information depends on the *dwPropID* parameter.
+
+
+
+
+
+
+
+        The buffer is allocated by the AD RMS SDK 2.1 and must be freed by calling  @msipc.ipcfreememory.
+
+
+
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfgetserializedlicensefromfile
+  id: IpcfGetSerializedLicenseFromFile
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetSerializedLicenseFromFile
+  fullName: msipc.ipcfgetserializedlicensefromfile
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Gets the license associated with a file.
+
+
+
+
+
+
+
+  remarks: >+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfGetSerializedLicenseFromFile(
+      	_In_ LPCWSTR wszInputFilePath,
+      	_Out_ PIPC_BUFFER *ppvLicense
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file from which to get the serialized license. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: ppvLicense [out]
+      type: PIPC_BUFFER
+      description: A pointer to a variable that receives a pointer to a buffer that holds the license. The buffer is allocated by the File API and must be freed using @msipc.ipcfreememory.
+    return:
+      type: HRESULT
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_IS_NOT_ENCRYPTED**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_PROTECTOR_BAD_INSTALL**
+
+        </td>
+
+        <td>
+
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfgetserializedlicensefromfilestream
+  id: IpcfGetSerializedLicenseFromFileStream
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfGetSerializedLicenseFromFileStream
+  fullName: msipc.ipcfgetserializedlicensefromfilestream
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Gets the license associated with a file stream.
+
+
+
+
+
+
+
+  remarks: >+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfGetSerializedLicenseFromFileStream(
+      	_In_ ILockBytes *pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      	_Out_ PIPC_BUFFER *ppvLicense
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: 'Pointer to the byte stream from which to get the serialized license. '
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file from which to get the serialized license. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        This parameter is only used determine the file format, based on the file name extension of the file in the input file stream.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: ppvLicense [out]
+      type: PIPC_BUFFER
+      description: A pointer to a variable that receives a pointer to a buffer that holds the license. The buffer is allocated by the File API and must be freed using @msipc.ipcfreememory.
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfisfileencrypted
+  id: IpcfIsFileEncrypted
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfIsFileEncrypted
+  fullName: msipc.ipcfisfileencrypted
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Determines whether a file on disk is encrypted.
+
+
+
+
+
+
+
+  remarks: >+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfIsFileEncrypted(
+      	_In_ LPCWSTR wszInputFilePath,
+      	_Out_ LPDWORD pdwFileStatus
+      )
+    parameters:
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file to query. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: pdwFileStatus [out]
+      type: LPDWORD
+      description: >-
+        A pointer to a variable that receives a **DWORD** that indicates whether and how the file is protected. When the function returns, this parameter can be one of the following values.<table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FILE_STATUS_DECRYPTED**
+
+        </td>
+
+        <td>
+
+        **0**
+
+        </td>
+
+        <td>
+
+        The file is not encrypted.
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FILE_STATUS_ENCRYPTED_CUSTOM**
+
+        </td>
+
+        <td>
+
+        **1**
+
+        </td>
+
+        <td>
+
+        The file is encrypted using native protection; that is, using an AD RMS file format that is based on its MIME type.   Some RMS functionality may not be available.
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FILE_STATUS_ENCRYPTED**
+
+        </td>
+
+        <td>
+
+        **2**
+
+        </td>
+
+        <td>
+
+        The file is encrypted.
+
+        </td>
+
+        </tr>
+
+        </table>
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfisfilestreamencrypted
+  id: IpcfIsFileStreamEncrypted
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfIsFileStreamEncrypted
+  fullName: msipc.ipcfisfilestreamencrypted
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Determines whether a file stream is encrypted.
+
+
+
+
+
+
+
+  remarks: >+
+    For supporting information on using the File API part of Rights Management Services SDK 2.1  see, @msipc.supported_file_formats, @msipc.file_api_configuration and @msipc.setting_the_api_security_mode__api_mode_  mode in the @msipc.developer_notes topic.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      HRESULT WINAPI IpcfIsFileStreamEncrypted(
+      	_In_ ILockBytes *pInputFileStream,
+      	_In_ LPCWSTR wszInputFilePath,
+      	_Out_ LPDWORD pdwFileStatus
+      )
+    parameters:
+    - id: pInputFileStream [in]
+      type: ILockBytes
+      description: Pointer to the byte stream that represents the file to be queried.
+    - id: wszInputFilePath [in]
+      type: LPCWSTR
+      description: >+
+        The path to the file to query. The path must include the file name and, if one exists, the file name extension.
+
+
+
+        This parameter is only used determine the file format, based on the file name extension of the file in the input file stream.
+
+
+
+        The path is limited to **MAX_PATH** characters. To extend this limit to 32,767 characters, prepend "\\?\" to the path. For more information, see [Naming Files, Paths, and Namespaces](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx).
+
+
+
+    - id: pdwFileStatus [out]
+      type: LPDWORD
+      description: >-
+        A pointer to a variable that receives a **DWORD** that indicates whether and how the file is protected. When the function returns, this parameter can be one of the following values.<table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FILE_STATUS_DECRYPTED**
+
+        </td>
+
+        <td>
+
+        **0**
+
+        </td>
+
+        <td>
+
+        The file is not encrypted.
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FILE_STATUS_ENCRYPTED_CUSTOM**
+
+        </td>
+
+        <td>
+
+        **1**
+
+        </td>
+
+        <td>
+
+        The file is encrypted using native protection; that is, using an AD RMS file format that is based on its MIME type.   Some RMS functionality may not be available.
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FILE_STATUS_ENCRYPTED**
+
+        </td>
+
+        <td>
+
+        **2**
+
+        </td>
+
+        <td>
+
+        The file is encrypted.
+
+        </td>
+
+        </tr>
+
+        </table>
+    return:
+      type: HRESULT
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfopenfileonhandle
+  id: IpcfOpenFileOnHandle
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfOpenFileOnHandle
+  fullName: msipc.ipcfopenfileonhandle
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Gets an **IPCF_FILE_HANDLE** associated with an encrypted file   which can  be used to access and modify that file's data.
+
+
+
+    This operation requires that the current user has at least the **VIEW** right for the content.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfOpenFileOnHandle(
+      	_In_ HANDLE hFileStream,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      		 DWORD dwFlags,
+      	_Out_ PIPCF_FILE_HANDLE phFile
+      )
+    parameters:
+    - id: hFileStream [in]
+      type: HANDLE
+      description: "HANDLE to a file, opened by a Windows API ::CreateFile function, that represents an encrypted file.\r\n\r\nThis function will fail for un-unencrypted files or custom-encrypted files (i.e., files for which @msipc.ipcfisfileencrypted returns** IPCF_FILE_STATUS_ENCRYPTED_CUSTOM**. \r\n\r\n*hFileStream* must not be freed or modified until the *phFile* is closed.\r\n\r\n"
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: Optional pointer to information that helps the  MSIPC client decide what the user prompt behavior should be.
+    - id: dwFlags
+      type: DWORD
+      description: >+
+        This must be set to 0 (zero).
+
+
+
+    - id: phFile [out]
+      type: PIPCF_FILE_HANDLE
+      description: Pointer to an **IPCF_FILE_HANDLE** which can be used to read/write the encrypted data. This pointer must  be closed using the @msipc.ipcclosehandle function.
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_NOT_ENCRYPTED**
+
+        </td>
+
+        <td>
+
+        Function failed due to an un-unencrypted files.
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcfopenfileonilockbytes
+  id: IpcfOpenFileOnILockBytes
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfOpenFileOnILockBytes
+  fullName: msipc.ipcfopenfileonilockbytes
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Gets an **IPCF_FILE_HANDLE** associated with an encrypted byte stream   which can  be used to access and modify that stream's data.
+
+
+
+    This operation requires that the current user has at least the **VIEW** right for the content.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfOpenFileOnILockBytes(
+      	_In_ ILockBytes *pFileStream,
+      	_In_opt_ PCIPC_PROMPT_CTX pContext,
+      		 DWORD dwFlags,
+      	_Out_ PIPCF_FILE_HANDLE phFile
+      )
+    parameters:
+    - id: pFileStream [in]
+      type: ILockBytes
+      description: >+
+        Pointer to a byte stream that represents an encrypted file.
+
+
+
+        The function will fail for un-unencrypted files, or custom-encrypted files (i.e., files for which @msipc.ipcfisfileencrypted returns **IPCF_FILE_STATUS_ENCRYPTED_CUSTOM**.
+
+
+
+        *pFileStream* must not be freed or modified until *phFile* is closed.
+
+
+
+    - id: pContext [in, optional]
+      type: PCIPC_PROMPT_CTX
+      description: Optional pointer to information that helps the  MSIPC client decide what the user prompt behavior should be.
+    - id: dwFlags
+      type: DWORD
+      description: Must be set to 0 (zero)
+    - id: phFile [out]
+      type: PIPCF_FILE_HANDLE
+      description: Pointer to an **IPCF_FILE_HANDLE** which can be used to read/write the encrypted data. This pointer must  be closed using the @msipc.ipcclosehandle function.
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >-
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+        Possible values include, but are not limited to, those in the following table.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Return code/value</th>
+
+        <th>Description</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCERROR_FILE_NOT_ENCRYPTED**
+
+        </td>
+
+        <td>
+
+        Function failed due to an un-unencrypted files.
+
+        </td>
+
+        </tr>
+
+        </table>
+  inheritance: []
+- uid: msipc.ipcflogicalfilerangetorawfilerange
+  id: IpcfLogicalFileRangeToRawFileRange
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfLogicalFileRangeToRawFileRange
+  fullName: msipc.ipcflogicalfilerangetorawfilerange
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Gets the raw file range for the given logical file range of the protected file  content.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfLogicalFileRangeToRawFileRange(
+      	_In_ IPCF_FILE_HANDLE hFile,
+      	_In_ PCIPCF_FILE_RANGE inRange,
+      	_Out_ PIPCF_RAW_FILE_RANGE outRange
+      )
+    parameters:
+    - id: hFile [in]
+      type: IPCF_FILE_HANDLE
+      description: Handle to the protected file  obtained from @msipc.ipcfopenfileonilockbytes or @msipc.ipcfopenfileonhandle.
+    - id: inRange [in]
+      type: PCIPCF_FILE_RANGE
+      description: Pointer to the structure @msipc.ipcf_file_range indicating the logical range of data in the pfile represented by *hFile*.
+    - id: outRange [out]
+      type: PIPCF_RAW_FILE_RANGE
+      description: Pointer to the structure @msipc.ipcf_raw_file_range indicating the raw range corresponding to the logical range represented by *inRange*.
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfreadfile
+  id: IpcfReadFile
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfReadFile
+  fullName: msipc.ipcfreadfile
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Reads protected content of a protected file  given a logical file range.
+
+
+
+    This operation requires that the current user has at least the VIEW right for the content.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfReadFile(
+      	_In_ IPCF_FILE_HANDLE hFile,
+      	_In_ PCIPCF_FILE_RANGE pDataRange,
+      	_In_ PBYTE pvBuffer,
+      	_In_out_ DWORD64 *cbBufferSize
+      )
+    parameters:
+    - id: hFile [in]
+      type: IPCF_FILE_HANDLE
+      description: >+
+        Handle to the protected file .
+
+
+
+        This needs to be obtained from the function @msipc.ipcfopenfileonilockbytes or @msipc.ipcfopenfileonhandle. .
+
+
+
+    - id: pDataRange [in]
+      type: PCIPCF_FILE_RANGE
+      description: Pointer to @msipc.ipcf_file_range structure indicating the data range to read.
+    - id: pvBuffer [in]
+      type: PBYTE
+      description: Buffer to which the decrypted data will be returned.
+    - id: cbBufferSize [in, out]
+      type: DWORD64
+      description: >+
+        Pointer to size of *pvBuffer* in bytes.
+
+
+
+        On return, this contains the actual number of bytes copied into *pvBuffer*.
+
+
+
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfsetendoffile
+  id: IpcfSetEndOfFile
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfSetEndOfFile
+  fullName: msipc.ipcfsetendoffile
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Truncates a protected file .
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfSetEndOfFile(
+      	_In_ IPCF_FILE_HANDLE hFile,
+      	_In_ DWORD64 qwOffset
+      )
+    parameters:
+    - id: hFile [in]
+      type: IPCF_FILE_HANDLE
+      description: >+
+        Handle to the protected file .
+
+
+
+        This needs to be obtained from the function  @msipc.ipcfopenfileonilockbytes or @msipc.ipcfopenfileonhandle.
+
+
+
+    - id: qwOffset [in]
+      type: DWORD64
+      description: The logical offset of the file to set as EOF (end of file).
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfsetfileproperty
+  id: IpcfSetFileProperty
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfSetFileProperty
+  fullName: msipc.ipcfsetfileproperty
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Sets the properties on **IPCF_FILE_HANDLE** or on the file represented by it.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfSetFileProperty(
+      	_In_ IPCF_FILE_HANDLE hFile,
+      	_In_ DWORD dwPropId,
+      	_In_ LPCVOID pvProperty
+      )
+    parameters:
+    - id: hFile [in]
+      type: IPCF_FILE_HANDLE
+      description: Handle properties to be set.
+    - id: dwPropId [in]
+      type: DWORD
+      description: >-
+        Type of file property to modify.
+
+
+
+        The *pvProperty* parameter must match this type.
+
+
+
+        <table border="1">
+
+        <tr>
+
+        <th>Name</th>
+
+        <th>Value</th>
+
+        <th>Meaning</th>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_HEADER_POSITION**
+
+        </td>
+
+        <td>
+
+        **1**
+
+        </td>
+
+        <td>
+
+        Describes the file range indicating the offset and size of the protected file header.
+
+
+
+
+
+
+
+        For @msipc.ipcfsetfileproperty cannot set this property.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_CONTENT_KEY**
+
+        </td>
+
+        <td>
+
+        **2**
+
+        </td>
+
+        <td>
+
+        This is currently not implemented and returns **E_NOTIMPL** if called.
+
+
+
+        Describes the handle to the key which is used to protect the content of the file specified by parameter *hFile*.
+
+
+
+        For @msipc.ipcfsetfileproperty cannot set this property.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_ACCESS_BLOCK_SIZE**
+
+        </td>
+
+        <td>
+
+        **3**
+
+        </td>
+
+        <td>
+
+        Specifies the size of blocks with which the data will be accessed.
+
+
+
+
+
+
+
+        For @msipc.ipcfsetfileproperty*pvProperty* is of type **LPDWORD**.
+
+
+
+
+        </td>
+
+        </tr>
+
+        <tr>
+
+        <td>
+
+        **IPCF_FI_BASIC_INFORMATION**
+
+        </td>
+
+        <td>
+
+        **4**
+
+        </td>
+
+        <td>
+
+        This is currently not implemented and returns **E_NOTIMPL** if called.
+
+
+
+        Specifies the basic information about the file represented by the parameter *hFile*.
+
+
+
+        For @msipc.ipcfsetfileproperty*pvProperty* is of type **PCIPCF_FILE_BASIC_INFORMATION**.
+
+
+
+
+        </td>
+
+        </tr>
+
+        </table>
+    - id: pvProperty [in]
+      type: LPCVOID
+      description: >+
+        Pointer to the buffer which contains the property to be set.
+
+
+
+        The value depends on the parameter *dwPropId*.
+
+
+
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+- uid: msipc.ipcfwritefile
+  id: IpcfWriteFile
+  parent: msipc.microsoft_information_protection_and_control_client_functions
+  children: []
+  href: Functions.yml
+  langs:
+  - cplusplus
+  name: IpcfWriteFile
+  fullName: msipc.ipcfwritefile
+  type: Method
+  assemblies: *o0
+  namespace: Functions
+  summary: >+
+    Modifies protected content of a protected file  to a given logical file range.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      EXTERN_C HRESULT WINAPI IpcfWriteFile(
+      	_In_ IPCF_FILE_HANDLE hFile,
+      	_In_ PCIPCF_FILE_RANGE pDataRange,
+      	_In_ PBYTE pvBuffer,
+      	_In_out_ DWORD64 *cbBufferSize
+      )
+    parameters:
+    - id: hFile [in]
+      type: IPCF_FILE_HANDLE
+      description: >+
+        Handle to the protected file .
+
+
+
+        This needs to be obtained from the function  @msipc.ipcfopenfileonilockbytes or @msipc.ipcfopenfileonhandle.
+
+
+
+    - id: pDataRange [in]
+      type: PCIPCF_FILE_RANGE
+      description: Pointer to @msipc.ipcf_file_range structure indicating the data range to write.
+    - id: pvBuffer [in]
+      type: PBYTE
+      description: The unencrypted data which needs to be written at the given data range specified through *pDataRange*.
+    - id: cbBufferSize [in, out]
+      type: DWORD64
+      description: >+
+        Pointer to size of *pvBuffer* in bytes.
+
+
+
+        On return, this contains the actual number of bytes written to the file represented by *hFile* parameter.
+
+
+
+    return:
+      type: EXTERN_C HRESULT WINAPI
+      description: >+
+        If the function succeeds, the return value is **S_OK**. If the function fails, it returns an **HRESULT** value that indicates the error.
+
+
+
+        For more information, see @msipc.error_codes for a description of all Rights Management Services SDK 2.1  return values.
+
+
+
+  inheritance: []
+references:
+- uid: msipc.ipcaccesscheck
+  href: IpcAccessCheck.yml
+  name: IpcAccessCheck
+- uid: msipc.ipcclosehandle
+  href: IpcCloseHandle.yml
+  name: IpcCloseHandle
+- uid: msipc.ipccreatelicensefromscratch
+  href: IpcCreateLicenseFromScratch.yml
+  name: IpcCreateLicenseFromScratch
+- uid: msipc.ipccreatelicensefromtemplateid
+  href: IpcCreateLicenseFromTemplateID.yml
+  name: IpcCreateLicenseFromTemplateID
+- uid: msipc.ipccreatelicensemetadatahandle
+  href: IpcCreateLicenseMetadataHandle.yml
+  name: IpcCreateLicenseMetadataHandle
+- uid: msipc.ipcdecrypt
+  href: IpcDecrypt.yml
+  name: IpcDecrypt
+- uid: msipc.ipcencrypt
+  href: IpcEncrypt.yml
+  name: IpcEncrypt
+- uid: msipc.ipcfreememory
+  href: IpcFreeMemory.yml
+  name: IpcFreeMemory
+- uid: msipc.ipcgeterrormessagetext
+  href: IpcGetErrorMessageText.yml
+  name: IpcGetErrorMessageText
+- uid: msipc.ipcgetglobalproperty
+  href: IpcGetGlobalProperty.yml
+  name: IpcGetGlobalProperty
+- uid: msipc.ipcgetkey
+  href: IpcGetKey.yml
+  name: IpcGetKey
+- uid: msipc.ipcgetkeyproperty
+  href: IpcGetKeyProperty.yml
+  name: IpcGetKeyProperty
+- uid: msipc.ipcgetlicenseproperty
+  href: IpcGetLicenseProperty.yml
+  name: IpcGetLicenseProperty
+- uid: msipc.ipcgetserializedlicenseproperty
+  href: IpcGetSerializedLicenseProperty.yml
+  name: IpcGetSerializedLicenseProperty
+- uid: msipc.ipcgettemplateissuerlist
+  href: IpcGetTemplateIssuerList.yml
+  name: IpcGetTemplateIssuerList
+- uid: msipc.ipcgettemplatelist
+  href: IpcGetTemplateList.yml
+  name: IpcGetTemplateList
+- uid: msipc.ipcinitialize
+  href: IpcInitialize.yml
+  name: IpcInitialize
+- uid: msipc.ipcprotectwindow
+  href: IpcProtectWindow.yml
+  name: IpcProtectWindow
+- uid: msipc.ipcserializelicense
+  href: IpcSerializeLicense.yml
+  name: IpcSerializeLicense
+- uid: msipc.ipcsetglobalproperty
+  href: IpcSetGlobalProperty.yml
+  name: IpcSetGlobalProperty
+- uid: msipc.ipcsetlicenseproperty
+  href: IpcSetLicenseProperty.yml
+  name: IpcSetLicenseProperty
+- uid: msipc.ipcunprotectwindow
+  href: IpcUnprotectWindow.yml
+  name: IpcUnprotectWindow
+- uid: msipc.ipcregisterlicense
+  href: IpcRegisterLicense.yml
+  name: IpcRegisterLicense
+- uid: msipc.ipcserializelicensemetadata
+  href: IpcSerializeLicenseWithMetadata.yml
+  name: IpcSerializeLicenseWithMetadata
+- uid: msipc.ipcsetlicensemetadataproperty
+  href: IpcSetLicenseMetadataProperty.yml
+  name: IpcSetLicenseMetadataProperty
+- uid: msipc.ipcfdecryptfile
+  href: IpcfDecryptFile.yml
+  name: IpcfDecryptFile
+- uid: msipc.ipcfdecryptfilestream
+  href: IpcfDecryptFileStream.yml
+  name: IpcfDecryptFileStream
+- uid: msipc.ipcfencryptfile
+  href: IpcfEncryptFile.yml
+  name: IpcfEncryptFile
+- uid: msipc.ipcfencryptfilestream
+  href: IpcfEncryptFileStream.yml
+  name: IpcfEncryptFileStream
+- uid: msipc.ipcfencryptfilestreamwithmetadata
+  href: IpcfEncryptFileStreamWithMetadata.yml
+  name: IpcfEncryptFileStreamWithMetadata
+- uid: msipc.ipcfencryptfilewithmetadata
+  href: IpcfEncryptFileWithMetadata.yml
+  name: IpcfEncryptFileWithMetadata
+- uid: msipc.ipcfgetdecryptedfilepath
+  href: IpcfGetDecryptedFilePath.yml
+  name: IpcfGetDecryptedFilePath
+- uid: msipc.ipcfgetdecryptedfilepathfromstream
+  href: IpcfGetDecryptedFilePathFromStream.yml
+  name: IpcfGetDecryptedFilePathFromStream
+- uid: msipc.ipcfgetencryptedfilepath
+  href: IpcfGetEncryptedFilePath.yml
+  name: IpcfGetEncryptedFilePath
+- uid: msipc.ipcfgetencryptedfilepathfromstream
+  href: IpcfGetEncryptedFilePathFromStream.yml
+  name: IpcfGetEncryptedFilePathFromStream
+- uid: msipc.ipcfgetfileproperty
+  href: IpcfGetFileProperty.yml
+  name: IpcfGetFileProperty
+- uid: msipc.ipcfgetserializedlicensefromfile
+  href: IpcfGetSerializedLicenseFromFile.yml
+  name: IpcfGetSerializedLicenseFromFile
+- uid: msipc.ipcfgetserializedlicensefromfilestream
+  href: IpcfGetSerializedLicenseFromFileStream.yml
+  name: IpcfGetSerializedLicenseFromFileStream
+- uid: msipc.ipcfisfileencrypted
+  href: IpcfIsFileEncrypted.yml
+  name: IpcfIsFileEncrypted
+- uid: msipc.ipcfisfilestreamencrypted
+  href: IpcfIsFileStreamEncrypted.yml
+  name: IpcfIsFileStreamEncrypted
+- uid: msipc.ipcfopenfileonhandle
+  href: IpcfOpenFileOnHandle.yml
+  name: IpcfOpenFileOnHandle
+- uid: msipc.ipcfopenfileonilockbytes
+  href: IpcfOpenFileOnILockBytes.yml
+  name: IpcfOpenFileOnILockBytes
+- uid: msipc.ipcflogicalfilerangetorawfilerange
+  href: IpcfLogicalFileRangeToRawFileRange.yml
+  name: IpcfLogicalFileRangeToRawFileRange
+- uid: msipc.ipcfreadfile
+  href: IpcfReadFile.yml
+  name: IpcfReadFile
+- uid: msipc.ipcfsetendoffile
+  href: IpcfSetEndOfFile.yml
+  name: IpcfSetEndOfFile
+- uid: msipc.ipcfsetfileproperty
+  href: IpcfSetFileProperty.yml
+  name: IpcfSetFileProperty
+- uid: msipc.ipcfwritefile
+  href: IpcfWriteFile.yml
+  name: IpcfWriteFile

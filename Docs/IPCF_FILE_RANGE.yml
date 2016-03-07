@@ -1,0 +1,69 @@
+items:
+- uid: msipc.ipcf_file_range
+  id: IPCF_FILE_RANGE
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipcf_file_range.qwOffset
+  - msipc.ipcf_file_range.qwSize
+  href: IPCF_FILE_RANGE.yml
+  langs:
+  - cplusplus
+  name: IPCF_FILE_RANGE
+  fullName: msipc.ipcf_file_range
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Describes the logical file range in a protected file .
+
+
+
+    For more information on protected file , see @msipc.supported_file_formats.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPCF_FILE_RANGE {
+      	DWORD64 qwOffset;
+      	DWORD64 qwSize;
+      } IPCF_FILE_RANGE *IPCF_FILE_RANGE;
+  inheritance: []
+- uid: msipc.ipcf_file_range.qwOffset
+  id: qwOffset
+  parent: msipc.ipcf_file_range
+  href: IPCF_FILE_RANGE.yml
+  langs:
+  - cplusplus
+  name: qwOffset
+  fullName: msipc.ipcf_file_range.qwOffset
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Logical offset of the data of interest.
+- uid: msipc.ipcf_file_range.qwSize
+  id: qwSize
+  parent: msipc.ipcf_file_range
+  href: IPCF_FILE_RANGE.yml
+  langs:
+  - cplusplus
+  name: qwSize
+  fullName: msipc.ipcf_file_range.qwSize
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Size of the data of interest.
+references:
+- uid: msipc.supported_file_formats
+  name: Supported File Formats
+- uid: msipc.msipc_structures
+  href: Structures.yml
+  name: Structures
+- uid: msipc.ipcf_file_range.qwOffset
+  href: IPCF_FILE_RANGE.yml
+  name: qwOffset
+- uid: msipc.ipcf_file_range.qwSize
+  href: IPCF_FILE_RANGE.yml
+  name: qwSize

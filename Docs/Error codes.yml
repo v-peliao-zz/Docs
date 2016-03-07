@@ -1,0 +1,592 @@
+items:
+- uid: msipc.error_codes
+  id: Error codes
+  parent: msipc.msipc_constants
+  children:
+  - msipc.error_codes.IPCERROR_AD_ENTRY_NOT_FOUND
+  - msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+  - msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+  - msipc.error_codes.IPCERROR_BROKEN_CERT_CHAIN
+  - msipc.error_codes.IPCERROR_CLOCK_ROLL_BACK_DETECTED
+  - msipc.error_codes.IPCERROR_CONTENT_KEY_NOT_SET
+  - msipc.error_codes.IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+  - msipc.error_codes.IPCERROR_DEBUGGER_DETECTED
+  - msipc.error_codes.IPCERROR_FILE_ENCRYPT_BLOCKED
+  - msipc.error_codes.IPCERROR_FILE_IS_NOT_ENCRYPTED
+  - msipc.error_codes.IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED
+  - msipc.error_codes.IPCERROR_FILE_SYSTEM_FILE
+  - msipc.error_codes.IPCERROR_FILE_UPDATELICENSE_BLOCKED
+  - msipc.error_codes.IPCERROR_ILS_ERROR
+  - msipc.error_codes.IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+  - msipc.error_codes.IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+  - msipc.error_codes.IPCERROR_LOCALE_NOT_FOUND
+  - msipc.error_codes.IPCERROR_MACHINE_NOT_TRUSTED
+  - msipc.error_codes.IPCERROR_NEEDS_KEY_PARAMETER
+  - msipc.error_codes.IPCERROR_NEEDS_ONLINE
+  - msipc.error_codes.IPCERROR_NEEDS_UI
+  - msipc.error_codes.IPCERROR_NOT_BLOCK_ALIGNED
+  - msipc.error_codes.IPCERROR_OS_VERSION_NOT_TRUSTED
+  - msipc.error_codes.IPCERROR_PROPERTY_ALREADY_SET
+  - msipc.error_codes.IPCERROR_RIGHT_NOT_GRANTED
+  - msipc.error_codes.IPCERROR_SAFEMODE_OS_DETECTED
+  - msipc.error_codes.IPCERROR_SERVER_ERROR
+  - msipc.error_codes.IPCERROR_SERVER_RESPONSE_NOT_VALID
+  - msipc.error_codes.IPCERROR_SIA_NOT_INSTALLED
+  - msipc.error_codes.IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+  - msipc.error_codes.IPCERROR_USER_RIGHTS_NOT_SET
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: Error codes
+  fullName: msipc.error_codes
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Error codes returned by the Rights Management Services SDK 2.1  system.
+
+
+
+
+
+
+
+    For error condition processing, always use a call to @msipc.ipcgeterrormessagetext right after an SDK API call fails, so you get complete information about the nature of the error.
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.error_codes.IPCERROR_USER_RIGHTS_NOT_SET
+  id: IPCERROR_USER_RIGHTS_NOT_SET
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_USER_RIGHTS_NOT_SET
+  fullName: msipc.error_codes.IPCERROR_USER_RIGHTS_NOT_SET
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Usage rights on this content are not set correctly. Contact your application support for further investigation.
+  syntax:
+    content: IPCERROR_USER_RIGHTS_NOT_SET = 0x80040200
+- uid: msipc.error_codes.IPCERROR_AD_ENTRY_NOT_FOUND
+  id: IPCERROR_AD_ENTRY_NOT_FOUND
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_AD_ENTRY_NOT_FOUND
+  fullName: msipc.error_codes.IPCERROR_AD_ENTRY_NOT_FOUND
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: No email address exists for the specified user in the Active Directory. Contact your administrator for further investigation.
+  syntax:
+    content: IPCERROR_AD_ENTRY_NOT_FOUND = 0x80040201
+- uid: msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+  id: IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+  fullName: msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This application is not trusted to consume rights managed content. The Authenticode signature for the application is not valid. Contact your administrator for further investigation.
+  syntax:
+    content: IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE = 0x80040202
+- uid: msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+  id: IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+  fullName: msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This application is not trusted to consume rights managed content.  The application's rights management manifest is missing or is not valid. Contact your application support for further investigation.
+  syntax:
+    content: IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST = 0x80040203
+- uid: msipc.error_codes.IPCERROR_BROKEN_CERT_CHAIN
+  id: IPCERROR_BROKEN_CERT_CHAIN
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_BROKEN_CERT_CHAIN
+  fullName: msipc.error_codes.IPCERROR_BROKEN_CERT_CHAIN
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: A required certificate chain was not trusted.
+  syntax:
+    content: IPCERROR_BROKEN_CERT_CHAIN = 0x80040204
+- uid: msipc.error_codes.IPCERROR_CLOCK_ROLL_BACK_DETECTED
+  id: IPCERROR_CLOCK_ROLL_BACK_DETECTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_CLOCK_ROLL_BACK_DETECTED
+  fullName: msipc.error_codes.IPCERROR_CLOCK_ROLL_BACK_DETECTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This application cannot provide rights management functionality because the system clock has been set to a time that occurs in the past. Make sure that your computer's system clock is set correctly and try again.
+  syntax:
+    content: IPCERROR_CLOCK_ROLL_BACK_DETECTED = 0x80040205
+- uid: msipc.error_codes.IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+  id: IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+  fullName: msipc.error_codes.IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This application cannot provide rights management functionality because the cryptographic algorithm requested by the server is not supported by this client. Contact your administrator for further investigation.
+  syntax:
+    content: IPCERROR_CRYPTO_OPERATION_UNSUPPORTED = 0x80040206
+- uid: msipc.error_codes.IPCERROR_DEBUGGER_DETECTED
+  id: IPCERROR_DEBUGGER_DETECTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_DEBUGGER_DETECTED
+  fullName: msipc.error_codes.IPCERROR_DEBUGGER_DETECTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The operation could not be completed because a debugger was detected.
+  syntax:
+    content: IPCERROR_DEBUGGER_DETECTED = 0x80040207
+- uid: msipc.error_codes.IPCERROR_LOCALE_NOT_FOUND
+  id: IPCERROR_LOCALE_NOT_FOUND
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_LOCALE_NOT_FOUND
+  fullName: msipc.error_codes.IPCERROR_LOCALE_NOT_FOUND
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Text for the specified language does not exist in this license.
+  syntax:
+    content: IPCERROR_LOCALE_NOT_FOUND = 0x80040208
+- uid: msipc.error_codes.IPCERROR_ILS_ERROR
+  id: IPCERROR_ILS_ERROR
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_ILS_ERROR
+  fullName: msipc.error_codes.IPCERROR_ILS_ERROR
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: An error occurred when trying to contact the Information Rights Management Service for your Microsoft account. Try again later, or contact your administrator for further investigation.
+  syntax:
+    content: IPCERROR_ILS_ERROR = 0x80040209
+- uid: msipc.error_codes.IPCERROR_SERVER_RESPONSE_NOT_VALID
+  id: IPCERROR_SERVER_RESPONSE_NOT_VALID
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_SERVER_RESPONSE_NOT_VALID
+  fullName: msipc.error_codes.IPCERROR_SERVER_RESPONSE_NOT_VALID
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The data received from the server running AD RMS didn't match the expected format. Contact your administrator for further investigation.
+  syntax:
+    content: IPCERROR_SERVER_RESPONSE_NOT_VALID = 0x8004020A
+- uid: msipc.error_codes.IPCERROR_OS_VERSION_NOT_TRUSTED
+  id: IPCERROR_OS_VERSION_NOT_TRUSTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_OS_VERSION_NOT_TRUSTED
+  fullName: msipc.error_codes.IPCERROR_OS_VERSION_NOT_TRUSTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This operating system version is not trusted to perform the specified operation. Contact the content owner for further investigation.
+  syntax:
+    content: IPCERROR_OS_VERSION_NOT_TRUSTED = 0x8004020B
+- uid: msipc.error_codes.IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+  id: IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+  fullName: msipc.error_codes.IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Too many users have been granted access to this protected content. Reduce the number of users or replace users with user groups, and try again.
+  syntax:
+    content: IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED = 0x8004020C
+- uid: msipc.error_codes.IPCERROR_NEEDS_ONLINE
+  id: IPCERROR_NEEDS_ONLINE
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_NEEDS_ONLINE
+  fullName: msipc.error_codes.IPCERROR_NEEDS_ONLINE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The Active Directory Rights Management Services Client 2.1  needs network access to complete the operation, but it cannot get network access because the application requested offline mode.
+  syntax:
+    content: IPCERROR_NEEDS_ONLINE = 0x8004020D
+- uid: msipc.error_codes.IPCERROR_NEEDS_UI
+  id: IPCERROR_NEEDS_UI
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_NEEDS_UI
+  fullName: msipc.error_codes.IPCERROR_NEEDS_UI
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The Active Directory Rights Management Services Client 2.1  needs to display a window to complete the operation, but it cannot display a window because the application requested silent mode.
+  syntax:
+    content: IPCERROR_NEEDS_UI = 0x8004020E
+- uid: msipc.error_codes.IPCERROR_NOT_BLOCK_ALIGNED
+  id: IPCERROR_NOT_BLOCK_ALIGNED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_NOT_BLOCK_ALIGNED
+  fullName: msipc.error_codes.IPCERROR_NOT_BLOCK_ALIGNED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The data passed to the Active Directory Rights Management Services Client 2.1  was not a multiple of the cipher block size. Contact your application support for further investigation.
+  syntax:
+    content: IPCERROR_NOT_BLOCK_ALIGNED = 0x8004020F
+- uid: msipc.error_codes.IPCERROR_PROPERTY_ALREADY_SET
+  id: IPCERROR_PROPERTY_ALREADY_SET
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_PROPERTY_ALREADY_SET
+  fullName: msipc.error_codes.IPCERROR_PROPERTY_ALREADY_SET
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The application attempted to set a property that has already been set.
+  syntax:
+    content: IPCERROR_PROPERTY_ALREADY_SET = 0x80040210
+- uid: msipc.error_codes.IPCERROR_RIGHT_NOT_GRANTED
+  id: IPCERROR_RIGHT_NOT_GRANTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_RIGHT_NOT_GRANTED
+  fullName: msipc.error_codes.IPCERROR_RIGHT_NOT_GRANTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: You have not been granted the rights necessary to complete the specified operation. Contact the content owner for additional rights.
+  syntax:
+    content: IPCERROR_RIGHT_NOT_GRANTED = 0x80040211
+- uid: msipc.error_codes.IPCERROR_SAFEMODE_OS_DETECTED
+  id: IPCERROR_SAFEMODE_OS_DETECTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_SAFEMODE_OS_DETECTED
+  fullName: msipc.error_codes.IPCERROR_SAFEMODE_OS_DETECTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The Active Directory Rights Management Services Client 2.1  cannot be started when the operating system is in safe mode. Try the operation again when the operating system is in normal mode.
+  syntax:
+    content: IPCERROR_SAFEMODE_OS_DETECTED = 0x80040212
+- uid: msipc.error_codes.IPCERROR_SERVER_ERROR
+  id: IPCERROR_SERVER_ERROR
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_SERVER_ERROR
+  fullName: msipc.error_codes.IPCERROR_SERVER_ERROR
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: An error occurred while trying to contact the Active Directory Rights Management Services server. Try again later or contact your administrator.
+  syntax:
+    content: IPCERROR_SERVER_ERROR = 0x80040214
+- uid: msipc.error_codes.IPCERROR_MACHINE_NOT_TRUSTED
+  id: IPCERROR_MACHINE_NOT_TRUSTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_MACHINE_NOT_TRUSTED
+  fullName: msipc.error_codes.IPCERROR_MACHINE_NOT_TRUSTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This computer does not have the rights required to perform the specified operation. Update the rights on this computer or contact your administrator.
+  syntax:
+    content: IPCERROR_MACHINE_NOT_TRUSTED = 0x80040215
+- uid: msipc.error_codes.IPCERROR_NEEDS_KEY_PARAMETER
+  id: IPCERROR_NEEDS_KEY_PARAMETER
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_NEEDS_KEY_PARAMETER
+  fullName: msipc.error_codes.IPCERROR_NEEDS_KEY_PARAMETER
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The application must provide a key handle to access the requested information. Contact your application support for further investigation.
+  syntax:
+    content: IPCERROR_NEEDS_KEY_PARAMETER = 0x80040216
+- uid: msipc.error_codes.IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+  id: IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+  fullName: msipc.error_codes.IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: License interval time on this content is not set. Contact your application support for further investigation.
+  syntax:
+    content: IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET = 0x80040217
+- uid: msipc.error_codes.IPCERROR_CONTENT_KEY_NOT_SET
+  id: IPCERROR_CONTENT_KEY_NOT_SET
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_CONTENT_KEY_NOT_SET
+  fullName: msipc.error_codes.IPCERROR_CONTENT_KEY_NOT_SET
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Content key on the license used by this content is not set. Contact your application support for further investigation.
+  syntax:
+    content: IPCERROR_CONTENT_KEY_NOT_SET = 0x80040218
+- uid: msipc.error_codes.IPCERROR_SIA_NOT_INSTALLED
+  id: IPCERROR_SIA_NOT_INSTALLED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_SIA_NOT_INSTALLED
+  fullName: msipc.error_codes.IPCERROR_SIA_NOT_INSTALLED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Microsoft Online Services Sign-in Assistant is not installed on this machine. Contact your administrator for further investigation.
+  syntax:
+    content: IPCERROR_SIA_NOT_INSTALLED = 0x80040219
+- uid: msipc.error_codes.IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+  id: IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+  fullName: msipc.error_codes.IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Azure  Rights Management Service has not granted you rights to modify the usage policy for this content. Contact your administrator for more details.
+  syntax:
+    content: IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER = 0x8004021A
+- uid: msipc.error_codes.IPCERROR_FILE_SYSTEM_FILE
+  id: IPCERROR_FILE_SYSTEM_FILE
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_FILE_SYSTEM_FILE
+  fullName: msipc.error_codes.IPCERROR_FILE_SYSTEM_FILE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The specified file is a Windows system file.
+  syntax:
+    content: IPCERROR_FILE_SYSTEM_FILE = 0x80041000
+- uid: msipc.error_codes.IPCERROR_FILE_IS_NOT_ENCRYPTED
+  id: IPCERROR_FILE_IS_NOT_ENCRYPTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_FILE_IS_NOT_ENCRYPTED
+  fullName: msipc.error_codes.IPCERROR_FILE_IS_NOT_ENCRYPTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: This file is not encrypted by Active Directory Rights Management Services.
+  syntax:
+    content: IPCERROR_FILE_IS_NOT_ENCRYPTED = 0x80041001
+- uid: msipc.error_codes.IPCERROR_FILE_ENCRYPT_BLOCKED
+  id: IPCERROR_FILE_ENCRYPT_BLOCKED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_FILE_ENCRYPT_BLOCKED
+  fullName: msipc.error_codes.IPCERROR_FILE_ENCRYPT_BLOCKED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Encryption of this file format is blocked by your administrators.
+  syntax:
+    content: IPCERROR_FILE_ENCRYPT_BLOCKED = 0x80041002
+- uid: msipc.error_codes.IPCERROR_FILE_UPDATELICENSE_BLOCKED
+  id: IPCERROR_FILE_UPDATELICENSE_BLOCKED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_FILE_UPDATELICENSE_BLOCKED
+  fullName: msipc.error_codes.IPCERROR_FILE_UPDATELICENSE_BLOCKED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Updating the policy on an already encrypted file is blocked by your administrator.
+  syntax:
+    content: IPCERROR_FILE_UPDATELICENSE_BLOCKED = 0x80041003
+- uid: msipc.error_codes.IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED
+  id: IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED
+  parent: msipc.error_codes
+  href: Error codes.yml
+  langs:
+  - cplusplus
+  name: IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED
+  fullName: msipc.error_codes.IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: The PDF Protector does not support the specified file for native protection.
+  syntax:
+    content: IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED = 0x80041004
+references:
+- uid: msipc.ipcgeterrormessagetext
+  href: IpcGetErrorMessageText.yml
+  name: IpcGetErrorMessageText
+- uid: msipc.error_codes.IPCERROR_USER_RIGHTS_NOT_SET
+  href: Error codes.yml
+  name: IPCERROR_USER_RIGHTS_NOT_SET
+- uid: msipc.error_codes.IPCERROR_AD_ENTRY_NOT_FOUND
+  href: Error codes.yml
+  name: IPCERROR_AD_ENTRY_NOT_FOUND
+- uid: msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+  href: Error codes.yml
+  name: IPCERROR_APPLICATION_AUTH_ERROR_AUTHENTICODE
+- uid: msipc.error_codes.IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+  href: Error codes.yml
+  name: IPCERROR_APPLICATION_AUTH_ERROR_MANIFEST
+- uid: msipc.error_codes.IPCERROR_BROKEN_CERT_CHAIN
+  href: Error codes.yml
+  name: IPCERROR_BROKEN_CERT_CHAIN
+- uid: msipc.error_codes.IPCERROR_CLOCK_ROLL_BACK_DETECTED
+  href: Error codes.yml
+  name: IPCERROR_CLOCK_ROLL_BACK_DETECTED
+- uid: msipc.error_codes.IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+  href: Error codes.yml
+  name: IPCERROR_CRYPTO_OPERATION_UNSUPPORTED
+- uid: msipc.error_codes.IPCERROR_DEBUGGER_DETECTED
+  href: Error codes.yml
+  name: IPCERROR_DEBUGGER_DETECTED
+- uid: msipc.error_codes.IPCERROR_LOCALE_NOT_FOUND
+  href: Error codes.yml
+  name: IPCERROR_LOCALE_NOT_FOUND
+- uid: msipc.error_codes.IPCERROR_ILS_ERROR
+  href: Error codes.yml
+  name: IPCERROR_ILS_ERROR
+- uid: msipc.error_codes.IPCERROR_SERVER_RESPONSE_NOT_VALID
+  href: Error codes.yml
+  name: IPCERROR_SERVER_RESPONSE_NOT_VALID
+- uid: msipc.error_codes.IPCERROR_OS_VERSION_NOT_TRUSTED
+  href: Error codes.yml
+  name: IPCERROR_OS_VERSION_NOT_TRUSTED
+- uid: msipc.error_codes.IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+  href: Error codes.yml
+  name: IPCERROR_ISSUANCELICENSE_LENGTH_LIMIT_EXCEEDED
+- uid: msipc.error_codes.IPCERROR_NEEDS_ONLINE
+  href: Error codes.yml
+  name: IPCERROR_NEEDS_ONLINE
+- uid: msipc.error_codes.IPCERROR_NEEDS_UI
+  href: Error codes.yml
+  name: IPCERROR_NEEDS_UI
+- uid: msipc.error_codes.IPCERROR_NOT_BLOCK_ALIGNED
+  href: Error codes.yml
+  name: IPCERROR_NOT_BLOCK_ALIGNED
+- uid: msipc.error_codes.IPCERROR_PROPERTY_ALREADY_SET
+  href: Error codes.yml
+  name: IPCERROR_PROPERTY_ALREADY_SET
+- uid: msipc.error_codes.IPCERROR_RIGHT_NOT_GRANTED
+  href: Error codes.yml
+  name: IPCERROR_RIGHT_NOT_GRANTED
+- uid: msipc.error_codes.IPCERROR_SAFEMODE_OS_DETECTED
+  href: Error codes.yml
+  name: IPCERROR_SAFEMODE_OS_DETECTED
+- uid: msipc.error_codes.IPCERROR_SERVER_ERROR
+  href: Error codes.yml
+  name: IPCERROR_SERVER_ERROR
+- uid: msipc.error_codes.IPCERROR_MACHINE_NOT_TRUSTED
+  href: Error codes.yml
+  name: IPCERROR_MACHINE_NOT_TRUSTED
+- uid: msipc.error_codes.IPCERROR_NEEDS_KEY_PARAMETER
+  href: Error codes.yml
+  name: IPCERROR_NEEDS_KEY_PARAMETER
+- uid: msipc.error_codes.IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+  href: Error codes.yml
+  name: IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET
+- uid: msipc.error_codes.IPCERROR_CONTENT_KEY_NOT_SET
+  href: Error codes.yml
+  name: IPCERROR_CONTENT_KEY_NOT_SET
+- uid: msipc.error_codes.IPCERROR_SIA_NOT_INSTALLED
+  href: Error codes.yml
+  name: IPCERROR_SIA_NOT_INSTALLED
+- uid: msipc.error_codes.IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+  href: Error codes.yml
+  name: IPCERROR_TEMPLATE_NOT_ENABLED_FOR_USER
+- uid: msipc.error_codes.IPCERROR_FILE_SYSTEM_FILE
+  href: Error codes.yml
+  name: IPCERROR_FILE_SYSTEM_FILE
+- uid: msipc.error_codes.IPCERROR_FILE_IS_NOT_ENCRYPTED
+  href: Error codes.yml
+  name: IPCERROR_FILE_IS_NOT_ENCRYPTED
+- uid: msipc.error_codes.IPCERROR_FILE_ENCRYPT_BLOCKED
+  href: Error codes.yml
+  name: IPCERROR_FILE_ENCRYPT_BLOCKED
+- uid: msipc.error_codes.IPCERROR_FILE_UPDATELICENSE_BLOCKED
+  href: Error codes.yml
+  name: IPCERROR_FILE_UPDATELICENSE_BLOCKED
+- uid: msipc.error_codes.IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED
+  href: Error codes.yml
+  name: IPCERROR_FILE_PDFPROTECTOR_FORMAT_NOT_SUPPORTED

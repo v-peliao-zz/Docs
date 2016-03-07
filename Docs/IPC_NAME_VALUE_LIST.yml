@@ -1,0 +1,63 @@
+items:
+- uid: msipc.ipc_name_value_list
+  id: IPC_NAME_VALUE_LIST
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_name_value_list.aNameValuePairs
+  - msipc.ipc_name_value_list.cNameValuePairs
+  href: IPC_NAME_VALUE_LIST.yml
+  langs:
+  - cplusplus
+  name: IPC_NAME_VALUE_LIST
+  fullName: msipc.ipc_name_value_list
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Provides a name-value list structure that contains a collection of name-value pairs.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_NAME_VALUE_LIST {
+      	DWORD cNameValuePairs;
+      	IPC_NAME_VALUE aNameValuePairs[ANYSIZE_ARRAY];
+      } IPC_NAME_VALUE_LIST *PIPC_NAME_VALUE_LIST;typedef const IPC_NAME_VALUE_LIST *PCIPC_NAME_VALUE_LIST;
+  inheritance: []
+- uid: msipc.ipc_name_value_list.cNameValuePairs
+  id: cNameValuePairs
+  parent: msipc.ipc_name_value_list
+  href: IPC_NAME_VALUE_LIST.yml
+  langs:
+  - cplusplus
+  name: cNameValuePairs
+  fullName: msipc.ipc_name_value_list.cNameValuePairs
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The number of name-value pairs in the list.
+- uid: msipc.ipc_name_value_list.aNameValuePairs
+  id: aNameValuePairs
+  parent: msipc.ipc_name_value_list
+  href: IPC_NAME_VALUE_LIST.yml
+  langs:
+  - cplusplus
+  name: aNameValuePairs
+  fullName: msipc.ipc_name_value_list.aNameValuePairs
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The array of name-value pairs. For more information, see @msipc.ipc_name_value.
+references:
+- uid: msipc.ipc_name_value
+  href: IPC_NAME_VALUE.yml
+  name: IPC_NAME_VALUE
+- uid: msipc.ipc_name_value_list.cNameValuePairs
+  href: IPC_NAME_VALUE_LIST.yml
+  name: cNameValuePairs
+- uid: msipc.ipc_name_value_list.aNameValuePairs
+  href: IPC_NAME_VALUE_LIST.yml
+  name: aNameValuePairs

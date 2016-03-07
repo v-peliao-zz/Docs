@@ -1,0 +1,87 @@
+items:
+- uid: msipc.ipc_name_value
+  id: IPC_NAME_VALUE
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_name_value.lcid
+  - msipc.ipc_name_value.wszName
+  - msipc.ipc_name_value.wszValue
+  href: IPC_NAME_VALUE.yml
+  langs:
+  - cplusplus
+  name: IPC_NAME_VALUE
+  fullName: msipc.ipc_name_value
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Describes application specific data that is stored as part of the license.
+
+
+
+    The data is stored as name-value pairs.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_NAME_VALUE {
+      	LPCWSTR wszName;
+      	DWORD lcid;
+      	LPCWSTR wszValue;
+      } IPC_NAME_VALUE *PIPC_NAME_VALUE;typedef const IPC_NAME_VALUE *PCIPC_NAME_VALUE;
+  inheritance: []
+- uid: msipc.ipc_name_value.wszName
+  id: wszName
+  parent: msipc.ipc_name_value
+  href: IPC_NAME_VALUE.yml
+  langs:
+  - cplusplus
+  name: wszName
+  fullName: msipc.ipc_name_value.wszName
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The property name of the name-value pair.
+- uid: msipc.ipc_name_value.lcid
+  id: lcid
+  parent: msipc.ipc_name_value
+  href: IPC_NAME_VALUE.yml
+  langs:
+  - cplusplus
+  name: lcid
+  fullName: msipc.ipc_name_value.lcid
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The locale ID for the value.This member, **lcid**, must be set to the locale ID that goes with the value, **wszValue**. For more information about  platform behavior regarding locale ID, see the Frequently asked questions section of the @msipc.release_notes__rtm_ topic.
+
+
+
+- uid: msipc.ipc_name_value.wszValue
+  id: wszValue
+  parent: msipc.ipc_name_value
+  href: IPC_NAME_VALUE.yml
+  langs:
+  - cplusplus
+  name: wszValue
+  fullName: msipc.ipc_name_value.wszValue
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The property value to associate with the content or license.
+references:
+- uid: msipc.release_notes__rtm_
+  name: Release notes
+- uid: msipc.ipc_name_value.wszName
+  href: IPC_NAME_VALUE.yml
+  name: wszName
+- uid: msipc.ipc_name_value.lcid
+  href: IPC_NAME_VALUE.yml
+  name: lcid
+- uid: msipc.ipc_name_value.wszValue
+  href: IPC_NAME_VALUE.yml
+  name: wszValue

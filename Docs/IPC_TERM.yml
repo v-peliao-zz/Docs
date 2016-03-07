@@ -1,0 +1,68 @@
+items:
+- uid: msipc.ipc_term
+  id: IPC_TERM
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_term.ftStart
+  - msipc.ipc_term.qwDuration
+  href: IPC_TERM.yml
+  langs:
+  - cplusplus
+  name: IPC_TERM
+  fullName: msipc.ipc_term
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Describes a period of time based on a start time and duration.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_TERM {
+      	FILETIME ftStart;
+      	DWORD64 qwDuration;
+      } IPC_TERM *PIPC_TERM;typedef const IPC_TERM *PCIPC_TERM;
+  inheritance: []
+- uid: msipc.ipc_term.ftStart
+  id: ftStart
+  parent: msipc.ipc_term
+  href: IPC_TERM.yml
+  langs:
+  - cplusplus
+  name: ftStart
+  fullName: msipc.ipc_term.ftStart
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The beginning of the time period specified in the number of 100-nanosecond intervals since January 1, 1601 (UTC). For more information, see the {FILETIME}(https://msdn.microsoft.com/en-us/library/windows/desktop/ms724284(v=vs.85).aspx) structure.
+- uid: msipc.ipc_term.qwDuration
+  id: qwDuration
+  parent: msipc.ipc_term
+  href: IPC_TERM.yml
+  langs:
+  - cplusplus
+  name: qwDuration
+  fullName: msipc.ipc_term.qwDuration
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The duration of the time period in 100-nanosecond intervals.
+references:
+- uid: FILETIME
+  isExternal: true
+  href: https://msdn.microsoft.com/en-us/library/windows/desktop/ms724284(v=vs.85).aspx
+  name: FILETIME
+- uid: msipc.ipc_term.ftStart
+  href: IPC_TERM.yml
+  name: ftStart
+- uid: msipc.ipc_term.qwDuration
+  href: IPC_TERM.yml
+  name: qwDuration

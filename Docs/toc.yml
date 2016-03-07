@@ -1,0 +1,116 @@
+- uid: msipc.msipc_constants
+  name: Constants
+  href: Constants.yml
+  items:
+  - uid: msipc.api_mode_values
+    name: API mode values
+    href: API mode values.yml
+  - uid: msipc.decrypt_file_flags
+    name: Decrypt file flags
+    href: Decrypt file flags.yml
+  - uid: msipc.encrypt_file_flags
+    name: Encrypt file flags
+    href: Encrypt file flags.yml
+  - uid: msipc.encrypt_file_input_type
+    name: Encrypt file input type
+    href: Encrypt file input type.yml
+  - uid: msipc.environment_properties
+    name: Environment properties
+    href: Environment properties.yml
+  - uid: msipc.error_codes
+    name: Error codes
+    href: Error codes.yml
+  - uid: msipc.get_template_list_flags
+    name: Get template list flags
+    href: Get template list flags.yml
+  - uid: msipc.license_handle_types
+    name: License handle types
+    href: License handle types.yml
+  - uid: msipc.license_metadata_property_types
+    name: License metadata property types
+    href: License metadata property types.yml
+  - uid: msipc.license_property_types
+    name: License property types
+    href: License property types.yml
+  - uid: msipc.notification_preference
+    name: Notification preference
+    href: Notification preference.yml
+  - uid: msipc.notification_type
+    name: Notification type
+    href: Notification type.yml
+  - uid: msipc.preferred_encryption
+    name: Preferred encryption
+    href: Preferred encryption.yml
+  - uid: msipc.rights
+    name: Rights
+    href: Rights.yml
+- uid: msipc.microsoft_information_protection_and_control_client_data_types
+  name: Data types
+  href: Data types.yml
+- uid: msipc.microsoft_information_protection_and_control_client_functions
+  name: Functions
+  href: Functions.yml
+- uid: msipc.msipc_structures
+  name: Structures
+  href: Structures.yml
+  items:
+  - uid: msipc.ipc_buffer
+    name: IPC_BUFFER
+    href: IPC_BUFFER.yml
+  - uid: msipc.ipc_connection_info
+    name: IPC_CONNECTION_INFO
+    href: IPC_CONNECTION_INFO.yml
+  - uid: msipc.ipc_credential
+    name: IPC_CREDENTIAL
+    href: IPC_CREDENTIAL.yml
+  - uid: msipc.ipc_credential_symmetric_key
+    name: IPC_CREDENTIAL_SYMMETRIC_KEY
+    href: IPC_CREDENTIAL_SYMMETRIC_KEY.yml
+  - uid: msipc.ipc_license_metadata
+    name: IPC_LICENSE_METADATA
+    href: IPC_LICENSE_METADATA.yml
+  - uid: msipc.ipc_name_value
+    name: IPC_NAME_VALUE
+    href: IPC_NAME_VALUE.yml
+  - uid: msipc.ipc_name_value_list
+    name: IPC_NAME_VALUE_LIST
+    href: IPC_NAME_VALUE_LIST.yml
+  - uid: msipc.ipc_prompt_ctx
+    name: IPC_PROMPT_CTX
+    href: IPC_PROMPT_CTX.yml
+  - uid: msipc.ipc_template_info
+    name: IPC_TEMPLATE_INFO
+    href: IPC_TEMPLATE_INFO.yml
+  - uid: msipc.ipc_template_issuer
+    name: IPC_TEMPLATE_ISSUER
+    href: IPC_TEMPLATE_ISSUER.yml
+  - uid: msipc.ipc_template_issuer_list
+    name: IPC_TEMPLATE_ISSUER_LIST
+    href: IPC_TEMPLATE_ISSUER_LIST.yml
+  - uid: msipc.ipc_term
+    name: IPC_TERM
+    href: IPC_TERM.yml
+  - uid: msipc.ipc_til
+    name: IPC_TIL
+    href: IPC_TIL.yml
+  - uid: msipc.ipc_user
+    name: IPC_USER
+    href: IPC_USER.yml
+  - uid: msipc.ipc_user_rights
+    name: IPC_USER_RIGHTS
+    href: IPC_USER_RIGHTS.yml
+  - uid: msipc.ipc_user_rights_list
+    name: IPC_USER_RIGHTS_LIST
+    href: IPC_USER_RIGHTS_LIST.yml
+  - uid: msipc.ipcf_file_basc_information
+    name: IPCF_FILE_BASIC_INFORMATION
+    href: IPCF_FILE_BASIC_INFORMATION.yml
+  - uid: msipc.ipcf_file_range
+    name: IPCF_FILE_RANGE
+    href: IPCF_FILE_RANGE.yml
+  - uid: msipc.ipcf_protected_file_header
+    name: IPCF_PROTECTED_FILE_HEADER
+    href: IPCF_PROTECTED_FILE_HEADER.yml
+  - uid: msipc.ipcf_raw_file_range
+    name: IPCF_RAW_FILE_RANGE
+    href: IPCF_RAW_FILE_RANGE.yml

@@ -1,0 +1,374 @@
+items:
+- uid: msipc.microsoft_information_protection_and_control_client_data_types
+  id: Data types
+  children:
+  - msipc.microsoft_information_protection_and_control_client_data_types.IPC_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.IPC_KEY_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_METADATA_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.IPCF_FILE_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_BASIC_INFORMATION
+  - msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_RANGE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_PROTECTED_FILE_HEADER
+  - msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_RAW_FILE_RANGE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PIPC_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PIPC_KEY_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_METADATA_HANDLE
+  - msipc.microsoft_information_protection_and_control_client_data_types.PIPCF_FILE_HANDLE
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: Data types
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types
+  type: Class
+  assemblies: &o0
+  - RMS21
+  namespace: Data types
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_HANDLE
+  id: IPC_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: IPC_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.IPC_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A handle to an IPC object.
+
+
+
+    This type is declared in Ipcbase.h as follows:
+
+
+
+    DECLARE_HANDLE(IPC_HANDLE);
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_HANDLE
+  id: PIPC_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PIPC_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A pointer to a handle to an IPC object.
+
+
+
+    This type is declared in Ipcbase.h as follows:
+
+
+
+    typedef IPC_HANDLE* PIPC_HANDLE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_KEY_HANDLE
+  id: IPC_KEY_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: IPC_KEY_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.IPC_KEY_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A handle to an IPC key object.
+
+
+
+    This type is declared in Ipcbase.h as follows:
+
+
+
+    DECLARE_HANDLE(IPC_KEY_HANDLE);
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_KEY_HANDLE
+  id: PIPC_KEY_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PIPC_KEY_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_KEY_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A pointer to a handle to an IPC key object.
+
+
+
+    This type is declared in Ipcbase.h as follows:
+
+
+
+    typedef IPC_KEY_HANDLE* PIPC_KEY_HANDLE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_HANDLE
+  id: IPC_LICENSE_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: IPC_LICENSE_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A handle to an IPC license object.
+
+
+
+    This type is declared in Ipcbase.h as follows:
+
+
+
+    DECLARE_HANDLE(IPC_LICENSE_HANDLE);
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_HANDLE
+  id: PIPC_LICENSE_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PIPC_LICENSE_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A pointer to a handle to an IPC license object.
+
+
+
+    This type is declared in Ipcbase.h as follows:
+
+
+
+    typedef IPC_LICENSE_HANDLE* PIPC_LICENSE_HANDLE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPCF_FILE_HANDLE
+  id: IPCF_FILE_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: IPCF_FILE_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.IPCF_FILE_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A handle to a pfile.This type is declared in Ipcfile.h as follows:
+
+
+
+    DECLARE_HANDLE(IPCF_FILE_HANDLE);
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPCF_FILE_HANDLE
+  id: PIPCF_FILE_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PIPCF_FILE_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PIPCF_FILE_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    Pointer to an **IPCF_FILE_HANDLE** type.This type is declared in Ipcfile.h as follows:
+
+
+
+    typedef IPCF_FILE_HANDLE* PIPCF_FILE_HANDLE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_METADATA_HANDLE
+  id: IPC_LICENSE_METADATA_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: IPC_LICENSE_METADATA_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_METADATA_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    A handle to the metadata section in the IPC license.This type is declared in Ipcbase.h as follows:
+
+
+
+    DECLARE_HANDLE(IPC_LICENSE_METADATA_HANDLE);
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_METADATA_HANDLE
+  id: PIPC_LICENSE_METADATA_HANDLE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PIPC_LICENSE_METADATA_HANDLE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_METADATA_HANDLE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    Pointer to an **IPC_LICENSE_METADATA_HANDLE** type.This type is declared in Ipcbase.h as follows:
+
+
+
+    typedef IPC_LICENSE_METADATA_HANDLE* PIPC_LICENSE_METADATA_HANDLE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_BASIC_INFORMATION
+  id: PCIPCF_FILE_BASIC_INFORMATION
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PCIPCF_FILE_BASIC_INFORMATION
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_BASIC_INFORMATION
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    Const pointer to an @msipc.ipcf_file_basc_information structure.This type is declared in Ipcfile.h as follows:
+
+
+
+    typedef const IPCF_FILE_BASIC_INFORMATION *PCIPCF_FILE_BASIC_INFORMATION;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_RAW_FILE_RANGE
+  id: PCIPCF_RAW_FILE_RANGE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PCIPCF_RAW_FILE_RANGE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_RAW_FILE_RANGE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    Const Pointer to an @msipc.ipcf_raw_file_range structure.This type is declared in Ipcfile.h as follows:
+
+
+
+    typedef const IPCF_RAW_FILE_RANGE *PCIPCF_RAW_FILE_RANGE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_RANGE
+  id: PCIPCF_FILE_RANGE
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PCIPCF_FILE_RANGE
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_RANGE
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    Const Pointer to an @msipc.ipcf_file_range structure.This type is declared in Ipcfile.h as follows:
+
+
+
+    typedef const IPCF_FILE_RANGE *PCIPCF_FILE_RANGE;
+
+
+
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_PROTECTED_FILE_HEADER
+  id: PCIPCF_PROTECTED_FILE_HEADER
+  parent: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  langs:
+  - cplusplus
+  name: PCIPCF_PROTECTED_FILE_HEADER
+  fullName: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_PROTECTED_FILE_HEADER
+  type: Property
+  assemblies: *o0
+  namespace: Data types
+  summary: >+
+    Const Pointer to an @msipc.ipcf_protected_file_header structure.This type is declared in Ipcfile.h as follows:
+
+
+
+    typedef const IPCF_PROTECTED_FILE_HEADER *PCIPCF_PROTECTED_FILE_HEADER;
+
+
+
+references:
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_HANDLE
+  href: Data types.yml
+  name: IPC_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_HANDLE
+  href: Data types.yml
+  name: PIPC_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_KEY_HANDLE
+  href: Data types.yml
+  name: IPC_KEY_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_KEY_HANDLE
+  href: Data types.yml
+  name: PIPC_KEY_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_HANDLE
+  href: Data types.yml
+  name: IPC_LICENSE_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_HANDLE
+  href: Data types.yml
+  name: PIPC_LICENSE_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPCF_FILE_HANDLE
+  href: Data types.yml
+  name: IPCF_FILE_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPCF_FILE_HANDLE
+  href: Data types.yml
+  name: PIPCF_FILE_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.IPC_LICENSE_METADATA_HANDLE
+  href: Data types.yml
+  name: IPC_LICENSE_METADATA_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PIPC_LICENSE_METADATA_HANDLE
+  href: Data types.yml
+  name: PIPC_LICENSE_METADATA_HANDLE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_BASIC_INFORMATION
+  href: Data types.yml
+  name: PCIPCF_FILE_BASIC_INFORMATION
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_RAW_FILE_RANGE
+  href: Data types.yml
+  name: PCIPCF_RAW_FILE_RANGE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_FILE_RANGE
+  href: Data types.yml
+  name: PCIPCF_FILE_RANGE
+- uid: msipc.microsoft_information_protection_and_control_client_data_types.PCIPCF_PROTECTED_FILE_HEADER
+  href: Data types.yml
+  name: PCIPCF_PROTECTED_FILE_HEADER

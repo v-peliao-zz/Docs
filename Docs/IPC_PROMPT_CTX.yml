@@ -1,0 +1,263 @@
+items:
+- uid: msipc.ipc_prompt_ctx
+  id: IPC_PROMPT_CTX
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_prompt_ctx.cbSize
+  - msipc.ipc_prompt_ctx.dwFlags
+  - msipc.ipc_prompt_ctx.hCancelEvent
+  - msipc.ipc_prompt_ctx.hwndParent
+  - msipc.ipc_prompt_ctx.pcCredential
+  href: IPC_PROMPT_CTX.yml
+  langs:
+  - cplusplus
+  name: IPC_PROMPT_CTX
+  fullName: msipc.ipc_prompt_ctx
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Provides context for user prompts;
+
+
+
+    in the event that a process must be prompted for credentials or to display information, this context is used to determine the behavior of the prompts.
+
+
+
+  remarks: >+
+    If the application does not want the user to be prompted, theIPC_PROMPT_FLAG_SILENT flag can be used.
+
+
+
+    If user prompting is allowed, the parent window for modal dialogs can be specified.
+
+
+
+
+
+
+
+  syntax:
+    content: >-
+      typedef struct _IPC_PROMPT_CTX {
+      	DWORD cbSize;
+      	HWND hwndParent;
+      	DWORD dwFlags;
+      	HANDLE hCancelEvent;
+      	PCIPC_CREDENTIAL pcCredential;
+      } IPC_PROMPT_CTX *PIPC_PROMPT_CTX;typedef const IPC_PROMPT_CTX *PCIPC_PROMPT_CTX;
+  inheritance: []
+- uid: msipc.ipc_prompt_ctx.cbSize
+  id: cbSize
+  parent: msipc.ipc_prompt_ctx
+  href: IPC_PROMPT_CTX.yml
+  langs:
+  - cplusplus
+  name: cbSize
+  fullName: msipc.ipc_prompt_ctx.cbSize
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Used for version control. Must be set to  sizeof(IPC_PROMPT_CTX).
+- uid: msipc.ipc_prompt_ctx.hwndParent
+  id: hwndParent
+  parent: msipc.ipc_prompt_ctx
+  href: IPC_PROMPT_CTX.yml
+  langs:
+  - cplusplus
+  name: hwndParent
+  fullName: msipc.ipc_prompt_ctx.hwndParent
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    Optional handle to parent window for dialogs.
+
+
+
+    Setting this handle will cause the function to display all UI modal to the specified handle.
+
+
+
+    Set to **NULL** if not used.
+
+
+
+- uid: msipc.ipc_prompt_ctx.dwFlags
+  id: dwFlags
+  parent: msipc.ipc_prompt_ctx
+  href: IPC_PROMPT_CTX.yml
+  langs:
+  - cplusplus
+  name: dwFlags
+  fullName: msipc.ipc_prompt_ctx.dwFlags
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >-
+    Flags that specify prompt behavior.<table border="1">
+
+    <tr>
+
+    <th>Name</th>
+
+    <th>Value</th>
+
+    <th>Meaning</th>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_PROMPT_FLAG_SILENT**
+
+    </td>
+
+    <td>
+
+    **0x1**
+
+    </td>
+
+    <td>
+
+    Do not prompt the user for input. Use of this flag will cause the **IPCERROR_NEEDS_UI** error  to be returned if a prompt is required.
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_PROMPT_FLAG_OFFLINE**
+
+    </td>
+
+    <td>
+
+    **0x2**
+
+    </td>
+
+    <td>
+
+    Do not access the network. Use of this flag will cause the **IPCERROR_NEEDS_ONLINE** error to be returned if accessing the network is required.
+
+
+
+    This flag should not be used under normal conditions. When this flag is not set, the platform will attempt to service all requests offline and will go online only when necessary to service the request successfully. Setting this flag will not improve the platform's performance characteristics for requests that can be serviced offline, and will cause unwanted failures when the request could have been serviced online.
+
+
+
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_PROMPT_FLAG_HAS_USER_CONSENT**
+
+    </td>
+
+    <td>
+
+    **0x4**
+
+    </td>
+
+    <td>
+
+    This flag causes the privacy dialog display to be skipped when contacting an RMS server for the first time. Using this flag will cause the URLs to be cached as if consent has already given.
+
+
+
+
+    </td>
+
+    </tr>
+
+    </table>
+- uid: msipc.ipc_prompt_ctx.hCancelEvent
+  id: hCancelEvent
+  parent: msipc.ipc_prompt_ctx
+  href: IPC_PROMPT_CTX.yml
+  langs:
+  - cplusplus
+  name: hCancelEvent
+  fullName: msipc.ipc_prompt_ctx.hCancelEvent
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    Optional handle to an event created by {CreateEvent}(https://msdn.microsoft.com/en-us/library/windows/desktop/ms682396(v=vs.85).aspx) or {OpenEvent.}(https://msdn.microsoft.com/en-us/library/windows/desktop/ms684305(v=vs.85).aspx)
+
+
+
+    Setting this event cancels active calls to which this structure was passed. The initial state of the event should be non-signaled . If the event is in signaled state, the call will be aborted.
+
+
+
+    Set to **NULL** if not used.
+
+
+
+- uid: msipc.ipc_prompt_ctx.pcCredential
+  id: pcCredential
+  parent: msipc.ipc_prompt_ctx
+  href: IPC_PROMPT_CTX.yml
+  langs:
+  - cplusplus
+  name: pcCredential
+  fullName: msipc.ipc_prompt_ctx.pcCredential
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    Credential, represented by an @msipc.ipc_credential structure, to authenticate to an RMS Server. This value can be NULL.
+
+
+
+    Credential will be ignored if IPC_PROMPT_FLAG_OFFLINE flag is used. See the **dwFlags** member of this structure.
+
+
+
+references:
+- uid: CreateEvent
+  isExternal: true
+  href: https://msdn.microsoft.com/en-us/library/windows/desktop/ms682396(v=vs.85).aspx
+  name: CreateEvent
+- uid: OpenEvent.
+  isExternal: true
+  href: https://msdn.microsoft.com/en-us/library/windows/desktop/ms684305(v=vs.85).aspx
+  name: OpenEvent.
+- uid: msipc.ipc_credential
+  href: IPC_CREDENTIAL.yml
+  name: IPC_CREDENTIAL
+- uid: OpenEvent
+  isExternal: true
+  href: https://msdn.microsoft.com/en-us/library/windows/desktop/ms684305(v=vs.85).aspx
+  name: OpenEvent
+- uid: msipc.ipc_prompt_ctx.cbSize
+  href: IPC_PROMPT_CTX.yml
+  name: cbSize
+- uid: msipc.ipc_prompt_ctx.hwndParent
+  href: IPC_PROMPT_CTX.yml
+  name: hwndParent
+- uid: msipc.ipc_prompt_ctx.dwFlags
+  href: IPC_PROMPT_CTX.yml
+  name: dwFlags
+- uid: msipc.ipc_prompt_ctx.hCancelEvent
+  href: IPC_PROMPT_CTX.yml
+  name: hCancelEvent
+- uid: msipc.ipc_prompt_ctx.pcCredential
+  href: IPC_PROMPT_CTX.yml
+  name: pcCredential

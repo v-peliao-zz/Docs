@@ -1,0 +1,120 @@
+items:
+- uid: msipc.ipcf_protected_file_header
+  id: IPCF_PROTECTED_FILE_HEADER
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipcf_protected_file_header.dwEncryptedContentsOffset
+  - msipc.ipcf_protected_file_header.dwMajor
+  - msipc.ipcf_protected_file_header.dwMinor
+  - msipc.ipcf_protected_file_header.magic[6]
+  - msipc.ipcf_protected_file_header.rgbUndocumented[278]
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  langs:
+  - cplusplus
+  name: IPCF_PROTECTED_FILE_HEADER
+  fullName: msipc.ipcf_protected_file_header
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Describes the protected file  header content.
+
+
+
+    For more information on protected file , see @msipc.supported_file_formats.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_PROTECTED_FILE_HEADER {
+      	BYTE magic[6];
+      	DWORD dwMajor;
+      	DWORD dwMinor;
+      	BYTE rgbUndocumented[278];
+      	DWORD dwEncryptedContentsOffset;
+      } _IPCF_PROTECTED_FILE_HEADER *IPCF_PROTECTED_FILE_HEADER;
+  inheritance: []
+- uid: msipc.ipcf_protected_file_header.magic[6]
+  id: magic[6]
+  parent: msipc.ipcf_protected_file_header
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  langs:
+  - cplusplus
+  name: magic[6]
+  fullName: msipc.ipcf_protected_file_header.magic[6]
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The bytes at the start of the protected file  which are used to recognize the file format. If the file is a protected file , these must be { 0x2E, 0x70, 0x66, 0x69, 0x6C, 0x65 }.
+- uid: msipc.ipcf_protected_file_header.dwMajor
+  id: dwMajor
+  parent: msipc.ipcf_protected_file_header
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  langs:
+  - cplusplus
+  name: dwMajor
+  fullName: msipc.ipcf_protected_file_header.dwMajor
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Major version of the protected file .
+- uid: msipc.ipcf_protected_file_header.dwMinor
+  id: dwMinor
+  parent: msipc.ipcf_protected_file_header
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  langs:
+  - cplusplus
+  name: dwMinor
+  fullName: msipc.ipcf_protected_file_header.dwMinor
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Minor version of the protected file .
+- uid: msipc.ipcf_protected_file_header.rgbUndocumented[278]
+  id: rgbUndocumented[278]
+  parent: msipc.ipcf_protected_file_header
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  langs:
+  - cplusplus
+  name: rgbUndocumented[278]
+  fullName: msipc.ipcf_protected_file_header.rgbUndocumented[278]
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Undocumented data in the protected file  header.
+- uid: msipc.ipcf_protected_file_header.dwEncryptedContentsOffset
+  id: dwEncryptedContentsOffset
+  parent: msipc.ipcf_protected_file_header
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  langs:
+  - cplusplus
+  name: dwEncryptedContentsOffset
+  fullName: msipc.ipcf_protected_file_header.dwEncryptedContentsOffset
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The offset in the file where the encrypted payload of the protected file  starts.
+references:
+- uid: msipc.supported_file_formats
+  name: Supported File Formats
+- uid: msipc.msipc_structures
+  href: Structures.yml
+  name: Structures
+- uid: msipc.ipcf_protected_file_header.magic[6]
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  name: magic[6]
+- uid: msipc.ipcf_protected_file_header.dwMajor
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  name: dwMajor
+- uid: msipc.ipcf_protected_file_header.dwMinor
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  name: dwMinor
+- uid: msipc.ipcf_protected_file_header.rgbUndocumented[278]
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  name: rgbUndocumented[278]
+- uid: msipc.ipcf_protected_file_header.dwEncryptedContentsOffset
+  href: IPCF_PROTECTED_FILE_HEADER.yml
+  name: dwEncryptedContentsOffset

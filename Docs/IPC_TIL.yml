@@ -1,0 +1,70 @@
+items:
+- uid: msipc.ipc_til
+  id: IPC_TIL
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_til.aTi
+  - msipc.ipc_til.cTi
+  href: IPC_TIL.yml
+  langs:
+  - cplusplus
+  name: IPC_TIL
+  fullName: msipc.ipc_til
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Contains a list of template information  in the form of @msipc.ipc_template_info structures, returned by a call to @msipc.ipcgettemplatelist.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_TIL {
+      	DWORD cTi;
+      	IPC_TEMPLATE_INFO aTi[ANYSIZE_ARRAY];
+      } IPC_TIL *PIPC_TIL;typedef const IPC_TIL *PCIPC_TIL;
+  inheritance: []
+- uid: msipc.ipc_til.cTi
+  id: cTi
+  parent: msipc.ipc_til
+  href: IPC_TIL.yml
+  langs:
+  - cplusplus
+  name: cTi
+  fullName: msipc.ipc_til.cTi
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The number of @msipc.ipc_template_info structures in the list.
+- uid: msipc.ipc_til.aTi
+  id: aTi
+  parent: msipc.ipc_til
+  href: IPC_TIL.yml
+  langs:
+  - cplusplus
+  name: aTi
+  fullName: msipc.ipc_til.aTi
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: An array of @msipc.ipc_template_info structures.
+references:
+- uid: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  name: IPC_TEMPLATE_INFO
+- uid: msipc.ipcgettemplatelist
+  href: IpcGetTemplateList.yml
+  name: IpcGetTemplateList
+- uid: msipc.ipc_til.cTi
+  href: IPC_TIL.yml
+  name: cTi
+- uid: msipc.ipc_til.aTi
+  href: IPC_TIL.yml
+  name: aTi

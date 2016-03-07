@@ -1,0 +1,80 @@
+items:
+- uid: msipc.decrypt_file_flags
+  id: Decrypt file flags
+  parent: msipc.msipc_constants
+  children:
+  - msipc.decrypt_file_flags.IPCF_DF_FLAG_DEFAULT
+  - msipc.decrypt_file_flags.IPCF_DF_FLAG_OPEN_AS_RMS_AWARE
+  href: Decrypt file flags.yml
+  langs:
+  - cplusplus
+  name: Decrypt file flags
+  fullName: msipc.decrypt_file_flags
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Constants for specifying file decryption behavior.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.decrypt_file_flags.IPCF_DF_FLAG_DEFAULT
+  id: IPCF_DF_FLAG_DEFAULT
+  parent: msipc.decrypt_file_flags
+  href: Decrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPCF_DF_FLAG_DEFAULT
+  fullName: msipc.decrypt_file_flags.IPCF_DF_FLAG_DEFAULT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Specifies that default settings should be used. For usage, see for @msipc.ipcfdecryptfile.
+  syntax:
+    content: IPCF_DF_FLAG_DEFAULT = 0
+- uid: msipc.decrypt_file_flags.IPCF_DF_FLAG_OPEN_AS_RMS_AWARE
+  id: IPCF_DF_FLAG_OPEN_AS_RMS_AWARE
+  parent: msipc.decrypt_file_flags
+  href: Decrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPCF_DF_FLAG_OPEN_AS_RMS_AWARE
+  fullName: msipc.decrypt_file_flags.IPCF_DF_FLAG_OPEN_AS_RMS_AWARE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: "Allows applications to decrypt the file, even if the EXTRACT right is not granted.\r\n\r\nApplications that pass this flag must ensure that all RMS rights are enforced, including but not limited to:\r\n\r\nEXTRACT – if this right is not granted, the application will ensure that all decrypted copies of this content are deleted after use.  If decrypted content is displayedto the user (e.g., in an editor), the application will block clipboard accessand screen capture for this content (see: @msipc.ipcfgetserializedlicensefromfile, @msipc.ipcgetkey, @msipc.ipcaccesscheck, and @msipc.ipcprotectwindow.\r\n\r\nFor a complete list of rights that your application must support, see @msipc.usage_restriction_reference.\r\n\r\n"
+  syntax:
+    content: IPCF_DF_FLAG_OPEN_AS_RMS_AWARE = 1
+references:
+- uid: msipc.ipcfdecryptfile
+  href: IpcfDecryptFile.yml
+  name: IpcfDecryptFile
+- uid: msipc.ipcfgetserializedlicensefromfile
+  href: IpcfGetSerializedLicenseFromFile.yml
+  name: IpcfGetSerializedLicenseFromFile
+- uid: msipc.ipcgetkey
+  href: IpcGetKey.yml
+  name: IpcGetKey
+- uid: msipc.ipcaccesscheck
+  href: IpcAccessCheck.yml
+  name: IpcAccessCheck
+- uid: msipc.ipcprotectwindow
+  href: IpcProtectWindow.yml
+  name: IpcProtectWindow
+- uid: msipc.usage_restriction_reference
+  name: Usage restriction reference
+- uid: msipc.decrypt_file_flags.IPCF_DF_FLAG_DEFAULT
+  href: Decrypt file flags.yml
+  name: IPCF_DF_FLAG_DEFAULT
+- uid: msipc.decrypt_file_flags.IPCF_DF_FLAG_OPEN_AS_RMS_AWARE
+  href: Decrypt file flags.yml
+  name: IPCF_DF_FLAG_OPEN_AS_RMS_AWARE

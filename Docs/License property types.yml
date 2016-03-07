@@ -1,0 +1,600 @@
+items:
+- uid: msipc.license_property_types
+  id: License property types
+  parent: msipc.msipc_constants
+  children:
+  - msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA
+  - msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+  - msipc.license_property_types.IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS
+  - msipc.license_property_types.IPC_LI_CONNECTION_INFO
+  - msipc.license_property_types.IPC_LI_CONTENT_ID
+  - msipc.license_property_types.IPC_LI_CONTENT_KEY
+  - msipc.license_property_types.IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+  - msipc.license_property_types.IPC_LI_DESCRIPTOR
+  - msipc.license_property_types.IPC_LI_INTERVAL_TIME
+  - msipc.license_property_types.IPC_LI_ISSUED_TIME
+  - msipc.license_property_types.IPC_LI_OWNER
+  - msipc.license_property_types.IPC_LI_REFERRAL_INFO_URL
+  - msipc.license_property_types.IPC_LI_USER_RIGHTS_LIST
+  - msipc.license_property_types.IPC_LI_VALIDITY_TIME
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: License property types
+  fullName: msipc.license_property_types
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Constants used to refer to license properties when calling     @msipc.ipcgetlicenseproperty,     @msipc.ipcgetserializedlicenseproperty or     @msipc.ipcsetlicenseproperty.
+
+
+
+
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.license_property_types.IPC_LI_VALIDITY_TIME
+  id: IPC_LI_VALIDITY_TIME
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_VALIDITY_TIME
+  fullName: msipc.license_property_types.IPC_LI_VALIDITY_TIME
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies the time period over which a license is valid. The property is represented as an       @msipc.ipc_term structure.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the       *pvProperty* parameter is of type **PCIPC_TERM**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and       @msipc.ipcgetserializedlicenseproperty,       the *ppvProperty* parameter is of type **PIPC_TERM***.
+
+
+
+    When using this property with the       @msipc.ipcgetserializedlicenseproperty       function, the *hKey* parameter is required.
+
+
+
+  syntax:
+    content: IPC_LI_VALIDITY_TIME = 1
+- uid: msipc.license_property_types.IPC_LI_INTERVAL_TIME
+  id: IPC_LI_INTERVAL_TIME
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_INTERVAL_TIME
+  fullName: msipc.license_property_types.IPC_LI_INTERVAL_TIME
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies the time period, in days, over which a license may be used to decrypt content without having to       renew the license request from the server. The property is represented as an       **LDPWORD** type.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the       *pvProperty* parameter is of type **LPDWORD**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and       @msipc.ipcgetserializedlicenseproperty,       the *ppvProperty* parameter is of type **LPDWORD***.
+
+
+
+
+
+
+
+
+
+    **Important** * The maximum permitted value for the time interval is 65535.
+
+
+
+    * Setting the value to 0 will require the application to connect to the server each time content is          consumed.
+
+
+
+    * If this value is not set in the license,          @msipc.ipcgetlicenseproperty will return          **IPCERROR_LICENSE_INTERVAL_TIME_NOT_SET**.
+
+
+
+
+
+
+
+
+
+
+
+    When using this property with the       @msipc.ipcgetserializedlicenseproperty       function, the *hKey* parameter is required.
+
+
+
+  syntax:
+    content: IPC_LI_INTERVAL_TIME = 2
+- uid: msipc.license_property_types.IPC_LI_OWNER
+  id: IPC_LI_OWNER
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_OWNER
+  fullName: msipc.license_property_types.IPC_LI_OWNER
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies the license owner. The property is represented as an @msipc.ipc_user structure.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the  *pvProperty* parameter is of type **PCIPC_USER**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and @msipc.ipcgetserializedlicenseproperty, the *ppvProperty* parameter is of type **PIPC_USER***.
+
+
+
+    This property cannot be deleted with @msipc.ipcsetlicenseproperty. If the *fDelete* parameter is specified with this property, @msipc.ipcsetlicenseproperty will return **E_INVALIDARG**.
+
+
+
+  syntax:
+    content: IPC_LI_OWNER = 3
+- uid: msipc.license_property_types.IPC_LI_USER_RIGHTS_LIST
+  id: IPC_LI_USER_RIGHTS_LIST
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_USER_RIGHTS_LIST
+  fullName: msipc.license_property_types.IPC_LI_USER_RIGHTS_LIST
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies a user rights list.    The property is represented as an @msipc.ipc_user_rights_list structure.
+
+
+
+    Your application should explicitly add "owner" rights when creating a license from scratch using @msipc.ipccreatelicensefromscratch. For more information see, @msipc.add_explicit_owner_rights.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the   *pvProperty* parameter is of type **PCIPC_USER_RIGHTS_LIST**.
+
+
+
+    This property cannot be deleted with @msipc.ipcsetlicenseproperty. If the *fDelete* parameter is specified with this property, @msipc.ipcsetlicenseproperty will return **E_INVALIDARG**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and @msipc.ipcgetserializedlicenseproperty, the *ppvProperty* parameter is of type **PIPC_USER_RIGHTS_LIST***.
+
+
+
+    When using this property with the @msipc.ipcgetserializedlicenseproperty function, the *hKey* parameter is required.
+
+
+
+  syntax:
+    content: IPC_LI_USER_RIGHTS_LIST = 4
+- uid: msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA
+  id: IPC_LI_APP_SPECIFIC_DATA
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_APP_SPECIFIC_DATA
+  fullName: msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies application-defined properties of the license that can be used for additional logging.    The properties are represented as an @msipc.ipc_name_value_list structure.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the  *pvProperty* parameter is of type **PCIPC_NAME_VALUE_LIST**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and @msipc.ipcgetserializedlicenseproperty, the *ppvProperty* parameter is of type **PIPC_NAME_VALUE_LIST***.
+
+
+
+    When using this property with the @msipc.ipcgetserializedlicenseproperty function, the *hKey* parameter is required.
+
+
+
+  syntax:
+    content: IPC_LI_APP_SPECIFIC_DATA = 5
+- uid: msipc.license_property_types.IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+  id: IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+  fullName: msipc.license_property_types.IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies whether deprecated encryption algorithms should be used. The property is a **BOOL** value   that is **TRUE** if deprecated algorithms should be used; **FALSE** otherwise.
+
+
+
+    This property should only be used by applications that protect content that will be consumed by     AD RMS applications built using the MSDRM library (for more information, see @rm.ad_rms_functions.
+
+
+
+    Setting this property to **TRUE**:
+
+
+
+    * Allows you to generate licenses compatible with the MSDRM library.
+
+
+
+    * May cause your application to protect content in a way that does not conform to           your customers' standards for content protection.
+
+
+
+    * Will prevent your application from benefitting from any cryptographic enhancements added to Rights Management Services SDK 2.1  going forward.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the *ppvProperty* parameter is a pointer to type **const BOOL**.
+
+
+
+    This property cannot be deleted with @msipc.ipcsetlicenseproperty. If the *fDelete* parameter is specified with this property, @msipc.ipcsetlicenseproperty will return **E_INVALIDARG**.
+
+
+
+    When using this property with the @msipc.ipcgetserializedlicenseproperty function, the *hKey* parameter is required.
+
+
+
+
+
+
+
+    License buffer data is encoded in UTF8 when using the default flags and UTF16 when using the **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** flag.
+
+
+
+  syntax:
+    content: IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS = 6
+- uid: msipc.license_property_types.IPC_LI_CONNECTION_INFO
+  id: IPC_LI_CONNECTION_INFO
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_CONNECTION_INFO
+  fullName: msipc.license_property_types.IPC_LI_CONNECTION_INFO
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies the connection info of the server that issues this license. The property is represented as an @msipc.ipc_connection_info structure. This property is only used for querying, and cannot be used with @msipc.ipcsetlicenseproperty.
+
+
+
+    For @msipc.ipcgetlicenseproperty and @msipc.ipcgetserializedlicenseproperty, the  *ppvProperty* parameter is of type **PIPC_CONNECTION_INFO***.
+
+
+
+  syntax:
+    content: IPC_LI_CONNECTION_INFO = 7
+- uid: msipc.license_property_types.IPC_LI_DESCRIPTOR
+  id: IPC_LI_DESCRIPTOR
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_DESCRIPTOR
+  fullName: msipc.license_property_types.IPC_LI_DESCRIPTOR
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies a language-specific name and description from the license. The property is represented as an       @msipc.ipc_template_info structure.
+
+
+
+    For @msipc.ipcsetlicenseproperty:
+
+
+
+    * The *pvProperty* parameter  is of type **PCIPC_TEMPLATE_INFO**.
+
+
+
+    * The IPC_TEMPLATE_INFO::wszID field is not required and is ignored.
+
+
+
+    * These  members of @msipc.ipc_template_info are read-only:
+
+
+
+    * **wszIssuerDisplayName**
+
+
+
+    * **fFromTemplate**
+
+
+
+
+
+
+
+    For @msipc.ipcgetlicenseproperty and @msipc.ipcgetserializedlicenseproperty, the *ppvProperty* parameter is of type **PIPC_TEMPLATE_INFO***. The IPC_TEMPLATE_INFO::wszID field is returned as **NULL** if IPC_TEMPLATE_INFO::fFromTemplate is **FALSE**.
+
+
+
+    When using this property with the @msipc.ipcgetserializedlicenseproperty function, the *hKey* parameter is required.
+
+
+
+  syntax:
+    content: IPC_LI_DESCRIPTOR = 8
+- uid: msipc.license_property_types.IPC_LI_REFERRAL_INFO_URL
+  id: IPC_LI_REFERRAL_INFO_URL
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_REFERRAL_INFO_URL
+  fullName: msipc.license_property_types.IPC_LI_REFERRAL_INFO_URL
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: "Specifies an application defined URL where a user can get additional information to access the content.\r\n\r\nFor @msipc.ipcsetlicenseproperty, the  *pvProperty* parameter is of type **LPCWSTR**.\r\n\r\nFor @msipc.ipcgetlicenseproperty and @msipc.ipcgetserializedlicenseproperty, the *ppvProperty* parameter is of type **LPWSTR***. \r\n\r\nIf referral information is not set in the license, a default value will be returned.\r\n\r\n"
+  syntax:
+    content: IPC_LI_REFERRAL_INFO_URL = 10
+- uid: msipc.license_property_types.IPC_LI_CONTENT_KEY
+  id: IPC_LI_CONTENT_KEY
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_CONTENT_KEY
+  fullName: msipc.license_property_types.IPC_LI_CONTENT_KEY
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies that this license should reuse an existing key for protecting the content. Existing content       republished this way does not need to be re-encrypted by using       @msipc.ipcencrypt if the underlying content has not changed.
+
+
+
+    The **IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS** property may not be used in conjunction       with this property.
+
+
+
+    This property cannot be deleted with       @msipc.ipcsetlicenseproperty. If the       *fDelete* parameter is specified with this property,       @msipc.ipcsetlicenseproperty will return       **E_INVALIDARG**.
+
+
+
+    This is not a valid license property for       @msipc.ipcgetserializedlicenseproperty.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the       *pvProperty* is of type **IPC_KEY_HANDLE**.
+
+
+
+    For @msipc.ipcgetlicenseproperty, the       *ppvProperty* is of type **PIPC_KEY_HANDLE**. This should be       closed with @msipc.ipcclosehandle.
+
+
+
+  syntax:
+    content: IPC_LI_CONTENT_KEY = 11
+- uid: msipc.license_property_types.IPC_LI_CONTENT_ID
+  id: IPC_LI_CONTENT_ID
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_CONTENT_ID
+  fullName: msipc.license_property_types.IPC_LI_CONTENT_ID
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies unique Id of the content.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the *pvProperty* parameter is of type **LPWSTR**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and       @msipc.ipcgetserializedlicenseproperty,       the *ppvLicenseInfo* is of type **LPWSTR***.
+
+
+
+  syntax:
+    content: IPC_LI_CONTENT_ID = 12
+- uid: msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+  id: IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+  fullName: msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies application defined properties of the license, that can be used for additional logging. This       information will not be part of encrypted rights in license.
+
+
+
+    Since it will be in the clear, its not recommended that you put any sensitive information in this data.
+
+
+
+    For @msipc.ipcsetlicenseproperty, the       *pvLicenseInfo* is of type **PCIPC_NAME_VALUE_LIST**.
+
+
+
+    For @msipc.ipcgetlicenseproperty and       @msipc.ipcgetserializedlicenseproperty,       the *pvLicenseInfo* is of type **PIPC_NAME_VALUE_LIST***.
+
+
+
+  syntax:
+    content: IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION = 13
+- uid: msipc.license_property_types.IPC_LI_ISSUED_TIME
+  id: IPC_LI_ISSUED_TIME
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_ISSUED_TIME
+  fullName: msipc.license_property_types.IPC_LI_ISSUED_TIME
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies the issued time of the license. This property is only used for querying and cannot be used with @msipc.ipcsetlicenseproperty.
+
+
+
+    For @msipc.ipcgetlicenseproperty and       @msipc.ipcgetserializedlicenseproperty,       the *pvLicenseInfo* is of type **FILETIME***.
+
+
+
+  syntax:
+    content: IPC_LI_ISSUED_TIME = 14
+- uid: msipc.license_property_types.IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS
+  id: IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS
+  parent: msipc.license_property_types
+  href: License property types.yml
+  langs:
+  - cplusplus
+  name: IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS
+  fullName: msipc.license_property_types.IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifies whether the SDK should automatically grant the owner full access when the access control list does not have an entry for the owner.	For  @msipc.ipcsetlicenseproperty, the *pvLicenseInfo* parameter is of type **BOOL**.
+
+
+
+    For  @msipc.ipcgetlicenseproperty, the *ppvLicenseInfo* parameter is of type **PBOOL***.
+
+
+
+  syntax:
+    content: IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS = 15
+references:
+- uid: msipc.ipcgetlicenseproperty
+  href: IpcGetLicenseProperty.yml
+  name: IpcGetLicenseProperty
+- uid: msipc.ipcgetserializedlicenseproperty
+  href: IpcGetSerializedLicenseProperty.yml
+  name: IpcGetSerializedLicenseProperty
+- uid: msipc.ipcsetlicenseproperty
+  href: IpcSetLicenseProperty.yml
+  name: IpcSetLicenseProperty
+- uid: msipc.ipc_term
+  href: IPC_TERM.yml
+  name: IPC_TERM
+- uid: msipc.ipc_user
+  href: IPC_USER.yml
+  name: IPC_USER
+- uid: msipc.ipc_user_rights_list
+  href: IPC_USER_RIGHTS_LIST.yml
+  name: IPC_USER_RIGHTS_LIST
+- uid: msipc.ipccreatelicensefromscratch
+  href: IpcCreateLicenseFromScratch.yml
+  name: IpcCreateLicenseFromScratch
+- uid: msipc.add_explicit_owner_rights
+  name: Add explicit owner rights
+- uid: msipc.ipc_name_value_list
+  href: IPC_NAME_VALUE_LIST.yml
+  name: IPC_NAME_VALUE_LIST
+- uid: rm.ad_rms_functions
+  name: AD RMS Functions
+- uid: msipc.ipc_connection_info
+  href: IPC_CONNECTION_INFO.yml
+  name: IPC_CONNECTION_INFO
+- uid: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  name: IPC_TEMPLATE_INFO
+- uid: msipc.ipcencrypt
+  href: IpcEncrypt.yml
+  name: IpcEncrypt
+- uid: msipc.ipcclosehandle
+  href: IpcCloseHandle.yml
+  name: IpcCloseHandle
+- uid: msipc.preferred_encryption
+  href: Preferred encryption.yml
+  name: Preferred encryption
+- uid: msipc.license_property_types.IPC_LI_VALIDITY_TIME
+  href: License property types.yml
+  name: IPC_LI_VALIDITY_TIME
+- uid: msipc.license_property_types.IPC_LI_INTERVAL_TIME
+  href: License property types.yml
+  name: IPC_LI_INTERVAL_TIME
+- uid: msipc.license_property_types.IPC_LI_OWNER
+  href: License property types.yml
+  name: IPC_LI_OWNER
+- uid: msipc.license_property_types.IPC_LI_USER_RIGHTS_LIST
+  href: License property types.yml
+  name: IPC_LI_USER_RIGHTS_LIST
+- uid: msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA
+  href: License property types.yml
+  name: IPC_LI_APP_SPECIFIC_DATA
+- uid: msipc.license_property_types.IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+  href: License property types.yml
+  name: IPC_LI_DEPRECATED_ENCRYPTION_ALGORITHMS
+- uid: msipc.license_property_types.IPC_LI_CONNECTION_INFO
+  href: License property types.yml
+  name: IPC_LI_CONNECTION_INFO
+- uid: msipc.license_property_types.IPC_LI_DESCRIPTOR
+  href: License property types.yml
+  name: IPC_LI_DESCRIPTOR
+- uid: msipc.license_property_types.IPC_LI_REFERRAL_INFO_URL
+  href: License property types.yml
+  name: IPC_LI_REFERRAL_INFO_URL
+- uid: msipc.license_property_types.IPC_LI_CONTENT_KEY
+  href: License property types.yml
+  name: IPC_LI_CONTENT_KEY
+- uid: msipc.license_property_types.IPC_LI_CONTENT_ID
+  href: License property types.yml
+  name: IPC_LI_CONTENT_ID
+- uid: msipc.license_property_types.IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+  href: License property types.yml
+  name: IPC_LI_APP_SPECIFIC_DATA_NO_ENCRYPTION
+- uid: msipc.license_property_types.IPC_LI_ISSUED_TIME
+  href: License property types.yml
+  name: IPC_LI_ISSUED_TIME
+- uid: msipc.license_property_types.IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS
+  href: License property types.yml
+  name: IPC_LI_AUTO_GRANT_OWNER_FULL_ACCESS

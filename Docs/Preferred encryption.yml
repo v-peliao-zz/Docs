@@ -1,0 +1,81 @@
+items:
+- uid: msipc.preferred_encryption
+  id: Preferred encryption
+  parent: msipc.msipc_constants
+  children:
+  - msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+  - msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_ECB
+  - msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+  href: Preferred encryption.yml
+  langs:
+  - cplusplus
+  name: Preferred encryption
+  fullName: msipc.preferred_encryption
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Used to specify the encryption package.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+  id: IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+  parent: msipc.preferred_encryption
+  href: Preferred encryption.yml
+  langs:
+  - cplusplus
+  name: IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+  fullName: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Use this flag to explicitly set encryption  for AES 256
+  syntax:
+    content: IPC_ENCRYPTION_PACKAGE_AES256_CBC4K = 1
+- uid: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+  id: IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+  parent: msipc.preferred_encryption
+  href: Preferred encryption.yml
+  langs:
+  - cplusplus
+  name: IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+  fullName: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Use this flag to set encryption  for AES 128
+  syntax:
+    content: IPC_ENCRYPTION_PACKAGE_AES128_CBC4K = 2
+- uid: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_ECB
+  id: IPC_ENCRYPTION_PACKAGE_AES128_ECB
+  parent: msipc.preferred_encryption
+  href: Preferred encryption.yml
+  langs:
+  - cplusplus
+  name: IPC_ENCRYPTION_PACKAGE_AES128_ECB
+  fullName: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_ECB
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Use this flag to set encryption  for AES 128, also know as *deprecated algorithms*.
+  syntax:
+    content: IPC_ENCRYPTION_PACKAGE_AES128_ECB = 3
+references:
+- uid: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+  href: Preferred encryption.yml
+  name: IPC_ENCRYPTION_PACKAGE_AES256_CBC4K
+- uid: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+  href: Preferred encryption.yml
+  name: IPC_ENCRYPTION_PACKAGE_AES128_CBC4K
+- uid: msipc.preferred_encryption.IPC_ENCRYPTION_PACKAGE_AES128_ECB
+  href: Preferred encryption.yml
+  name: IPC_ENCRYPTION_PACKAGE_AES128_ECB

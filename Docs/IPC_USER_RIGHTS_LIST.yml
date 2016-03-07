@@ -1,0 +1,101 @@
+items:
+- uid: msipc.ipc_user_rights_list
+  id: IPC_USER_RIGHTS_LIST
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_user_rights_list.cbSize
+  - msipc.ipc_user_rights_list.cUserRights
+  - msipc.ipc_user_rights_list.rgUserRights
+  href: IPC_USER_RIGHTS_LIST.yml
+  langs:
+  - cplusplus
+  name: IPC_USER_RIGHTS_LIST
+  fullName: msipc.ipc_user_rights_list
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Contains a list of user rights structures that defines the use restrictions associated with a license object.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_USER_RIGHTS_LIST {
+      	DWORD cbSize;
+      	DWORD cUserRights;
+      	IPC_USER_RIGHTS rgUserRights[ANYSIZE_ARRAY];
+      } IPC_USER_RIGHTS_LIST *PIPC_USER_RIGHTS_LIST;typedef const IPC_USER_RIGHTS_LIST *PCIPC_USER_RIGHTS_LIST;
+  inheritance: []
+- uid: msipc.ipc_user_rights_list.cbSize
+  id: cbSize
+  parent: msipc.ipc_user_rights_list
+  href: IPC_USER_RIGHTS_LIST.yml
+  langs:
+  - cplusplus
+  name: cbSize
+  fullName: msipc.ipc_user_rights_list.cbSize
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    When used with @msipc.ipcsetlicenseproperty, **cbSize** is an input   and must be set to  sizeof(IPC_USER_RIGHTS_LIST).
+
+
+
+    When used with @msipc.ipcgetlicenseproperty or @msipc.ipcgetserializedlicenseproperty, **cbSize** has no meaning and  should be ignored.
+
+
+
+- uid: msipc.ipc_user_rights_list.cUserRights
+  id: cUserRights
+  parent: msipc.ipc_user_rights_list
+  href: IPC_USER_RIGHTS_LIST.yml
+  langs:
+  - cplusplus
+  name: cUserRights
+  fullName: msipc.ipc_user_rights_list.cUserRights
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The number of elements in **rgUserRights**.
+- uid: msipc.ipc_user_rights_list.rgUserRights
+  id: rgUserRights
+  parent: msipc.ipc_user_rights_list
+  href: IPC_USER_RIGHTS_LIST.yml
+  langs:
+  - cplusplus
+  name: rgUserRights
+  fullName: msipc.ipc_user_rights_list.rgUserRights
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: An array of @msipc.ipc_user_rights structures.
+references:
+- uid: msipc.ipcsetlicenseproperty
+  href: IpcSetLicenseProperty.yml
+  name: IpcSetLicenseProperty
+- uid: msipc.ipcgetlicenseproperty
+  href: IpcGetLicenseProperty.yml
+  name: IpcGetLicenseProperty
+- uid: msipc.ipcgetserializedlicenseproperty
+  href: IpcGetSerializedLicenseProperty.yml
+  name: IpcGetSerializedLicenseProperty
+- uid: msipc.ipc_user_rights
+  href: IPC_USER_RIGHTS.yml
+  name: IPC_USER_RIGHTS
+- uid: msipc.ipc_user_rights_list.cbSize
+  href: IPC_USER_RIGHTS_LIST.yml
+  name: cbSize
+- uid: msipc.ipc_user_rights_list.cUserRights
+  href: IPC_USER_RIGHTS_LIST.yml
+  name: cUserRights
+- uid: msipc.ipc_user_rights_list.rgUserRights
+  href: IPC_USER_RIGHTS_LIST.yml
+  name: rgUserRights

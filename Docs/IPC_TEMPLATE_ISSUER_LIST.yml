@@ -1,0 +1,66 @@
+items:
+- uid: msipc.ipc_template_issuer_list
+  id: IPC_TEMPLATE_ISSUER_LIST
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_template_issuer_list.aTi
+  - msipc.ipc_template_issuer_list.cTi
+  href: IPC_TEMPLATE_ISSUER_LIST.yml
+  langs:
+  - cplusplus
+  name: IPC_TEMPLATE_ISSUER_LIST
+  fullName: msipc.ipc_template_issuer_list
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Contains a list of template issuers in the form of @msipc.ipc_template_issuer structures, returned by a call to @msipc.ipcgettemplateissuerlist.
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_TEMPLATE_ISSUER_LIST {
+      	DWORD cTi;
+      	IPC_TEMPLATE_ISSUER aTi[ANYSIZE_ARRAY];
+      } IPC_TEMPLATE_ISSUER_LIST *PIPC_TEMPLATE_ISSUER_LIST;typedef const IPC_TEMPLATE_ISSUER_LIST *PCIPC_TEMPLATE_ISSUER_LIST;
+  inheritance: []
+- uid: msipc.ipc_template_issuer_list.cTi
+  id: cTi
+  parent: msipc.ipc_template_issuer_list
+  href: IPC_TEMPLATE_ISSUER_LIST.yml
+  langs:
+  - cplusplus
+  name: cTi
+  fullName: msipc.ipc_template_issuer_list.cTi
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: The number of issuers  in the list.
+- uid: msipc.ipc_template_issuer_list.aTi
+  id: aTi
+  parent: msipc.ipc_template_issuer_list
+  href: IPC_TEMPLATE_ISSUER_LIST.yml
+  langs:
+  - cplusplus
+  name: aTi
+  fullName: msipc.ipc_template_issuer_list.aTi
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: An array of @msipc.ipc_template_issuer structures that represent the issuers.
+references:
+- uid: msipc.ipc_template_issuer
+  href: IPC_TEMPLATE_ISSUER.yml
+  name: IPC_TEMPLATE_ISSUER
+- uid: msipc.ipcgettemplateissuerlist
+  href: IpcGetTemplateIssuerList.yml
+  name: IpcGetTemplateIssuerList
+- uid: msipc.ipc_template_issuer_list.cTi
+  href: IPC_TEMPLATE_ISSUER_LIST.yml
+  name: cTi
+- uid: msipc.ipc_template_issuer_list.aTi
+  href: IPC_TEMPLATE_ISSUER_LIST.yml
+  name: aTi

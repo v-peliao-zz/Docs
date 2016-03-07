@@ -3,14 +3,14 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
           "Docs/**"
         ],
         "src": null,
-        "dest": null
+        "dest": "Docs"
       }
     ],
     "resource": [

@@ -1,0 +1,176 @@
+items:
+- uid: msipc.license_metadata_property_types
+  id: License metadata property types
+  parent: msipc.msipc_constants
+  children:
+  - msipc.license_metadata_property_types.IPC_MD_CONTENT_NAME
+  - msipc.license_metadata_property_types.IPC_MD_CONTENT_PATH
+  - msipc.license_metadata_property_types.IPC_MD_DATE_CREATED
+  - msipc.license_metadata_property_types.IPC_MD_DATE_MODIFIED
+  - msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_PREFERENCE
+  - msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_TYPE
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: License metadata property types
+  fullName: msipc.license_metadata_property_types
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Property types for license metadata.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.license_metadata_property_types.IPC_MD_CONTENT_PATH
+  id: IPC_MD_CONTENT_PATH
+  parent: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_CONTENT_PATH
+  fullName: msipc.license_metadata_property_types.IPC_MD_CONTENT_PATH
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Full path of the content which is being protected using the given license.
+
+
+
+    For @msipc.ipcsetlicensemetadataproperty, the       *pvMetadata* is of type **LPCWSTR**.
+
+
+
+  syntax:
+    content: IPC_MD_CONTENT_PATH = 0x00000000
+- uid: msipc.license_metadata_property_types.IPC_MD_CONTENT_NAME
+  id: IPC_MD_CONTENT_NAME
+  parent: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_CONTENT_NAME
+  fullName: msipc.license_metadata_property_types.IPC_MD_CONTENT_NAME
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: "Name of the content being protected using the given license.     \r\n\r\nFor @msipc.ipcsetlicensemetadataproperty, the *pvProperty* is of type **LPCWSTR**.\r\n\r\n"
+  syntax:
+    content: IPC_MD_CONTENT_NAME = 0x00000001
+- uid: msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_TYPE
+  id: IPC_MD_NOTIFICATION_TYPE
+  parent: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_NOTIFICATION_TYPE
+  fullName: msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_TYPE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Desired @msipc.notification_type for the content protected using this license.
+
+
+
+    For @msipc.ipcsetlicensemetadataproperty, the       *pvMetadata* is of type **LPDWORD**.
+
+
+
+  syntax:
+    content: IPC_MD_NOTIFICATION_TYPE = 0x00000002
+- uid: msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_PREFERENCE
+  id: IPC_MD_NOTIFICATION_PREFERENCE
+  parent: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_NOTIFICATION_PREFERENCE
+  fullName: msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_PREFERENCE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Desired @msipc.notification_preference for the content protected using this license.
+
+
+
+    For @msipc.ipcsetlicensemetadataproperty, the       *pvProperty* is of type **LPDWORD**.
+
+
+
+  syntax:
+    content: IPC_MD_NOTIFICATION_PREFERENCE = 0x00000003
+- uid: msipc.license_metadata_property_types.IPC_MD_DATE_MODIFIED
+  id: IPC_MD_DATE_MODIFIED
+  parent: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_DATE_MODIFIED
+  fullName: msipc.license_metadata_property_types.IPC_MD_DATE_MODIFIED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Modification date of the content protected with the  the given license.
+
+
+
+    For @msipc.ipcsetlicensemetadataproperty, the       *pvMetadata* is of type pointer to **FILETIME***.
+
+
+
+  syntax:
+    content: IPC_MD_DATE_MODIFIED = 0x00000004
+- uid: msipc.license_metadata_property_types.IPC_MD_DATE_CREATED
+  id: IPC_MD_DATE_CREATED
+  parent: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_DATE_CREATED
+  fullName: msipc.license_metadata_property_types.IPC_MD_DATE_CREATED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: "Date created of the content which is being protected using the given license. \r\n\r\nFor @msipc.ipcsetlicensemetadataproperty, the       *pvMetadata* is of type pointer to **FILETIME* **.\r\n\r\n"
+  syntax:
+    content: IPC_MD_DATE_CREATED = 0x00000005
+references:
+- uid: msipc.ipcsetlicensemetadataproperty
+  href: IpcSetLicenseMetadataProperty.yml
+  name: IpcSetLicenseMetadataProperty
+- uid: msipc.notification_type
+  href: Notification type.yml
+  name: Notification type
+- uid: msipc.notification_preference
+  href: Notification preference.yml
+  name: Notification preference
+- uid: msipc.license_metadata_property_types.IPC_MD_CONTENT_PATH
+  href: License metadata property types.yml
+  name: IPC_MD_CONTENT_PATH
+- uid: msipc.license_metadata_property_types.IPC_MD_CONTENT_NAME
+  href: License metadata property types.yml
+  name: IPC_MD_CONTENT_NAME
+- uid: msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_TYPE
+  href: License metadata property types.yml
+  name: IPC_MD_NOTIFICATION_TYPE
+- uid: msipc.license_metadata_property_types.IPC_MD_NOTIFICATION_PREFERENCE
+  href: License metadata property types.yml
+  name: IPC_MD_NOTIFICATION_PREFERENCE
+- uid: msipc.license_metadata_property_types.IPC_MD_DATE_MODIFIED
+  href: License metadata property types.yml
+  name: IPC_MD_DATE_MODIFIED
+- uid: msipc.license_metadata_property_types.IPC_MD_DATE_CREATED
+  href: License metadata property types.yml
+  name: IPC_MD_DATE_CREATED

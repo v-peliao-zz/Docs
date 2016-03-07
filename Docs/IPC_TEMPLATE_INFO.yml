@@ -1,0 +1,214 @@
+items:
+- uid: msipc.ipc_template_info
+  id: IPC_TEMPLATE_INFO
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_template_info.fFromTemplate
+  - msipc.ipc_template_info.lcid
+  - msipc.ipc_template_info.wszDescription
+  - msipc.ipc_template_info.wszID
+  - msipc.ipc_template_info.wszIssuerDisplayName
+  - msipc.ipc_template_info.wszName
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: IPC_TEMPLATE_INFO
+  fullName: msipc.ipc_template_info
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Contains information for a template  such as ID, locale, name, and description.
+
+
+
+  remarks: >+
+    When using this structure with @msipc.ipcsetlicenseproperty, the following members are not required and are ignored:
+
+
+
+    * **wszID**
+
+
+
+    * **wszIssuerDisplayName**
+
+
+
+    * **fFromTemplate**
+
+
+
+
+
+
+
+    When using this structure with @msipc.ipcgetlicenseproperty or @msipc.ipcgetserializedlicenseproperty, the member **wszID** is returned as **NULL** when the license was not created directly from a template.
+
+
+
+  syntax:
+    content: >-
+      typedef struct _IPC_TEMPLATE_INFO {
+      	LPCWSTR wszID;
+      	LCID lcid;
+      	LPCWSTR wszName;
+      	LPCWSTR wszDescription;
+      	LPCWSTR wszIssuerDisplayName;
+      	BOOL fFromTemplate;
+      } IPC_TEMPLATE_INFO *PIPC_TEMPLATE_INFO;typedef const IPC_TEMPLATE_INFO *PCIPC_TEMPLATE_INFO;
+  inheritance: []
+- uid: msipc.ipc_template_info.wszID
+  id: wszID
+  parent: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: wszID
+  fullName: msipc.ipc_template_info.wszID
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The template ID.
+
+
+
+    This member is read-only.
+
+
+
+- uid: msipc.ipc_template_info.lcid
+  id: lcid
+  parent: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: lcid
+  fullName: msipc.ipc_template_info.lcid
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The locale ID for the template name and description.
+
+
+
+    This member, **lcid**, must be set to the locale ID  of the template information of this structure instance. For more information about  platform behavior regarding locale ID, see the Frequently asked questions section of the @msipc.release_notes__rtm_ topic.
+
+
+
+- uid: msipc.ipc_template_info.wszName
+  id: wszName
+  parent: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: wszName
+  fullName: msipc.ipc_template_info.wszName
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The template name
+
+
+
+    .Do not include a colon (:) character or a semicolon (;) character in the string.
+
+
+
+- uid: msipc.ipc_template_info.wszDescription
+  id: wszDescription
+  parent: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: wszDescription
+  fullName: msipc.ipc_template_info.wszDescription
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The template description.
+
+
+
+    Do not include a colon (:) character or a semicolon (;) character in the string.
+
+
+
+- uid: msipc.ipc_template_info.wszIssuerDisplayName
+  id: wszIssuerDisplayName
+  parent: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: wszIssuerDisplayName
+  fullName: msipc.ipc_template_info.wszIssuerDisplayName
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    The name of the RMS server that issued the template, in a format that can be displayed to the user.
+
+
+
+    This member is read-only.
+
+
+
+- uid: msipc.ipc_template_info.fFromTemplate
+  id: fFromTemplate
+  parent: msipc.ipc_template_info
+  href: IPC_TEMPLATE_INFO.yml
+  langs:
+  - cplusplus
+  name: fFromTemplate
+  fullName: msipc.ipc_template_info.fFromTemplate
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >+
+    Specifies whether the  license was created directly from a template (for example, enumerated using @msipc.ipcgettemplatelist). The property is a **BOOL** and is **TRUE** if the license was created directly from a template, otherwise **FALSE**.
+
+
+
+    This member is read-only.
+
+
+
+references:
+- uid: msipc.release_notes__rtm_
+  name: Release notes
+- uid: msipc.ipcgettemplatelist
+  href: IpcGetTemplateList.yml
+  name: IpcGetTemplateList
+- uid: msipc.ipcsetlicenseproperty
+  href: IpcSetLicenseProperty.yml
+  name: IpcSetLicenseProperty
+- uid: msipc.ipcgetlicenseproperty
+  href: IpcGetLicenseProperty.yml
+  name: IpcGetLicenseProperty
+- uid: msipc.ipcgetserializedlicenseproperty
+  href: IpcGetSerializedLicenseProperty.yml
+  name: IpcGetSerializedLicenseProperty
+- uid: msipc.ipc_template_info.wszID
+  href: IPC_TEMPLATE_INFO.yml
+  name: wszID
+- uid: msipc.ipc_template_info.lcid
+  href: IPC_TEMPLATE_INFO.yml
+  name: lcid
+- uid: msipc.ipc_template_info.wszName
+  href: IPC_TEMPLATE_INFO.yml
+  name: wszName
+- uid: msipc.ipc_template_info.wszDescription
+  href: IPC_TEMPLATE_INFO.yml
+  name: wszDescription
+- uid: msipc.ipc_template_info.wszIssuerDisplayName
+  href: IPC_TEMPLATE_INFO.yml
+  name: wszIssuerDisplayName
+- uid: msipc.ipc_template_info.fFromTemplate
+  href: IPC_TEMPLATE_INFO.yml
+  name: fFromTemplate

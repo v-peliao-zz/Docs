@@ -1,0 +1,263 @@
+items:
+- uid: msipc.rights
+  id: Rights
+  parent: msipc.msipc_constants
+  children:
+  - msipc.rights.IPC_EMAIL_FORWARD
+  - msipc.rights.IPC_EMAIL_REPLY
+  - msipc.rights.IPC_EMAIL_REPLYALL
+  - msipc.rights.IPC_GENERIC_ALL
+  - msipc.rights.IPC_GENERIC_COMMENT
+  - msipc.rights.IPC_GENERIC_EXPORT
+  - msipc.rights.IPC_GENERIC_EXTRACT
+  - msipc.rights.IPC_GENERIC_PRINT
+  - msipc.rights.IPC_GENERIC_READ
+  - msipc.rights.IPC_GENERIC_WRITE
+  - msipc.rights.IPC_READ_RIGHTS
+  - msipc.rights.IPC_WRITE_RIGHTS
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: Rights
+  fullName: msipc.rights
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Rights Management Services SDK 2.1  defines the following rights, which are enforced by your application.
+
+
+
+
+
+
+
+    AD RMS-enabled applications can interpret these rights differently. This is intended as a general description for how these rights are typically used. Consult the documentation of the specific application for information about how these rights are enforced. For more information, see [AD RMS Policy Template Considerations](https://TechNet.Microsoft.Com/en-us/library/dd996658.aspx).
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.rights.IPC_GENERIC_ALL
+  id: IPC_GENERIC_ALL
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_ALL
+  fullName: msipc.rights.IPC_GENERIC_ALL
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Holders of this right have full access.
+  syntax:
+    content: IPC_GENERIC_ALL = L"OWNER"
+- uid: msipc.rights.IPC_GENERIC_READ
+  id: IPC_GENERIC_READ
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_READ
+  fullName: msipc.rights.IPC_GENERIC_READ
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to read content.
+  syntax:
+    content: IPC_GENERIC_READ = L"VIEW"
+- uid: msipc.rights.IPC_GENERIC_WRITE
+  id: IPC_GENERIC_WRITE
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_WRITE
+  fullName: msipc.rights.IPC_GENERIC_WRITE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to write content.
+  syntax:
+    content: IPC_GENERIC_WRITE = L"EDIT"
+- uid: msipc.rights.IPC_GENERIC_EXTRACT
+  id: IPC_GENERIC_EXTRACT
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_EXTRACT
+  fullName: msipc.rights.IPC_GENERIC_EXTRACT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Right to extract content from a protected format and place it in an unprotected format.    Typically, when this right is granted, the application will allow the user to
+
+
+
+    * Copy and paste information from protected content.
+
+
+
+    * Use "Save As" to save protected content to an unprotected format.
+
+
+
+  syntax:
+    content: IPC_GENERIC_EXTRACT = L"EXTRACT"
+- uid: msipc.rights.IPC_GENERIC_EXPORT
+  id: IPC_GENERIC_EXPORT
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_EXPORT
+  fullName: msipc.rights.IPC_GENERIC_EXPORT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to extract content from a protected format and place it in different RMS-protected format.     Typically, when this right is granted, the application will allow the user to use the "Save As" feature to    save protected content to a new file. The content should be saved with RMS protection.
+  syntax:
+    content: IPC_GENERIC_EXPORT = L"EXPORT"
+- uid: msipc.rights.IPC_GENERIC_PRINT
+  id: IPC_GENERIC_PRINT
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_PRINT
+  fullName: msipc.rights.IPC_GENERIC_PRINT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to send protected content to a printer device.
+  syntax:
+    content: IPC_GENERIC_PRINT = L"PRINT"
+- uid: msipc.rights.IPC_GENERIC_COMMENT
+  id: IPC_GENERIC_COMMENT
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_GENERIC_COMMENT
+  fullName: msipc.rights.IPC_GENERIC_COMMENT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to add annotations or comments to the content.
+  syntax:
+    content: IPC_GENERIC_COMMENT = L"COMMENT"
+- uid: msipc.rights.IPC_READ_RIGHTS
+  id: IPC_READ_RIGHTS
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_READ_RIGHTS
+  fullName: msipc.rights.IPC_READ_RIGHTS
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to read the user rights list and restrictions.
+  syntax:
+    content: IPC_READ_RIGHTS = L"VIEWRIGHTSDATA"
+- uid: msipc.rights.IPC_WRITE_RIGHTS
+  id: IPC_WRITE_RIGHTS
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_WRITE_RIGHTS
+  fullName: msipc.rights.IPC_WRITE_RIGHTS
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Right to write the user rights list and restrictions.
+  syntax:
+    content: IPC_WRITE_RIGHTS = L"EDITRIGHTSDATA"
+- uid: msipc.rights.IPC_EMAIL_FORWARD
+  id: IPC_EMAIL_FORWARD
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_EMAIL_FORWARD
+  fullName: msipc.rights.IPC_EMAIL_FORWARD
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: 'Email applications: the right to forward an email.'
+  syntax:
+    content: IPC_EMAIL_FORWARD = L"FORWARD"
+- uid: msipc.rights.IPC_EMAIL_REPLY
+  id: IPC_EMAIL_REPLY
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_EMAIL_REPLY
+  fullName: msipc.rights.IPC_EMAIL_REPLY
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: 'Email applications: the right to reply to an email.'
+  syntax:
+    content: IPC_EMAIL_REPLY = L"REPLY"
+- uid: msipc.rights.IPC_EMAIL_REPLYALL
+  id: IPC_EMAIL_REPLYALL
+  parent: msipc.rights
+  href: Rights.yml
+  langs:
+  - cplusplus
+  name: IPC_EMAIL_REPLYALL
+  fullName: msipc.rights.IPC_EMAIL_REPLYALL
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: 'Email applications: the right to reply all to an email.'
+  syntax:
+    content: IPC_EMAIL_REPLYALL = L"REPLYALL"
+references:
+- uid: AD RMS Policy Template Considerations
+  isExternal: true
+  href: https://TechNet.Microsoft.Com/en-us/library/dd996658.aspx
+  name: AD RMS Policy Template Considerations
+- uid: msipc.rights.IPC_GENERIC_ALL
+  href: Rights.yml
+  name: IPC_GENERIC_ALL
+- uid: msipc.rights.IPC_GENERIC_READ
+  href: Rights.yml
+  name: IPC_GENERIC_READ
+- uid: msipc.rights.IPC_GENERIC_WRITE
+  href: Rights.yml
+  name: IPC_GENERIC_WRITE
+- uid: msipc.rights.IPC_GENERIC_EXTRACT
+  href: Rights.yml
+  name: IPC_GENERIC_EXTRACT
+- uid: msipc.rights.IPC_GENERIC_EXPORT
+  href: Rights.yml
+  name: IPC_GENERIC_EXPORT
+- uid: msipc.rights.IPC_GENERIC_PRINT
+  href: Rights.yml
+  name: IPC_GENERIC_PRINT
+- uid: msipc.rights.IPC_GENERIC_COMMENT
+  href: Rights.yml
+  name: IPC_GENERIC_COMMENT
+- uid: msipc.rights.IPC_READ_RIGHTS
+  href: Rights.yml
+  name: IPC_READ_RIGHTS
+- uid: msipc.rights.IPC_WRITE_RIGHTS
+  href: Rights.yml
+  name: IPC_WRITE_RIGHTS
+- uid: msipc.rights.IPC_EMAIL_FORWARD
+  href: Rights.yml
+  name: IPC_EMAIL_FORWARD
+- uid: msipc.rights.IPC_EMAIL_REPLY
+  href: Rights.yml
+  name: IPC_EMAIL_REPLY
+- uid: msipc.rights.IPC_EMAIL_REPLYALL
+  href: Rights.yml
+  name: IPC_EMAIL_REPLYALL

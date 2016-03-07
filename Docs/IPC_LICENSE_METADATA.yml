@@ -1,0 +1,138 @@
+items:
+- uid: msipc.ipc_license_metadata
+  id: IPC_LICENSE_METADATA
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_license_metadata.cbSize
+  - msipc.ipc_license_metadata.dwNotificationPreference
+  - msipc.ipc_license_metadata.dwNotificationType
+  - msipc.ipc_license_metadata.ftDateCreated
+  - msipc.ipc_license_metadata.ftDateModified
+  - msipc.ipc_license_metadata.wszContentName
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: IPC_LICENSE_METADATA
+  fullName: msipc.ipc_license_metadata
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Represents the metadata for content tracking.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_LICENSE_METADATA {
+      	DWORD cbSize;
+      	DWORD dwNotificationType;
+      	DWORD dwNotificationPreference;
+      	FILETIME ftDateModified;
+      	FILETIME ftDateCreated;
+      	LPCWSTR wszContentName;
+      } IPC_LICENSE_METADATA *PIPC_LICENSE_METADATA;typedef const IPC_LICENSE_METADATA *PCIPC_LICENSE_METADATA;
+  inheritance: []
+- uid: msipc.ipc_license_metadata.cbSize
+  id: cbSize
+  parent: msipc.ipc_license_metadata
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: cbSize
+  fullName: msipc.ipc_license_metadata.cbSize
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: This is the size of this structure and needs to be initialized to sizeof(IPC_LICENSE_METADATA).
+- uid: msipc.ipc_license_metadata.dwNotificationType
+  id: dwNotificationType
+  parent: msipc.ipc_license_metadata
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: dwNotificationType
+  fullName: msipc.ipc_license_metadata.dwNotificationType
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Type of notification from one of the following. For more information, see @msipc.notification_type.
+- uid: msipc.ipc_license_metadata.dwNotificationPreference
+  id: dwNotificationPreference
+  parent: msipc.ipc_license_metadata
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: dwNotificationPreference
+  fullName: msipc.ipc_license_metadata.dwNotificationPreference
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Type of notification preference from @msipc.notification_preference.
+- uid: msipc.ipc_license_metadata.ftDateModified
+  id: ftDateModified
+  parent: msipc.ipc_license_metadata
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: ftDateModified
+  fullName: msipc.ipc_license_metadata.ftDateModified
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Modification date  of the unprotected content..
+- uid: msipc.ipc_license_metadata.ftDateCreated
+  id: ftDateCreated
+  parent: msipc.ipc_license_metadata
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: ftDateCreated
+  fullName: msipc.ipc_license_metadata.ftDateCreated
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Creation date of the unprotected content.
+- uid: msipc.ipc_license_metadata.wszContentName
+  id: wszContentName
+  parent: msipc.ipc_license_metadata
+  href: IPC_LICENSE_METADATA.yml
+  langs:
+  - cplusplus
+  name: wszContentName
+  fullName: msipc.ipc_license_metadata.wszContentName
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: Name by which the content should be identified.
+references:
+- uid: msipc.notification_type
+  href: Notification type.yml
+  name: Notification type
+- uid: msipc.notification_preference
+  href: Notification preference.yml
+  name: Notification preference
+- uid: msipc.ipc_license_metadata.cbSize
+  href: IPC_LICENSE_METADATA.yml
+  name: cbSize
+- uid: msipc.ipc_license_metadata.dwNotificationType
+  href: IPC_LICENSE_METADATA.yml
+  name: dwNotificationType
+- uid: msipc.ipc_license_metadata.dwNotificationPreference
+  href: IPC_LICENSE_METADATA.yml
+  name: dwNotificationPreference
+- uid: msipc.ipc_license_metadata.ftDateModified
+  href: IPC_LICENSE_METADATA.yml
+  name: ftDateModified
+- uid: msipc.ipc_license_metadata.ftDateCreated
+  href: IPC_LICENSE_METADATA.yml
+  name: ftDateCreated
+- uid: msipc.ipc_license_metadata.wszContentName
+  href: IPC_LICENSE_METADATA.yml
+  name: wszContentName

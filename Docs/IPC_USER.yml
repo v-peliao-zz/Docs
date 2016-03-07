@@ -1,0 +1,208 @@
+items:
+- uid: msipc.ipc_user
+  id: IPC_USER
+  parent: msipc.msipc_structures
+  children:
+  - msipc.ipc_user.dwType
+  - msipc.ipc_user.wszID
+  href: IPC_USER.yml
+  langs:
+  - cplusplus
+  name: IPC_USER
+  fullName: msipc.ipc_user
+  type: Struct
+  assemblies: &o0
+  - RMS21
+  namespace: Structures
+  summary: >+
+    Represents a user or a group ID of a particular type.
+
+
+
+
+
+
+
+  remarks: 
+  syntax:
+    content: >-
+      typedef struct _IPC_USER {
+      	DWORD dwType;
+      	LPCWSTR wszID;
+      } IPC_USER *PIPC_USER;typedef const IPC_USER *PCIPC_USER;
+  inheritance: []
+- uid: msipc.ipc_user.dwType
+  id: dwType
+  parent: msipc.ipc_user
+  href: IPC_USER.yml
+  langs:
+  - cplusplus
+  name: dwType
+  fullName: msipc.ipc_user.dwType
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >-
+    The type of principal that has been granted rights in the license. The value of  **wszID**  must match the specified type.<table border="1">
+
+    <tr>
+
+    <th>Name</th>
+
+    <th>Value</th>
+
+    <th>Meaning</th>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_USER_TYPE_EMAIL**
+
+    </td>
+
+    <td>
+
+    **1**
+
+    </td>
+
+    <td>
+
+    Email address.
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_USER_TYPE_IPC**
+
+    </td>
+
+    <td>
+
+    **2**
+
+    </td>
+
+    <td>
+
+    IPC-internal user or group ID.
+
+    </td>
+
+    </tr>
+
+    </table>
+- uid: msipc.ipc_user.wszID
+  id: wszID
+  parent: msipc.ipc_user
+  href: IPC_USER.yml
+  langs:
+  - cplusplus
+  name: wszID
+  fullName: msipc.ipc_user.wszID
+  type: Field
+  assemblies: *o0
+  namespace: Structures
+  summary: >-
+    The user or group ID. Depending on the value of  **dwType** this is either an email address or one of the following user or group ID values.
+
+
+
+    If **wszID** is set to one of the values in the possible values set that follows, **dwType** should be set to **IPC_USER_TYPE_IPC**.
+
+
+
+    <table border="1">
+
+    <tr>
+
+    <th>Name</th>
+
+    <th>Value</th>
+
+    <th>Meaning</th>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_USER_ID_EVERYONE**
+
+    </td>
+
+    <td>
+
+    **_TEXT("ANYONE")**
+
+    </td>
+
+    <td>
+
+    IPC group ID for the group that contains all users.
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_USER_ID_NULL**
+
+    </td>
+
+    <td>
+
+    **_TEXT("NULL")**
+
+    </td>
+
+    <td>
+
+    IPC user ID used to represent the absence of a user.
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    **IPC_USER_ID_OWNER**
+
+    </td>
+
+    <td>
+
+    **_TEXT("OWNER")**
+
+    </td>
+
+    <td>
+
+    IPC user ID used to represent the owner principal.
+
+    </td>
+
+    </tr>
+
+    </table>
+references:
+- uid: msipc.ipc_user.dwType
+  href: IPC_USER.yml
+  name: dwType
+- uid: msipc.ipc_user.wszID
+  href: IPC_USER.yml
+  name: wszID

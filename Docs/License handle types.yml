@@ -1,0 +1,83 @@
+items:
+- uid: msipc.license_handle_types
+  id: License handle types
+  parent: msipc.msipc_constants
+  children:
+  - msipc.license_handle_types.IPC_MD_LICENSE_HANDLE
+  - msipc.license_handle_types.IPC_SL_LICENSE_METADATA_HANDLE
+  href: License handle types.yml
+  langs:
+  - cplusplus
+  name: License handle types
+  fullName: msipc.license_handle_types
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    License handle types.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.license_handle_types.IPC_MD_LICENSE_HANDLE
+  id: IPC_MD_LICENSE_HANDLE
+  parent: msipc.license_handle_types
+  href: License handle types.yml
+  langs:
+  - cplusplus
+  name: IPC_MD_LICENSE_HANDLE
+  fullName: msipc.license_handle_types.IPC_MD_LICENSE_HANDLE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    License handle returned by @msipc.ipccreatelicensefromscratch or @msipc.ipccreatelicensefromtemplateid  is used as parameter.  **pvHandle** is of type  @msipc.microsoft_information_protection_and_control_client_data_types  created using  @msipc.ipccreatelicensefromscratch or @msipc.ipccreatelicensefromtemplateid.
+
+
+
+  syntax:
+    content: IPC_MD_LICENSE_HANDLE = 1
+- uid: msipc.license_handle_types.IPC_SL_LICENSE_METADATA_HANDLE
+  id: IPC_SL_LICENSE_METADATA_HANDLE
+  parent: msipc.license_handle_types
+  href: License handle types.yml
+  langs:
+  - cplusplus
+  name: IPC_SL_LICENSE_METADATA_HANDLE
+  fullName: msipc.license_handle_types.IPC_SL_LICENSE_METADATA_HANDLE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    License metadata handle returned by @msipc.ipccreatelicensemetadatahandle  is used as parameter.  **pvHandle** is of type  @msipc.microsoft_information_protection_and_control_client_data_types  created using  @msipc.ipccreatelicensemetadatahandle.
+
+
+
+  syntax:
+    content: IPC_SL_LICENSE_METADATA_HANDLE = 2
+references:
+- uid: msipc.ipccreatelicensefromscratch
+  href: IpcCreateLicenseFromScratch.yml
+  name: IpcCreateLicenseFromScratch
+- uid: msipc.ipccreatelicensefromtemplateid
+  href: IpcCreateLicenseFromTemplateID.yml
+  name: IpcCreateLicenseFromTemplateID
+- uid: msipc.microsoft_information_protection_and_control_client_data_types
+  href: Data types.yml
+  name: IPC_LICENSE_HANDLE
+- uid: msipc.ipccreatelicensemetadatahandle
+  href: IpcCreateLicenseMetadataHandle.yml
+  name: IpcCreateLicenseMetadataHandle
+- uid: msipc.license_handle_types.IPC_MD_LICENSE_HANDLE
+  href: License handle types.yml
+  name: IPC_MD_LICENSE_HANDLE
+- uid: msipc.license_handle_types.IPC_SL_LICENSE_METADATA_HANDLE
+  href: License handle types.yml
+  name: IPC_SL_LICENSE_METADATA_HANDLE

@@ -1,0 +1,104 @@
+items:
+- uid: msipc.notification_type
+  id: Notification type
+  parent: msipc.msipc_constants
+  children:
+  - msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY
+  - msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DISABLED
+  - msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_ENABLED
+  href: Notification type.yml
+  langs:
+  - cplusplus
+  name: Notification type
+  fullName: msipc.notification_type
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Specifies the way notifications about tracked document content usage is sent to the content owner.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DISABLED
+  id: IPCD_CT_NOTIFICATION_TYPE_DISABLED
+  parent: msipc.notification_type
+  href: Notification type.yml
+  langs:
+  - cplusplus
+  name: IPCD_CT_NOTIFICATION_TYPE_DISABLED
+  fullName: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DISABLED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Specifies that a notifications are disabled.
+  syntax:
+    content: IPCD_CT_NOTIFICATION_TYPE_DISABLED = 0
+- uid: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_ENABLED
+  id: IPCD_CT_NOTIFICATION_TYPE_ENABLED
+  parent: msipc.notification_type
+  href: Notification type.yml
+  langs:
+  - cplusplus
+  name: IPCD_CT_NOTIFICATION_TYPE_ENABLED
+  fullName: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_ENABLED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Specifies that a notification will be sent when a user accesses the content. This includes the notification for unsuccessful attempts.
+  syntax:
+    content: IPCD_CT_NOTIFICATION_TYPE_ENABLED = 1
+- uid: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY
+  id: IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY
+  parent: msipc.notification_type
+  href: Notification type.yml
+  langs:
+  - cplusplus
+  name: IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY
+  fullName: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Specifies that a notification will be sent every time a user unsuccessfully tries to access the content.
+  syntax:
+    content: IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY = 2
+references:
+- uid: msipc.tracking_content
+  name: Tracking Content
+- uid: msipc.notification_preference
+  href: Notification preference.yml
+  name: Notification preference
+- uid: msipc.ipccreatelicensemetadatahandle
+  href: IpcCreateLicenseMetadataHandle.yml
+  name: IpcCreateLicenseMetadataHandle
+- uid: msipc.ipcsetlicensemetadataproperty
+  href: IpcSetLicenseMetadataProperty.yml
+  name: IpcSetLicenseMetadataProperty
+- uid: msipc.ipcserializelicensemetadata
+  href: IpcSerializeLicenseWithMetadata.yml
+  name: IpcSerializeLicenseWithMetadata
+- uid: msipc.ipcfencryptfilewithmetadata
+  href: IpcfEncryptFileWithMetadata.yml
+  name: IpcfEncryptFileWithMetadata
+- uid: msipc.ipcfencryptfilestreamwithmetadata
+  href: IpcfEncryptFileStreamWithMetadata.yml
+  name: IpcfEncryptFileStreamWithMetadata
+- uid: msipc.ipcregisterlicense
+  href: IpcRegisterLicense.yml
+  name: IpcRegisterLicense
+- uid: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DISABLED
+  href: Notification type.yml
+  name: IPCD_CT_NOTIFICATION_TYPE_DISABLED
+- uid: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_ENABLED
+  href: Notification type.yml
+  name: IPCD_CT_NOTIFICATION_TYPE_ENABLED
+- uid: msipc.notification_type.IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY
+  href: Notification type.yml
+  name: IPCD_CT_NOTIFICATION_TYPE_DENY_ONLY

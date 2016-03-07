@@ -1,0 +1,54 @@
+items:
+- uid: msipc.environment_properties
+  id: Environment properties
+  parent: msipc.msipc_constants
+  children:
+  - msipc.environment_properties.IPC_EI_API_MODE
+  href: Environment properties.yml
+  langs:
+  - cplusplus
+  name: Environment properties
+  fullName: msipc.environment_properties
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Environment property constants used to query and set properties using @msipc.ipcgetglobalproperty and @msipc.ipcsetglobalproperty.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.environment_properties.IPC_EI_API_MODE
+  id: IPC_EI_API_MODE
+  parent: msipc.environment_properties
+  href: Environment properties.yml
+  langs:
+  - cplusplus
+  name: IPC_EI_API_MODE
+  fullName: msipc.environment_properties.IPC_EI_API_MODE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: 'Use this constant to query or set the security mode.   The default value is **IPC_API_MODE_CLIENT**. See  @msipc.api_mode_values for a list of security mode values.  '
+  syntax:
+    content: IPC_EI_API_MODE = 3
+references:
+- uid: msipc.ipcgetglobalproperty
+  href: IpcGetGlobalProperty.yml
+  name: IpcGetGlobalProperty
+- uid: msipc.ipcsetglobalproperty
+  href: IpcSetGlobalProperty.yml
+  name: IpcSetGlobalProperty
+- uid: msipc.api_mode_values
+  href: API mode values.yml
+  name: API Mode Values
+- uid: msipc.environment_properties.IPC_EI_API_MODE
+  href: Environment properties.yml
+  name: IPC_EI_API_MODE

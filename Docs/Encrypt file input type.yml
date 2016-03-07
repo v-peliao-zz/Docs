@@ -1,0 +1,84 @@
+items:
+- uid: msipc.encrypt_file_input_type
+  id: Encrypt file input type
+  parent: msipc.msipc_constants
+  children:
+  - msipc.encrypt_file_input_type.IPCF_EF_LICENSE_HANDLE
+  - msipc.encrypt_file_input_type.IPCF_EF_TEMPLATE_ID
+  href: Encrypt file input type.yml
+  langs:
+  - cplusplus
+  name: Encrypt file input type
+  fullName: msipc.encrypt_file_input_type
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Constants for specifying the type of license information.
+
+
+
+    The template/license will be used to create a key to encrypt a file.
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.encrypt_file_input_type.IPCF_EF_TEMPLATE_ID
+  id: IPCF_EF_TEMPLATE_ID
+  parent: msipc.encrypt_file_input_type
+  href: Encrypt file input type.yml
+  langs:
+  - cplusplus
+  name: IPCF_EF_TEMPLATE_ID
+  fullName: msipc.encrypt_file_input_type.IPCF_EF_TEMPLATE_ID
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    A template ID that represents an official template.
+
+
+
+    The *pvTemplateInfo* parameter should be of type **PWSTR** representing a Template ID which can be retrieved by calling @msipc.ipcgettemplatelist.
+
+
+
+  syntax:
+    content: IPCF_EF_TEMPLATE_ID = 0
+- uid: msipc.encrypt_file_input_type.IPCF_EF_LICENSE_HANDLE
+  id: IPCF_EF_LICENSE_HANDLE
+  parent: msipc.encrypt_file_input_type
+  href: Encrypt file input type.yml
+  langs:
+  - cplusplus
+  name: IPCF_EF_LICENSE_HANDLE
+  fullName: msipc.encrypt_file_input_type.IPCF_EF_LICENSE_HANDLE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    A license handle. The *pvLicenseInfo* parameter is of type **IPC_LICENSE_HANDLE** created by calling @msipc.ipccreatelicensefromscratch or @msipc.ipccreatelicensefromtemplateid.
+
+
+
+  syntax:
+    content: IPCF_EF_LICENSE_HANDLE = 1
+references:
+- uid: msipc.ipcgettemplatelist
+  href: IpcGetTemplateList.yml
+  name: IpcGetTemplateList
+- uid: msipc.ipccreatelicensefromscratch
+  href: IpcCreateLicenseFromScratch.yml
+  name: IpcCreateLicenseFromScratch
+- uid: msipc.ipccreatelicensefromtemplateid
+  href: IpcCreateLicenseFromTemplateID.yml
+  name: IpcCreateLicenseFromTemplateID
+- uid: msipc.encrypt_file_input_type.IPCF_EF_TEMPLATE_ID
+  href: Encrypt file input type.yml
+  name: IPCF_EF_TEMPLATE_ID
+- uid: msipc.encrypt_file_input_type.IPCF_EF_LICENSE_HANDLE
+  href: Encrypt file input type.yml
+  name: IPCF_EF_LICENSE_HANDLE

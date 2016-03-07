@@ -1,0 +1,70 @@
+items:
+- uid: msipc.msipc_constants
+  id: Constants
+  children:
+  - msipc.api_mode_values
+  - msipc.decrypt_file_flags
+  - msipc.encrypt_file_flags
+  - msipc.encrypt_file_input_type
+  - msipc.environment_properties
+  - msipc.error_codes
+  - msipc.get_template_list_flags
+  - msipc.license_handle_types
+  - msipc.license_metadata_property_types
+  - msipc.license_property_types
+  - msipc.notification_preference
+  - msipc.notification_type
+  - msipc.preferred_encryption
+  - msipc.rights
+  href: Constants.yml
+  langs:
+  - cplusplus
+  name: Constants
+  fullName: msipc.msipc_constants
+  type: Namespace
+  assemblies:
+  - RMS21
+  namespace: Constants
+references:
+- uid: msipc.api_mode_values
+  href: API mode values.yml
+  name: API mode values
+- uid: msipc.decrypt_file_flags
+  href: Decrypt file flags.yml
+  name: Decrypt file flags
+- uid: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  name: Encrypt file flags
+- uid: msipc.encrypt_file_input_type
+  href: Encrypt file input type.yml
+  name: Encrypt file input type
+- uid: msipc.environment_properties
+  href: Environment properties.yml
+  name: Environment properties
+- uid: msipc.error_codes
+  href: Error codes.yml
+  name: Error codes
+- uid: msipc.get_template_list_flags
+  href: Get template list flags.yml
+  name: Get template list flags
+- uid: msipc.license_handle_types
+  href: License handle types.yml
+  name: License handle types
+- uid: msipc.license_metadata_property_types
+  href: License metadata property types.yml
+  name: License metadata property types
+- uid: msipc.license_property_types
+  href: License property types.yml
+  name: License property types
+- uid: msipc.notification_preference
+  href: Notification preference.yml
+  name: Notification preference
+- uid: msipc.notification_type
+  href: Notification type.yml
+  name: Notification type
+- uid: msipc.preferred_encryption
+  href: Preferred encryption.yml
+  name: Preferred encryption
+- uid: msipc.rights
+  href: Rights.yml
+  name: Rights

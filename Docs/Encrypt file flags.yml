@@ -1,0 +1,180 @@
+items:
+- uid: msipc.encrypt_file_flags
+  id: Encrypt file flags
+  parent: msipc.msipc_constants
+  children:
+  - msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST
+  - msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+  - msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+  - msipc.encrypt_file_flags.IPCF_EF_FLAG_DEFAULT
+  - msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_NATIVE
+  - msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_PFILE
+  - msipc.encrypt_file_flags.IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: Encrypt file flags
+  fullName: msipc.encrypt_file_flags
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Constants for specifying the type of file input.
+
+
+
+
+
+
+
+  remarks: 
+  syntax: {}
+  inheritance: []
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_DEFAULT
+  id: IPCF_EF_FLAG_DEFAULT
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPCF_EF_FLAG_DEFAULT
+  fullName: msipc.encrypt_file_flags.IPCF_EF_FLAG_DEFAULT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Uses all of the default settings for @msipc.ipcfencryptfile.
+
+
+
+    By default, @msipc.ipcfencryptfile will try to apply the new policy specified in *pvLicenseInfo*.
+
+
+
+    When the file is already encrypted, if the new policy is different from the old one in the current file  or the protector to be used to protect  this type of file, specified by administrator configuration, is different from the one already used in  encrypting the current file, the file will be decrypted and re-encrypted with the new policy or new protectors.
+
+
+
+  syntax:
+    content: IPCF_EF_FLAG_DEFAULT = 0
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+  id: IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+  fullName: msipc.encrypt_file_flags.IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: When this flag is specified, if the file is already encrypted, the file will not be decrypted and re-encrypted with the new policy.
+  syntax:
+    content: IPCF_EF_FLAG_UPDATELICENSE_BLOCKED = 1
+- uid: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST
+  id: IPC_EF_FLAG_KEY_NO_PERSIST
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPC_EF_FLAG_KEY_NO_PERSIST
+  fullName: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Use this flag to prevent a key from being cached locally and inserted within the serialized license. If thisflag is used, the content creator must contact the RMS server in order to access the content.
+
+
+
+  syntax:
+    content: IPC_EF_FLAG_KEY_NO_PERSIST = 2
+- uid: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+  id: IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+  fullName: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Use this flag to prevent a key from being cached locally but the key can be inserted within the serialized license.
+  syntax:
+    content: IPC_EF_FLAG_KEY_NO_PERSIST_DISK = 4
+- uid: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+  id: IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+  fullName: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Use this flag to prevent a key from being inserted within the serialized license but cached locally in license store.
+  syntax:
+    content: IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE = 8
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_PFILE
+  id: IPCF_EF_FLAG_FORCE_PFILE
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPCF_EF_FLAG_FORCE_PFILE
+  fullName: msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_PFILE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifying this flag will cause the File Api to ignore the admin specified rules for encryption and create a pfile that can be opened by any application.This flag cannot be used along with **IPCF_EF_FLAG_FORCE_NATIVE**
+
+
+
+  syntax:
+    content: IPCF_EF_FLAG_FORCE_PFILE = 0x00000010
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_NATIVE
+  id: IPCF_EF_FLAG_FORCE_NATIVE
+  parent: msipc.encrypt_file_flags
+  href: Encrypt file flags.yml
+  langs:
+  - cplusplus
+  name: IPCF_EF_FLAG_FORCE_NATIVE
+  fullName: msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_NATIVE
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    Specifying this flag will make the file only opened by RMS aware applications.This flag cannot be used along with **IPCF_EF_FLAG_FORCE_PFILE**
+
+
+
+  syntax:
+    content: IPCF_EF_FLAG_FORCE_NATIVE = 0x00000020
+references:
+- uid: msipc.ipcfencryptfile
+  href: IpcfEncryptFile.yml
+  name: IpcfEncryptFile
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_DEFAULT
+  href: Encrypt file flags.yml
+  name: IPCF_EF_FLAG_DEFAULT
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+  href: Encrypt file flags.yml
+  name: IPCF_EF_FLAG_UPDATELICENSE_BLOCKED
+- uid: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST
+  href: Encrypt file flags.yml
+  name: IPC_EF_FLAG_KEY_NO_PERSIST
+- uid: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+  href: Encrypt file flags.yml
+  name: IPC_EF_FLAG_KEY_NO_PERSIST_DISK
+- uid: msipc.encrypt_file_flags.IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+  href: Encrypt file flags.yml
+  name: IPC_EF_FLAG_KEY_NO_PERSIST_LICENSE
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_PFILE
+  href: Encrypt file flags.yml
+  name: IPCF_EF_FLAG_FORCE_PFILE
+- uid: msipc.encrypt_file_flags.IPCF_EF_FLAG_FORCE_NATIVE
+  href: Encrypt file flags.yml
+  name: IPCF_EF_FLAG_FORCE_NATIVE

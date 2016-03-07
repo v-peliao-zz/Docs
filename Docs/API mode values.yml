@@ -1,0 +1,116 @@
+items:
+- uid: msipc.api_mode_values
+  id: API mode values
+  parent: msipc.msipc_constants
+  children:
+  - msipc.api_mode_values.IPC_API_MODE_CLIENT
+  - msipc.api_mode_values.IPC_API_MODE_CLIENT_IMPERSONATION
+  - msipc.api_mode_values.IPC_API_MODE_SERVER
+  href: API mode values.yml
+  langs:
+  - cplusplus
+  name: API mode values
+  fullName: msipc.api_mode_values
+  type: Enum
+  assemblies: &o0
+  - RMS21
+  namespace: Constants
+  summary: >+
+    Constants for specifying security mode.
+
+
+
+
+
+
+
+    For more usage information see, @msipc.setting_the_api_security_mode__api_mode_.
+
+
+
+  remarks: >+
+    The security mode is queried or set by calling @msipc.ipcgetglobalproperty or @msipc.ipcsetglobalproperty with the **IPC_EI_API_MODE** environment property specified. For more information, see @msipc.environment_properties.
+
+
+
+  syntax: {}
+  inheritance: []
+- uid: msipc.api_mode_values.IPC_API_MODE_CLIENT
+  id: IPC_API_MODE_CLIENT
+  parent: msipc.api_mode_values
+  href: API mode values.yml
+  langs:
+  - cplusplus
+  name: IPC_API_MODE_CLIENT
+  fullName: msipc.api_mode_values.IPC_API_MODE_CLIENT
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Used for less trusted systems, such as those running on a client operating system.
+  syntax:
+    content: IPC_API_MODE_CLIENT = 1
+- uid: msipc.api_mode_values.IPC_API_MODE_SERVER
+  id: IPC_API_MODE_SERVER
+  parent: msipc.api_mode_values
+  href: API mode values.yml
+  langs:
+  - cplusplus
+  name: IPC_API_MODE_SERVER
+  fullName: msipc.api_mode_values.IPC_API_MODE_SERVER
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: Used for more trusted systems, such as those running on a server operating system.
+  syntax:
+    content: IPC_API_MODE_SERVER = 2
+- uid: msipc.api_mode_values.IPC_API_MODE_CLIENT_IMPERSONATION
+  id: IPC_API_MODE_CLIENT_IMPERSONATION
+  parent: msipc.api_mode_values
+  href: API mode values.yml
+  langs:
+  - cplusplus
+  name: IPC_API_MODE_CLIENT_IMPERSONATION
+  fullName: msipc.api_mode_values.IPC_API_MODE_CLIENT_IMPERSONATION
+  type: Field
+  assemblies: *o0
+  namespace: Constants
+  summary: >+
+    This value is not supported and should not be used.
+
+
+
+
+
+
+
+    This value may be removed from future versions of the Rights Management Services SDK 2.1 .
+
+
+
+    The behavior of @msipc.ipcsetglobalproperty is undefined when using this value with the **IPC_EI_API_MODE** property.
+
+
+
+  syntax:
+    content: IPC_API_MODE_CLIENT_IMPERSONATION = 3
+references:
+- uid: msipc.setting_the_api_security_mode__api_mode_
+  name: Setting the API security mode
+- uid: msipc.ipcsetglobalproperty
+  href: IpcSetGlobalProperty.yml
+  name: IpcSetGlobalProperty
+- uid: msipc.ipcgetglobalproperty
+  href: IpcGetGlobalProperty.yml
+  name: IpcGetGlobalProperty
+- uid: msipc.environment_properties
+  href: Environment properties.yml
+  name: Environment Properties
+- uid: msipc.api_mode_values.IPC_API_MODE_CLIENT
+  href: API mode values.yml
+  name: IPC_API_MODE_CLIENT
+- uid: msipc.api_mode_values.IPC_API_MODE_SERVER
+  href: API mode values.yml
+  name: IPC_API_MODE_SERVER
+- uid: msipc.api_mode_values.IPC_API_MODE_CLIENT_IMPERSONATION
+  href: API mode values.yml
+  name: IPC_API_MODE_CLIENT_IMPERSONATION
